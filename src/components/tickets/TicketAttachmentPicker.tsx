@@ -33,8 +33,8 @@ export function TicketAttachmentPicker({ value, onChange, className, variant = "
 
   const pickCls =
     variant === "admin"
-      ? "border-violet-300 bg-violet-50 text-violet-900 hover:bg-violet-100 dark:border-slate-600 dark:bg-slate-800 dark:text-violet-100 dark:hover:bg-slate-700"
-      : "border-violet-300 bg-violet-50 text-violet-900 hover:bg-violet-100";
+      ? "border-rose-300 bg-rose-50 text-rose-900 hover:bg-rose-100 dark:border-slate-600 dark:bg-slate-800 dark:text-rose-100 dark:hover:bg-slate-700"
+      : "border-rose-300 bg-rose-50 text-rose-900 hover:bg-rose-100";
 
   const resetInput = () => {
     if (inputRef.current) inputRef.current.value = "";
@@ -99,7 +99,7 @@ export function TicketAttachmentPicker({ value, onChange, className, variant = "
         <p className="text-right text-xs text-slate-600 dark:text-slate-400">
           <span className="font-medium text-slate-800 dark:text-slate-200">{value.name}</span>
           {value.blobStoreId ? (
-            <span className="me-1 text-violet-600 dark:text-violet-400"> — تخزين محلي للملف الكبير</span>
+            <span className="me-1 text-rose-600 dark:text-rose-400"> — تخزين محلي للملف الكبير</span>
           ) : null}
         </p>
       ) : null}

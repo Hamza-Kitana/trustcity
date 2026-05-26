@@ -28,8 +28,8 @@ function PackageCompactCard({
       className={cn(
         "relative w-full rounded-2xl p-[2px] shadow-[0_16px_44px_-22px_rgba(0,0,0,0.5)] transition-[box-shadow,filter] duration-500",
         item.featured
-          ? "bg-gradient-to-br from-amber-400 via-orange-500 to-fuchsia-500 bg-[length:300%_300%] animate-vip-gradient-shift motion-reduce:animate-none"
-          : "bg-gradient-to-br from-violet-400 via-fuchsia-400 to-cyan-400 bg-[length:300%_300%] animate-vip-gradient-shift motion-reduce:animate-none",
+          ? "bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-[length:300%_300%] animate-vip-gradient-shift motion-reduce:animate-none"
+          : "bg-gradient-to-br from-rose-400 via-red-400 to-cyan-400 bg-[length:300%_300%] animate-vip-gradient-shift motion-reduce:animate-none",
         "hover:shadow-[0_22px_52px_-20px_hsl(var(--primary)/0.38)]",
         item.taken && "opacity-[0.9]",
       )}

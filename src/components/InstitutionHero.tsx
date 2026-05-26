@@ -11,11 +11,11 @@ export type InstitutionHeroProps = {
 /**
  * بطل موحّد لصفحات المؤسسات — نفس هيكل صفحة القوانين وصنّاع المحتوى (GIF + تدرّجات + «المؤسسات» أولاً).
  */
-const InstitutionHero = ({ badgeEn, title, alt = "Infinite City" }: InstitutionHeroProps) => {
+const InstitutionHero = ({ badgeEn, title, alt = "TRUST CFW" }: InstitutionHeroProps) => {
   return (
     <section className="relative h-[46vh] min-h-[300px] max-h-[520px] overflow-hidden">
       <img
-        src="/INF-CONECT-LOGO.gif"
+        src="/trustLogo.png"
         alt={alt}
         className="absolute inset-0 h-full w-full object-cover"
         onError={(event) => {

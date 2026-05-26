@@ -159,7 +159,7 @@ const StreamerApplicationsPage = () => {
             طلبات التقديم كصانع محتوى من البروفايل أو صفحة صنّاع المحتوى. عند القبول تُنشأ البطاقة تلقائياً.
           </p>
         </div>
-        <Button asChild variant="outline" className="border-violet-300">
+        <Button asChild variant="outline" className="border-rose-300">
           <Link to="/dashboard/streamers">
             <Video className="ms-2 h-4 w-4" />
             محرّر البطاقات
@@ -258,8 +258,8 @@ const StreamerApplicationsPage = () => {
                   </p>
                 </div>
               </div>
-              <div className="rounded-xl border border-violet-200/80 bg-violet-50/40 p-4">
-                <p className="mb-3 text-xs font-display font-semibold text-violet-800">
+              <div className="rounded-xl border border-rose-200/80 bg-rose-50/40 p-4">
+                <p className="mb-3 text-xs font-display font-semibold text-rose-800">
                   {selected.status === "pending"
                     ? "تعديل بيانات البطاقة قبل القبول"
                     : "تعديل بطاقة صانع المحتوى على الموقع"}

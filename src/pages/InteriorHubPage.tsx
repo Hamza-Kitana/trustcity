@@ -64,7 +64,7 @@ const InteriorHubPage = () => {
       <Navbar />
       <InstitutionHero
         badgeEn="MINISTRY OF INTERIOR"
-        alt="وزارة الداخلية — Infinite City"
+        alt="وزارة الداخلية — TRUST CFW"
         title={
           <>
             <span className="text-gradient-neon">وزارة</span>{" "}

@@ -15,12 +15,12 @@ const Footer = ({ forceLight = false }: FooterProps) => {
   const content = useFooterContent();
   const brandTitleClass = forceLight ? "text-slate-900" : "text-foreground";
   const mutedTextClass = forceLight ? "text-slate-700" : "text-muted-foreground";
-  const headingClass = forceLight ? "text-violet-700" : "text-primary";
-  const linkClass = forceLight ? "text-slate-700 transition-colors hover:text-violet-700" : "text-muted-foreground transition-colors hover:text-primary";
+  const headingClass = forceLight ? "text-rose-700" : "text-primary";
+  const linkClass = forceLight ? "text-slate-700 transition-colors hover:text-rose-700" : "text-muted-foreground transition-colors hover:text-primary";
   const copyrightClass = forceLight ? "text-slate-900" : "text-foreground/95";
   const dividerClass = forceLight ? "text-slate-400" : "text-muted-foreground/45";
   const developerLinkClass = forceLight
-    ? "font-latin-display font-medium text-violet-700 underline-offset-2 transition-colors hover:text-violet-800 hover:underline"
+    ? "font-latin-display font-medium text-rose-700 underline-offset-2 transition-colors hover:text-rose-800 hover:underline"
     : "font-latin-display font-medium text-primary underline-offset-2 transition-colors hover:text-primary/85 hover:underline";
 
   return (
@@ -28,7 +28,7 @@ const Footer = ({ forceLight = false }: FooterProps) => {
       dir="rtl"
       className={
         forceLight
-          ? "relative border-t border-violet-200 bg-gradient-to-b from-[#f8f3fc] via-[#faf7fd] to-[#fcfaff] pt-20 text-slate-900"
+          ? "relative border-t border-rose-200 bg-gradient-to-b from-[#fff4f5] via-[#fff8f8] to-[#fffafb] pt-20 text-slate-900"
           : "relative border-t border-primary/25 bg-gradient-to-b from-background via-background to-muted/20 pt-20"
       }
     >
@@ -40,15 +40,15 @@ const Footer = ({ forceLight = false }: FooterProps) => {
             <div className="flex items-center gap-3">
               <Link to="/" className="group inline-block shrink-0 leading-none" aria-label="العودة للرئيسية">
                 <img
-                  src="/INF_LOGO.png"
-                  alt="Infinite City Logo"
+                  src="/trustLogo.png"
+                  alt="TRUST CFW Logo"
                   className="h-10 w-10 object-contain drop-shadow-[0_0_22px_hsl(var(--primary)/0.95)]"
                   loading="lazy"
                 />
               </Link>
               <div className="leading-tight">
-                <div className={`font-latin-display text-base font-bold tracking-widest ${brandTitleClass}`}>INFINITE</div>
-                <div className="-mt-1 font-latin-display text-[10px] tracking-[0.3em] text-primary">C I T Y</div>
+                <div className={`font-latin-display text-base font-bold tracking-widest ${brandTitleClass}`}>TRUST</div>
+                <div className="-mt-1 font-latin-display text-[10px] tracking-[0.3em] text-primary">C F W</div>
               </div>
             </div>
             <p className={`mt-4 max-w-sm text-sm leading-relaxed ${mutedTextClass}`}>
@@ -98,10 +98,10 @@ const Footer = ({ forceLight = false }: FooterProps) => {
           </div>
         </div>
 
-        <div className={`mx-auto mt-12 max-w-6xl px-2 pb-6 pt-8 ${forceLight ? "border-t border-violet-200" : "border-t border-primary/15"}`}>
+        <div className={`mx-auto mt-12 max-w-6xl px-2 pb-6 pt-8 ${forceLight ? "border-t border-rose-200" : "border-t border-primary/15"}`}>
           <div className={`flex flex-wrap items-center justify-center gap-x-2 gap-y-1.5 text-center text-[11px] leading-relaxed sm:gap-x-3 sm:text-xs ${mutedTextClass}`}>
             <span className={`font-display font-semibold ${copyrightClass}`}>
-              © {new Date().getFullYear()} Infinite City
+              © {new Date().getFullYear()} TRUST CFW
             </span>
             <span className={`select-none ${dividerClass}`} aria-hidden>
               ·

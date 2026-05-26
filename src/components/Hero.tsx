@@ -1,5 +1,4 @@
 import { motion, useReducedMotion } from "framer-motion";
-import ShapeBlur from "@/components/ShapeBlur";
 import { getYoutubeEmbedUrl, useHeroBackgroundVideo } from "@/contexts/HeroBackgroundVideoContext";
 
 const Hero = () => {
@@ -19,7 +18,7 @@ const Hero = () => {
           <div className="absolute inset-0 overflow-hidden">
             <iframe
               ref={iframeRef}
-              title="Infinite City Background Video"
+              title="TRUST CFW Background Video"
               src={getYoutubeEmbedUrl()}
               loading="eager"
               className="absolute left-1/2 top-1/2 h-[100svh] w-[177.78svh] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 pointer-events-none md:inset-0 md:h-full md:w-full md:translate-x-0 md:translate-y-0 md:scale-[1.28]"
@@ -45,35 +44,9 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="relative isolate mx-auto mb-3 flex h-36 w-44 items-center justify-center sm:mb-4 sm:h-52 sm:w-64"
         >
-          {!reduceMotion ? (
-            <div
-              className="absolute inset-[-24%] z-0 opacity-95 pointer-events-none"
-              style={{
-                WebkitMaskImage: "url('/INF_LOGO.png')",
-                maskImage: "url('/INF_LOGO.png')",
-                WebkitMaskRepeat: "no-repeat",
-                maskRepeat: "no-repeat",
-                WebkitMaskPosition: "center",
-                maskPosition: "center",
-                WebkitMaskSize: "contain",
-                maskSize: "contain",
-              }}
-            >
-              <ShapeBlur
-                variation={1}
-                pixelRatioProp={window.devicePixelRatio || 1}
-                shapeSize={1.2}
-                roundness={0.5}
-                borderSize={0.06}
-                circleSize={0.35}
-                circleEdge={0.8}
-                color={[0.72, 0.36, 1]}
-              />
-            </div>
-          ) : null}
           <motion.img
-            src="/INF_LOGO.png"
-            alt="Infinite City Logo"
+            src="/trustLogo.png"
+            alt="TRUST CFW Logo"
             className="relative z-10 h-32 w-32 select-none object-contain sm:h-48 sm:w-48"
             loading="eager"
             animate={
@@ -134,7 +107,7 @@ const Hero = () => {
             }
             transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
           >
-            INFINITE
+            TRUST
           </motion.span>
           <motion.span
             className="block text-gradient-neon mt-2 animate-flicker font-latin-display"
@@ -151,7 +124,7 @@ const Hero = () => {
             }
             transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
           >
-            CITY
+            CFW
           </motion.span>
         </motion.h1>
 
@@ -161,7 +134,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mx-auto mt-2 max-w-2xl px-1 font-body text-sm leading-snug text-muted-foreground sm:mt-4 sm:text-lg sm:leading-relaxed md:text-xl"
         >
-          أهلا وسهلا بكم في مدينة إنفنتي، حيث تبدأ رحلتكم وتصنعون قصصكم بكل حرية ضمن أجواء واقعية مليئة بالتفاعل والمتعة.
+          أهلا وسهلا بكم في TRUST CFW، حيث تبدأ رحلتكم وتصنعون قصصكم بكل حرية ضمن أجواء واقعية مليئة بالتفاعل والمتعة.
         </motion.p>
 
         <motion.div
@@ -171,7 +144,7 @@ const Hero = () => {
           className="mx-auto mt-4 max-w-[min(100%,52rem)] px-2 pb-2 pt-1 text-center sm:mt-6 md:mt-8"
         >
           <p className="flex flex-nowrap items-center justify-center gap-x-1.5 overflow-x-auto whitespace-nowrap px-0.5 py-0.5 font-body text-[11px] leading-snug text-foreground/85 [scrollbar-width:none] sm:gap-x-2 sm:text-xs [&::-webkit-scrollbar]:hidden">
-            <span className="font-latin-display font-semibold text-foreground">© 2026 Infinite City</span>
+            <span className="font-latin-display font-semibold text-foreground">© 2026 TRUST CFW</span>
             <span className="select-none text-muted-foreground/55" aria-hidden>
               ·
             </span>
@@ -179,7 +152,7 @@ const Hero = () => {
             <span className="select-none text-muted-foreground/55" aria-hidden>
               ·
             </span>
-            <span className="tracking-wide text-foreground/88">صُنع بعناية لمجتمع إنفينيتي سيتي</span>
+            <span className="tracking-wide text-foreground/88">صُنع بعناية لمجتمع TRUST CFW</span>
             <span className="select-none text-muted-foreground/55" aria-hidden>
               ·
             </span>

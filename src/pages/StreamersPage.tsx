@@ -38,7 +38,7 @@ const StreamersPage = () => {
       <main className="pb-20">
         <section className="relative h-[46vh] min-h-[300px] max-h-[520px] overflow-hidden">
           <img
-            src="/INF-CONECT-LOGO.gif"
+            src="/trustLogo.png"
             alt="صورة تعبر عن صناع المحتوى"
             className="absolute inset-0 h-full w-full object-cover"
             onError={(event) => {

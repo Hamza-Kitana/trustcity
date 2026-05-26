@@ -56,7 +56,7 @@ const STATUS_CLASSES: Record<TicketStatus, string> = {
   in_review:
     "border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-800/55 dark:bg-amber-950/45 dark:text-amber-200",
   waiting:
-    "border-violet-200 bg-violet-50 text-violet-800 dark:border-violet-600/50 dark:bg-violet-950/40 dark:text-violet-200",
+    "border-rose-200 bg-rose-50 text-rose-800 dark:border-rose-600/50 dark:bg-rose-950/40 dark:text-rose-200",
   closed:
     "border-slate-300 bg-slate-100 text-slate-800 dark:border-slate-600 dark:bg-slate-800/90 dark:text-slate-200",
 };
@@ -345,7 +345,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
 
   if (visibleTicketTypes.length === 0) {
     return (
-      <div className="rounded-xl border border-violet-200 bg-white/95 p-4 text-right text-sm text-slate-600 dark:border-slate-600 dark:bg-slate-900/90 dark:text-slate-300">
+      <div className="rounded-xl border border-rose-200 bg-white/95 p-4 text-right text-sm text-slate-600 dark:border-slate-600 dark:bg-slate-900/90 dark:text-slate-300">
         لا تملك صلاحية على أي نوع تكت حالياً.
       </div>
     );
@@ -362,9 +362,9 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
     <section className="mx-auto max-w-6xl space-y-6">
       <div
         className={cn(
-          "rounded-2xl border border-violet-200 bg-gradient-to-b p-5 text-right shadow-[0_18px_44px_-30px_rgba(54,22,79,0.45)]",
+          "rounded-2xl border border-rose-200 bg-gradient-to-b p-5 text-right shadow-[0_18px_44px_-30px_rgba(127,29,29,0.45)]",
           (embeddedGangSlug ? getTicketTypeBySlug(embeddedGangSlug)?.accent : activeType?.accent) ??
-            "from-white to-violet-50",
+            "from-white to-rose-50",
           "dark:border-slate-600 dark:from-slate-900 dark:to-slate-950 dark:shadow-[0_18px_44px_-30px_rgba(0,0,0,0.5)]",
         )}
       >
@@ -381,7 +381,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
                   : "جدول تكتات احترافي مع فلترة ونافذة شات للرد على الزبون."}
             </p>
             {isSuperAdmin && !storeOrdersOnly && !embeddedMode ? (
-              <div className="mt-3 inline-flex overflow-hidden rounded-lg border border-violet-300 bg-white text-xs dark:border-slate-600 dark:bg-slate-800">
+              <div className="mt-3 inline-flex overflow-hidden rounded-lg border border-rose-300 bg-white text-xs dark:border-slate-600 dark:bg-slate-800">
                 <button
                   type="button"
                   className={cn(
@@ -395,7 +395,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
                 <button
                   type="button"
                   className={cn(
-                    "border-r border-violet-200 px-3 py-1.5 dark:border-slate-600",
+                    "border-r border-rose-200 px-3 py-1.5 dark:border-slate-600",
                     retentionHours === 72 ? "bg-[#36164f] text-white" : "text-slate-700 dark:text-slate-300",
                   )}
                   onClick={() => handleRetentionChange(72)}
@@ -415,7 +415,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
           <div className="relative">
             <button
               type="button"
-              className="relative inline-flex items-center gap-1 rounded-full border border-violet-300 bg-white/90 px-3 py-1 text-xs text-violet-700 hover:bg-white dark:border-slate-600 dark:bg-slate-800/95 dark:text-violet-200 dark:hover:bg-slate-800"
+              className="relative inline-flex items-center gap-1 rounded-full border border-rose-300 bg-white/90 px-3 py-1 text-xs text-rose-700 hover:bg-white dark:border-slate-600 dark:bg-slate-800/95 dark:text-rose-200 dark:hover:bg-slate-800"
               onClick={() => setNotificationsOpen((v) => !v)}
             >
               <BellRing className="h-3.5 w-3.5" />
@@ -427,8 +427,8 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
               ) : null}
             </button>
             {notificationsOpen ? (
-              <div className="absolute left-0 z-20 mt-2 w-80 overflow-hidden rounded-xl border border-violet-200 bg-white shadow-xl dark:border-slate-600 dark:bg-slate-900 dark:shadow-black/40">
-                <div className="border-b border-violet-100 px-3 py-2 text-right text-xs text-slate-600 dark:border-slate-700 dark:text-slate-400">
+              <div className="absolute left-0 z-20 mt-2 w-80 overflow-hidden rounded-xl border border-rose-200 bg-white shadow-xl dark:border-slate-600 dark:bg-slate-900 dark:shadow-black/40">
+                <div className="border-b border-rose-100 px-3 py-2 text-right text-xs text-slate-600 dark:border-slate-700 dark:text-slate-400">
                   آخر الإشعارات
                 </div>
                 <div className="max-h-72 overflow-y-auto">
@@ -439,8 +439,8 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
                         type="button"
                         onClick={() => openFromNotification(n.id, n.typeSlug, n.ticketId)}
                         className={cn(
-                          "w-full border-b border-violet-100 px-3 py-2 text-right hover:bg-violet-50 dark:border-slate-800 dark:hover:bg-slate-800/80",
-                          n.unread && "bg-violet-50/60 dark:bg-slate-800/70",
+                          "w-full border-b border-rose-100 px-3 py-2 text-right hover:bg-rose-50 dark:border-slate-800 dark:hover:bg-slate-800/80",
+                          n.unread && "bg-rose-50/60 dark:bg-slate-800/70",
                         )}
                       >
                         <p className="text-sm text-slate-800 dark:text-slate-100">{n.message}</p>
@@ -470,7 +470,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
               asChild
               variant="outline"
               className={cn(
-                "h-12 justify-center rounded-xl border-violet-300 bg-white text-sm text-violet-800 hover:bg-violet-50 hover:text-violet-900 dark:border-slate-600 dark:bg-slate-800 dark:text-violet-200 dark:hover:bg-slate-700 dark:hover:text-violet-100",
+                "h-12 justify-center rounded-xl border-rose-300 bg-white text-sm text-rose-800 hover:bg-rose-50 hover:text-rose-900 dark:border-slate-600 dark:bg-slate-800 dark:text-rose-200 dark:hover:bg-slate-700 dark:hover:text-rose-100",
                 effectiveTypeRole === item.role &&
                   "border-[#36164f] bg-[#36164f] text-white hover:bg-[#2f1344] hover:text-white dark:border-[#36164f]",
               )}
@@ -489,12 +489,12 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
         </div>
       ) : null}
 
-      <div className="rounded-2xl border border-violet-200 bg-white/95 p-4 shadow-[0_16px_36px_-24px_rgba(54,22,79,0.35)] dark:border-slate-700 dark:bg-slate-900/95 dark:shadow-[0_16px_36px_-24px_rgba(0,0,0,0.45)]">
+      <div className="rounded-2xl border border-rose-200 bg-white/95 p-4 shadow-[0_16px_36px_-24px_rgba(54,22,79,0.35)] dark:border-slate-700 dark:bg-slate-900/95 dark:shadow-[0_16px_36px_-24px_rgba(0,0,0,0.45)]">
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <p className="font-display text-sm text-slate-700 dark:text-slate-300">
             {effectiveTypeLabel} — عدد التكتات: {visibleTickets.length}
           </p>
-          <div className="inline-flex overflow-hidden rounded-lg border border-violet-200 bg-white text-xs dark:border-slate-600 dark:bg-slate-800">
+          <div className="inline-flex overflow-hidden rounded-lg border border-rose-200 bg-white text-xs dark:border-slate-600 dark:bg-slate-800">
             <button
               type="button"
               className={cn(
@@ -508,7 +508,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
             <button
               type="button"
               className={cn(
-                "border-r border-violet-200 px-2.5 py-1.5 dark:border-slate-600",
+                "border-r border-rose-200 px-2.5 py-1.5 dark:border-slate-600",
                 statusFilter === "in_review"
                   ? "bg-amber-100 text-amber-900 dark:bg-amber-950/55 dark:text-amber-100"
                   : "text-slate-700 dark:text-slate-300",
@@ -520,9 +520,9 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
             <button
               type="button"
               className={cn(
-                "border-r border-violet-200 px-2.5 py-1.5 dark:border-slate-600",
+                "border-r border-rose-200 px-2.5 py-1.5 dark:border-slate-600",
                 statusFilter === "waiting"
-                  ? "bg-violet-100 text-violet-900 dark:bg-violet-950/50 dark:text-violet-100"
+                  ? "bg-rose-100 text-rose-900 dark:bg-rose-950/50 dark:text-rose-100"
                   : "text-slate-700 dark:text-slate-300",
               )}
               onClick={() => setStatusFilter("waiting")}
@@ -532,7 +532,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
             <button
               type="button"
               className={cn(
-                "border-r border-violet-200 px-2.5 py-1.5 dark:border-slate-600",
+                "border-r border-rose-200 px-2.5 py-1.5 dark:border-slate-600",
                 statusFilter === "closed"
                   ? "bg-slate-200 text-slate-900 dark:bg-slate-700 dark:text-slate-100"
                   : "text-slate-700 dark:text-slate-300",
@@ -545,9 +545,9 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
         </div>
 
         {visibleTickets.length > 0 ? (
-          <div className="overflow-hidden rounded-xl border border-violet-200 dark:border-slate-700">
+          <div className="overflow-hidden rounded-xl border border-rose-200 dark:border-slate-700">
             <table className="w-full text-right text-sm">
-              <thead className="bg-violet-50/70 text-slate-700 dark:bg-slate-800/90 dark:text-slate-200">
+              <thead className="bg-rose-50/70 text-slate-700 dark:bg-slate-800/90 dark:text-slate-200">
                 <tr>
                   <th className="px-3 py-2 font-medium">الموضوع</th>
                   {embeddedGangSlug ? <th className="px-3 py-2 font-medium">العصابة المقترحة</th> : null}
@@ -566,7 +566,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
                   return (
                     <tr
                       key={ticket.id}
-                      className="cursor-pointer border-t border-violet-100 bg-white hover:bg-violet-50/45 dark:border-slate-700 dark:bg-slate-900/40 dark:hover:bg-slate-800/70"
+                      className="cursor-pointer border-t border-rose-100 bg-white hover:bg-rose-50/45 dark:border-slate-700 dark:bg-slate-900/40 dark:hover:bg-slate-800/70"
                       onClick={() => {
                         setSelectedTicketId(ticket.id);
                         setChatOpen(true);
@@ -604,7 +604,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
             </table>
           </div>
         ) : (
-          <p className="rounded-xl border border-violet-200 bg-violet-50/40 p-3 text-right text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-300">
+          <p className="rounded-xl border border-rose-200 bg-rose-50/40 p-3 text-right text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-300">
             لا توجد تكتات في هذا الفلتر حالياً.
           </p>
         )}
@@ -637,7 +637,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
 
           {selectedTicket ? (
             <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden px-4 sm:px-6">
-              <div className="shrink-0 rounded-xl border border-violet-200 bg-white/90 p-3 dark:border-slate-600 dark:bg-slate-800/90">
+              <div className="shrink-0 rounded-xl border border-rose-200 bg-white/90 p-3 dark:border-slate-600 dark:bg-slate-800/90">
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-sm text-slate-700 dark:text-slate-300">
                     الزبون:{" "}
@@ -672,7 +672,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
                   <Button
                     type="button"
                     variant="outline"
-                    className="border-violet-200 bg-violet-50 text-violet-800 hover:bg-violet-100 dark:border-violet-600/50 dark:bg-violet-950/35 dark:text-violet-200 dark:hover:bg-violet-950/55"
+                    className="border-rose-200 bg-rose-50 text-rose-800 hover:bg-rose-100 dark:border-rose-600/50 dark:bg-rose-950/35 dark:text-rose-200 dark:hover:bg-rose-950/55"
                     onClick={() => handleStatusChange(selectedTicket.id, "waiting")}
                   >
                     انتظار
@@ -691,7 +691,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
 
               <div
                 ref={chatScrollRef}
-                className="min-h-0 flex-1 space-y-2 overflow-y-auto overscroll-contain rounded-xl border border-violet-200 bg-violet-50/20 p-3 dark:border-slate-600 dark:bg-slate-950/50"
+                className="min-h-0 flex-1 space-y-2 overflow-y-auto overscroll-contain rounded-xl border border-rose-200 bg-rose-50/20 p-3 dark:border-slate-600 dark:bg-slate-950/50"
               >
                 {selectedTicket.messages.map((msg) => {
                   const mine = msg.author === (user?.username ?? "");
@@ -701,11 +701,11 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
                         className={cn(
                           "max-w-[85%] rounded-xl border px-3 py-2 text-right",
                           mine
-                            ? "border-violet-300 bg-violet-100/70 text-slate-900 dark:border-violet-600 dark:bg-violet-950/45 dark:text-slate-100"
-                            : "border-violet-200 bg-white text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100",
+                            ? "border-rose-300 bg-rose-100/70 text-slate-900 dark:border-rose-600 dark:bg-rose-950/45 dark:text-slate-100"
+                            : "border-rose-200 bg-white text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100",
                         )}
                       >
-                        <p className="text-xs font-medium text-violet-800 dark:text-violet-300">{msg.author}</p>
+                        <p className="text-xs font-medium text-rose-800 dark:text-rose-300">{msg.author}</p>
                         <p className="mt-1 whitespace-pre-wrap text-sm">{msg.body}</p>
                         {msg.attachments?.length ? (
                           <div className="mt-2 space-y-2">
@@ -739,7 +739,7 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
                       handleSendMessage();
                     }
                   }}
-                  className="min-h-[80px] border-violet-200 bg-white text-slate-900 placeholder:text-slate-400 dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500"
+                  className="min-h-[80px] border-rose-200 bg-white text-slate-900 placeholder:text-slate-400 dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500"
                   placeholder="اكتب ردك للزبون..."
                 />
                 <TicketAttachmentPicker value={messageAttachment} onChange={setMessageAttachment} variant="admin" />
@@ -747,11 +747,11 @@ const TicketsManagerPage = ({ storeOrdersOnly = false, embeddedGangSlug }: Ticke
             </div>
           ) : null}
 
-          <DialogFooter className="shrink-0 gap-2 border-t border-violet-100 bg-white px-4 py-3 dark:border-slate-700 dark:bg-slate-900 sm:justify-start sm:px-6">
+          <DialogFooter className="shrink-0 gap-2 border-t border-rose-100 bg-white px-4 py-3 dark:border-slate-700 dark:bg-slate-900 sm:justify-start sm:px-6">
             <Button
               type="button"
               variant="outline"
-              className="border-violet-200 bg-white text-violet-800 hover:bg-violet-50 dark:border-slate-600 dark:bg-slate-800 dark:text-violet-200 dark:hover:bg-slate-700"
+              className="border-rose-200 bg-white text-rose-800 hover:bg-rose-50 dark:border-slate-600 dark:bg-slate-800 dark:text-rose-200 dark:hover:bg-slate-700"
               onClick={() => setChatOpen(false)}
             >
               إغلاق

@@ -330,7 +330,7 @@ const LawsPage = () => {
 
       <InstitutionHero
         badgeEn="LAWS & CONSTITUTION"
-        alt="دستور المدينة — Infinite City"
+        alt="دستور المدينة — TRUST CFW"
         title={
           <>
             صفحة <span className="text-gradient-neon">دستور المدينة</span>

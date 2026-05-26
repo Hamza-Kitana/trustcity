@@ -141,9 +141,9 @@ const DiscordCallbackPage = () => {
         {status === "loading" ? (
           <p className="text-sm text-slate-600">{message}</p>
         ) : (
-          <div className="space-y-4 rounded-2xl border border-violet-200 bg-white p-6 shadow-lg">
+          <div className="space-y-4 rounded-2xl border border-rose-200 bg-white p-6 shadow-lg">
             <p className="text-sm text-rose-700">{message}</p>
-            <Button type="button" className="bg-violet-600 text-white hover:bg-violet-700" onClick={() => navigate("/", { replace: true })}>
+            <Button type="button" className="bg-rose-600 text-white hover:bg-rose-700" onClick={() => navigate("/", { replace: true })}>
               العودة للرئيسية
             </Button>
           </div>

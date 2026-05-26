@@ -16,9 +16,9 @@ type Props = {
 export function QuizTabPanel({ quizDraft, onAdd, onEdit, onDelete, onSave, saving }: Props) {
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap items-start justify-between gap-3 rounded-2xl border border-violet-200/80 bg-gradient-to-l from-violet-50 via-white to-fuchsia-50/40 p-4 dark:border-violet-800/50 dark:from-violet-950/40 dark:via-slate-900 dark:to-fuchsia-950/20">
+      <div className="flex flex-wrap items-start justify-between gap-3 rounded-2xl border border-rose-200/80 bg-gradient-to-l from-rose-50 via-white to-red-50/40 p-4 dark:border-rose-800/50 dark:from-rose-950/40 dark:via-slate-900 dark:to-red-950/20">
         <div className="flex items-start gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md shadow-violet-500/30">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-600 text-white shadow-md shadow-rose-500/30">
             <Sparkles className="h-5 w-5" />
           </span>
           <div>
@@ -32,7 +32,7 @@ export function QuizTabPanel({ quizDraft, onAdd, onEdit, onDelete, onSave, savin
           type="button"
           size="sm"
           onClick={onAdd}
-          className="gap-1.5 rounded-full bg-violet-600 text-white shadow-md hover:bg-violet-700"
+          className="gap-1.5 rounded-full bg-rose-600 text-white shadow-md hover:bg-rose-700"
         >
           <Plus className="h-4 w-4" />
           إضافة سؤال
@@ -40,16 +40,16 @@ export function QuizTabPanel({ quizDraft, onAdd, onEdit, onDelete, onSave, savin
       </div>
 
       {quizDraft.length === 0 ? (
-        <Card className="border-dashed border-violet-200 bg-violet-50/30 dark:border-violet-800 dark:bg-violet-950/20">
+        <Card className="border-dashed border-rose-200 bg-rose-50/30 dark:border-rose-800 dark:bg-rose-950/20">
           <CardContent className="flex flex-col items-center gap-3 py-14 text-center">
-            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-violet-700 dark:bg-violet-950/60 dark:text-violet-300">
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-100 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300">
               <HelpCircle className="h-7 w-7" />
             </span>
             <p className="font-display text-sm font-semibold text-slate-800 dark:text-slate-100">لا توجد أسئلة بعد</p>
             <p className="max-w-xs text-xs text-slate-500 dark:text-slate-400">
               اضغط «إضافة سؤال» — يُحفظ السؤال فور تأكيده في النافذة.
             </p>
-            <Button type="button" size="sm" onClick={onAdd} className="mt-1 gap-1.5 bg-violet-600 text-white hover:bg-violet-700">
+            <Button type="button" size="sm" onClick={onAdd} className="mt-1 gap-1.5 bg-rose-600 text-white hover:bg-rose-700">
               <Plus className="h-4 w-4" />
               إضافة سؤال
             </Button>
@@ -66,7 +66,7 @@ export function QuizTabPanel({ quizDraft, onAdd, onEdit, onDelete, onSave, savin
               >
                 <CardContent className="p-0">
                   <div className="flex flex-wrap items-stretch gap-0">
-                    <div className="flex w-12 shrink-0 items-center justify-center bg-violet-600 font-display text-sm font-bold text-white">
+                    <div className="flex w-12 shrink-0 items-center justify-center bg-rose-600 font-display text-sm font-bold text-white">
                       {index + 1}
                     </div>
                     <div className="min-w-0 flex-1 space-y-3 p-4">
@@ -130,7 +130,7 @@ export function QuizTabPanel({ quizDraft, onAdd, onEdit, onDelete, onSave, savin
           type="button"
           onClick={onSave}
           disabled={saving}
-          className="gap-2 rounded-xl bg-gradient-to-l from-violet-700 to-violet-600 px-6 text-white shadow-md hover:from-violet-800 hover:to-violet-700"
+          className="gap-2 rounded-xl bg-gradient-to-l from-rose-700 to-rose-600 px-6 text-white shadow-md hover:from-rose-800 hover:to-rose-700"
         >
           <Save className="h-4 w-4" />
           {saving ? "جاري الحفظ…" : "حفظ الأسئلة"}

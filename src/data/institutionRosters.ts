@@ -234,9 +234,9 @@ export const fpiDepartmentRoster: InstitutionRosterData = {
     ],
   },
   members: [
-    { image: face(22), title: "الوكيل فولت", subtitle: "تحقيق ميداني — قضايا كبرى", borderColor: "#A78BFA", gradient: g("#5B21B6")(175) },
-    { image: face(33), title: "المحققة نوفا", subtitle: "تحليل أدلة وجنائي", borderColor: "#C4B5FD", gradient: g("#6D28D9")(165) },
-    { image: face(44), title: "الوكيل غراي", subtitle: "تنسيق مع الادعاء", borderColor: "#8B5CF6", gradient: g("#4C1D95")(155) },
+    { image: face(22), title: "الوكيل فولت", subtitle: "تحقيق ميداني — قضايا كبرى", borderColor: "#FB7185", gradient: g("#9F1239")(175) },
+    { image: face(33), title: "المحققة نوفا", subtitle: "تحليل أدلة وجنائي", borderColor: "#FDA4AF", gradient: g("#BE123C")(165) },
+    { image: face(44), title: "الوكيل غراي", subtitle: "تنسيق مع الادعاء", borderColor: "#FB7185", gradient: g("#881337")(155) },
   ],
 };
 
@@ -377,14 +377,14 @@ export const developerRoster: InstitutionRosterData = {
     ],
   },
   members: [
-    { image: face(16), title: "سكربت كور", subtitle: "FiveM / Lua", borderColor: "#8B5CF6", gradient: g("#6D28D9")(145) },
-    { image: face(30), title: "واجهات فنتوم", subtitle: "React / UI", borderColor: "#A78BFA", gradient: g("#5B21B6")(210) },
+    { image: face(16), title: "سكربت كور", subtitle: "FiveM / Lua", borderColor: "#FB7185", gradient: g("#BE123C")(145) },
+    { image: face(30), title: "واجهات فنتوم", subtitle: "React / UI", borderColor: "#FB7185", gradient: g("#9F1239")(210) },
     { image: face(64), title: "بنية هيفي", subtitle: "سيرفرات ومراقبة", borderColor: "#06B6D4", gradient: g("#0E7490")(180) },
-    { image: face(19), title: "باك إند رايدر", subtitle: "Node / APIs", borderColor: "#A855F7", gradient: g("#7C3AED")(165) },
-    { image: face(47), title: "ديف أوبس مايجور", subtitle: "CI / Docker", borderColor: "#C084FC", gradient: g("#6D28D9")(175) },
+    { image: face(19), title: "باك إند رايدر", subtitle: "Node / APIs", borderColor: "#FB7185", gradient: g("#9F1239")(165) },
+    { image: face(47), title: "ديف أوبس مايجور", subtitle: "CI / Docker", borderColor: "#FDA4AF", gradient: g("#BE123C")(175) },
     { image: face(22), title: "أمان شيلد", subtitle: "صلاحيات ومكافحة غش", borderColor: "#22D3EE", gradient: g("#0891B2")(155) },
     { image: face(55), title: "قواعد داتا لين", subtitle: "SQL / Redis", borderColor: "#818CF8", gradient: g("#4F46E5")(185) },
-    { image: face(9), title: "فرونت ريفولف", subtitle: "تصميم نظام وتجربة", borderColor: "#C4B5FD", gradient: g("#6D28D9")(160) },
+    { image: face(9), title: "فرونت ريفولف", subtitle: "تصميم نظام وتجربة", borderColor: "#FDA4AF", gradient: g("#BE123C")(160) },
     { image: face(65), title: "برمجيات لوكس", subtitle: "اختبار واختبار حمل", borderColor: "#67E8F9", gradient: g("#0E7490")(170) },
     { image: face(70), title: "سكربت شادو", subtitle: "أحداث وميزات موسمية", borderColor: "#D946EF", gradient: g("#86198F")(175) },
   ],

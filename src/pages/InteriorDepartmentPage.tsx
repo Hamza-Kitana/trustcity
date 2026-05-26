@@ -39,7 +39,7 @@ const DEPT_CONFIG: Record<DeptKey, DeptConfig> = {
         <span className="text-gradient-neon">الشرطة</span>
       </>
     ),
-    alt: "الشرطة — Infinite City",
+    alt: "الشرطة — TRUST CFW",
     leaderBadge: "قائد الشرطة",
     deputyBadge: "نائب القائد",
     leadershipIntro: "قائد الشرطة ونائبه، ثم ضباط وأعضاء LSPD في الشبكة أدناه.",
@@ -73,7 +73,7 @@ const DEPT_CONFIG: Record<DeptKey, DeptConfig> = {
         <span className="text-gradient-neon">الشيرف</span>
       </>
     ),
-    alt: "الشيرف — Infinite City",
+    alt: "الشيرف — TRUST CFW",
     leaderBadge: "قائد الشيرف",
     deputyBadge: "نائب الشيرف",
     leadershipIntro: "قيادة الشيرف ونائبها، ثم أعضاء وحدة المقاطعة في الشبكة أدناه.",
@@ -107,7 +107,7 @@ const DEPT_CONFIG: Record<DeptKey, DeptConfig> = {
         <span className="text-gradient-neon">CIA</span>
       </>
     ),
-    alt: "CIA — Infinite City",
+    alt: "CIA — TRUST CFW",
     leaderBadge: "مدير الاستخبارات",
     deputyBadge: "نائب المدير",
     leadershipIntro: "مدير الجهاز ونائبه، ثم فريق الاستخبارات في الشبكة أدناه.",
@@ -141,7 +141,7 @@ const DEPT_CONFIG: Record<DeptKey, DeptConfig> = {
         <span className="text-gradient-neon">المارينز</span>
       </>
     ),
-    alt: "المارينز — Infinite City",
+    alt: "المارينز — TRUST CFW",
     leaderBadge: "قائد الكتيبة",
     deputyBadge: "نائب القائد",
     leadershipIntro: "قائد المارينز ونائبه، ثم أفراد الكتيبة في الشبكة أدناه.",
@@ -175,7 +175,7 @@ const DEPT_CONFIG: Record<DeptKey, DeptConfig> = {
         <span className="text-gradient-neon">FPI</span>
       </>
     ),
-    alt: "FPI — Infinite City",
+    alt: "FPI — TRUST CFW",
     leaderBadge: "قائد FPI",
     deputyBadge: "نائب قائد FPI",
     leadershipIntro: "قيادة وحدة FPI ونائبها، ثم الوكلاء والمحققون في الشبكة أدناه.",

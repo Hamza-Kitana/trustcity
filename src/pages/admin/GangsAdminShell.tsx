@@ -12,9 +12,9 @@ const GangsAdminShell = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-violet-200/80 pb-4 dark:border-violet-800/60">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-rose-200/80 pb-4 dark:border-rose-800/60">
         <div className="text-right">
-          <p className="font-display text-[11px] tracking-[0.28em] text-violet-600 dark:text-violet-400">GANG MANAGER</p>
+          <p className="font-display text-[11px] tracking-[0.28em] text-rose-600 dark:text-rose-400">GANG MANAGER</p>
           <h1 className="font-display text-2xl font-bold text-slate-900 dark:text-slate-50">مدير العصابات</h1>
           <p className="mt-1 max-w-xl text-sm text-slate-600 dark:text-slate-400">
             إدارة بطاقات العصابات ومراجعة طلبات فتح العصابة الجديدة.
@@ -28,8 +28,8 @@ const GangsAdminShell = () => {
               cn(
                 "inline-flex items-center gap-2 rounded-xl px-4 py-2.5 font-display text-sm transition",
                 isActive && !onSub
-                  ? "bg-violet-600 text-white shadow-sm"
-                  : "border border-violet-200 bg-white text-violet-800 hover:bg-violet-50 dark:border-violet-700 dark:bg-slate-900 dark:text-violet-200",
+                  ? "bg-rose-600 text-white shadow-sm"
+                  : "border border-rose-200 bg-white text-rose-800 hover:bg-rose-50 dark:border-rose-700 dark:bg-slate-900 dark:text-rose-200",
               )
             }
           >
@@ -42,8 +42,8 @@ const GangsAdminShell = () => {
               cn(
                 "inline-flex items-center gap-2 rounded-xl px-4 py-2.5 font-display text-sm transition",
                 isActive
-                  ? "bg-violet-600 text-white shadow-sm"
-                  : "border border-violet-200 bg-white text-violet-800 hover:bg-violet-50 dark:border-violet-700 dark:bg-slate-900 dark:text-violet-200",
+                  ? "bg-rose-600 text-white shadow-sm"
+                  : "border border-rose-200 bg-white text-rose-800 hover:bg-rose-50 dark:border-rose-700 dark:bg-slate-900 dark:text-rose-200",
               )
             }
           >

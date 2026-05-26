@@ -31,7 +31,7 @@ export function InstitutionClosedBanner({
     >
       <div className="relative overflow-hidden rounded-2xl border border-rose-500/40 bg-gradient-to-l from-rose-950/80 via-rose-900/55 to-rose-950/80 p-5 text-right shadow-[0_18px_44px_-22px_rgba(244,63,94,0.55)] md:p-6">
         <div className="pointer-events-none absolute -left-12 -top-12 h-44 w-44 rounded-full bg-rose-500/15 blur-3xl" />
-        <div className="pointer-events-none absolute -right-10 -bottom-10 h-36 w-36 rounded-full bg-fuchsia-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute -right-10 -bottom-10 h-36 w-36 rounded-full bg-red-500/15 blur-3xl" />
         <div className="relative flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:gap-5">
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-rose-500/15 text-rose-300 ring-1 ring-rose-400/40">
             <Lock className="h-6 w-6" aria-hidden />

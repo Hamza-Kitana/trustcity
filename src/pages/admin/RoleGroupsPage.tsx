@@ -205,7 +205,7 @@ const RoleGroupsPage = () => {
         </div>
         <Button
           type="button"
-          className="bg-[#36164f] font-display text-white hover:bg-[#2f1344] dark:bg-violet-700 dark:hover:bg-violet-600"
+          className="bg-[#36164f] font-display text-white hover:bg-[#2f1344] dark:bg-rose-700 dark:hover:bg-rose-600"
           onClick={openCreate}
         >
           <Plus className="ms-2 h-4 w-4" />
@@ -216,7 +216,7 @@ const RoleGroupsPage = () => {
       <div className="grid gap-4 sm:grid-cols-2">
         <div className={adminStatCard}>
           <p className="text-xs font-medium text-slate-500 dark:text-slate-400">عدد المجموعات</p>
-          <p className="mt-1 font-display text-2xl font-bold text-violet-700 dark:text-violet-300">{totalGroups}</p>
+          <p className="mt-1 font-display text-2xl font-bold text-rose-700 dark:text-rose-300">{totalGroups}</p>
         </div>
         <div className={adminStatCard}>
           <p className="text-xs font-medium text-slate-500 dark:text-slate-400">متوسط رتب لكل مجموعة</p>
@@ -229,7 +229,7 @@ const RoleGroupsPage = () => {
           بحث
         </Label>
         <div className="relative mt-1.5">
-          <Search className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-violet-500" />
+          <Search className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-rose-500" />
           <Input
             id="group-search"
             value={search}
@@ -247,14 +247,14 @@ const RoleGroupsPage = () => {
         </div>
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center gap-2 px-4 py-14 text-center text-sm text-slate-500 dark:text-slate-400">
-            <Boxes className="h-9 w-9 text-violet-400 dark:text-violet-500" />
+            <Boxes className="h-9 w-9 text-rose-400 dark:text-rose-500" />
             <p>{search.trim() ? "لا توجد نتائج مطابقة." : "لم تُنشئ مجموعات بعد."}</p>
             {!search.trim() ? (
               <Button
                 type="button"
                 size="sm"
                 variant="outline"
-                className="mt-2 border-violet-200 bg-white text-violet-700 hover:bg-violet-50 dark:border-violet-600 dark:bg-slate-800 dark:text-violet-300 dark:hover:bg-violet-950/40"
+                className="mt-2 border-rose-200 bg-white text-rose-700 hover:bg-rose-50 dark:border-rose-600 dark:bg-slate-800 dark:text-rose-300 dark:hover:bg-rose-950/40"
                 onClick={openCreate}
               >
                 <Plus className="ms-1 h-3.5 w-3.5" />
@@ -269,9 +269,9 @@ const RoleGroupsPage = () => {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="min-w-0 flex-1">
                     <p className="flex flex-wrap items-center gap-2 font-display text-base font-bold text-slate-900 dark:text-slate-50">
-                      <Layers className="h-4 w-4 text-violet-600 dark:text-violet-400" />
+                      <Layers className="h-4 w-4 text-rose-600 dark:text-rose-400" />
                       {g.name}
-                      <span className="rounded-full bg-violet-100 px-2 py-0.5 text-[10px] font-display font-medium text-violet-700 dark:bg-violet-950/60 dark:text-violet-200">
+                      <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-display font-medium text-rose-700 dark:bg-rose-950/60 dark:text-rose-200">
                         {g.roles.length} رتبة
                       </span>
                     </p>
@@ -286,7 +286,7 @@ const RoleGroupsPage = () => {
                       type="button"
                       size="sm"
                       variant="outline"
-                      className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 dark:border-violet-600 dark:bg-slate-800 dark:text-violet-300 dark:hover:bg-violet-950/40"
+                      className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 dark:border-rose-600 dark:bg-slate-800 dark:text-rose-300 dark:hover:bg-rose-950/40"
                       onClick={() => openEdit(g)}
                     >
                       <Pencil className="h-3.5 w-3.5 ms-1" />
@@ -308,7 +308,7 @@ const RoleGroupsPage = () => {
                   {g.roles.map((r) => (
                     <span
                       key={r}
-                      className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-2.5 py-0.5 text-[11px] font-display text-violet-800 dark:border-violet-600/60 dark:bg-violet-950/45 dark:text-violet-200"
+                      className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 px-2.5 py-0.5 text-[11px] font-display text-rose-800 dark:border-rose-600/60 dark:bg-rose-950/45 dark:text-rose-200"
                     >
                       {roleLabel(r)}
                     </span>
@@ -339,7 +339,7 @@ const RoleGroupsPage = () => {
         >
           <DialogHeader className="shrink-0 space-y-1.5 px-4 pb-3 pt-12 text-right sm:px-6 sm:pt-14">
             <DialogTitle className="flex items-center justify-end gap-2 font-display text-slate-900 dark:text-slate-50">
-              <Layers className="h-5 w-5 text-violet-600 dark:text-violet-400" />
+              <Layers className="h-5 w-5 text-rose-600 dark:text-rose-400" />
               {form.id ? "تعديل المجموعة" : "إنشاء مجموعة جديدة"}
             </DialogTitle>
             <DialogDescription className="text-slate-600 dark:text-slate-400">
@@ -379,7 +379,7 @@ const RoleGroupsPage = () => {
                   <p className="mt-1 text-[11px] text-slate-500 dark:text-slate-400">
                     اختار كل الرتب التي يجب أن يحصل عليها المستخدم تلقائياً. مرّر داخل كل قسم إذا طال القائمة.
                   </p>
-                  <div className="mt-2 space-y-3 rounded-xl border border-violet-200 bg-violet-50/80 p-3 dark:border-violet-700/50 dark:bg-violet-950/25">
+                  <div className="mt-2 space-y-3 rounded-xl border border-rose-200 bg-rose-50/80 p-3 dark:border-rose-700/50 dark:bg-rose-950/25">
                     <RoleSection
                       title="رتب عامة"
                       roles={BASE_ROLES.map((b) => b.value)}
@@ -398,12 +398,12 @@ const RoleGroupsPage = () => {
                       {[...form.roles].map((r) => (
                         <span
                           key={r}
-                          className="inline-flex items-center gap-1 rounded-full border border-violet-300 bg-white px-2.5 py-0.5 text-[11px] font-display text-violet-800 shadow-sm dark:border-violet-600 dark:bg-slate-800 dark:text-violet-200"
+                          className="inline-flex items-center gap-1 rounded-full border border-rose-300 bg-white px-2.5 py-0.5 text-[11px] font-display text-rose-800 shadow-sm dark:border-rose-600 dark:bg-slate-800 dark:text-rose-200"
                         >
                           {roleLabel(r)}
                           <button
                             type="button"
-                            className="rounded-full p-0.5 text-violet-700 hover:bg-violet-100 dark:text-violet-300 dark:hover:bg-violet-950/60"
+                            className="rounded-full p-0.5 text-rose-700 hover:bg-rose-100 dark:text-rose-300 dark:hover:bg-rose-950/60"
                             onClick={() => toggleRole(r)}
                             aria-label={`إزالة ${roleLabel(r)}`}
                           >
@@ -420,12 +420,12 @@ const RoleGroupsPage = () => {
               <Button
                 type="button"
                 variant="outline"
-                className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 dark:border-violet-600 dark:bg-slate-800 dark:text-violet-300 dark:hover:bg-violet-950/40"
+                className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 dark:border-rose-600 dark:bg-slate-800 dark:text-rose-300 dark:hover:bg-rose-950/40"
                 onClick={() => setEditorOpen(false)}
               >
                 إلغاء
               </Button>
-              <Button type="submit" className="bg-[#36164f] text-white hover:bg-[#2f1344] dark:bg-violet-700 dark:hover:bg-violet-600">
+              <Button type="submit" className="bg-[#36164f] text-white hover:bg-[#2f1344] dark:bg-rose-700 dark:hover:bg-rose-600">
                 <CheckCircle2 className="ms-2 h-4 w-4" />
                 {form.id ? "حفظ التعديلات" : "إنشاء المجموعة"}
               </Button>
@@ -482,7 +482,7 @@ function RoleSection({
   const allSelected = roles.every((r) => selected.has(r));
   const someSelected = roles.some((r) => selected.has(r));
   return (
-    <div className="rounded-lg border border-violet-100 bg-white p-3 dark:border-slate-600 dark:bg-slate-800/80">
+    <div className="rounded-lg border border-rose-100 bg-white p-3 dark:border-slate-600 dark:bg-slate-800/80">
       <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
         <button
           type="button"
@@ -494,7 +494,7 @@ function RoleSection({
             "rounded-full border px-2 py-0.5 text-[10px] font-display transition",
             allSelected
               ? "border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 dark:border-rose-800 dark:bg-rose-950/50 dark:text-rose-200 dark:hover:bg-rose-950/70"
-              : "border-violet-300 bg-violet-50 text-violet-700 hover:bg-violet-100 dark:border-violet-600 dark:bg-violet-950/40 dark:text-violet-200 dark:hover:bg-violet-950/55",
+              : "border-rose-300 bg-rose-50 text-rose-700 hover:bg-rose-100 dark:border-rose-600 dark:bg-rose-950/40 dark:text-rose-200 dark:hover:bg-rose-950/55",
           )}
         >
           {allSelected ? "إزالة الكل" : someSelected ? "اختيار الباقي" : "اختر الكل"}
@@ -519,8 +519,8 @@ function RoleSection({
                   className={cn(
                     "flex w-full items-center justify-between gap-2 rounded-lg border px-2.5 py-1.5 text-right text-sm transition",
                     checked
-                      ? "border-violet-300 bg-violet-50 text-violet-900 dark:border-violet-600 dark:bg-violet-950/45 dark:text-violet-100"
-                      : "border-slate-200 bg-white text-slate-700 hover:border-violet-200 hover:bg-violet-50/40 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-200 dark:hover:border-violet-600 dark:hover:bg-violet-950/25",
+                      ? "border-rose-300 bg-rose-50 text-rose-900 dark:border-rose-600 dark:bg-rose-950/45 dark:text-rose-100"
+                      : "border-slate-200 bg-white text-slate-700 hover:border-rose-200 hover:bg-rose-50/40 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-200 dark:hover:border-rose-600 dark:hover:bg-rose-950/25",
                   )}
                 >
                   <span
@@ -528,7 +528,7 @@ function RoleSection({
                     className={cn(
                       "flex h-4 w-4 shrink-0 items-center justify-center rounded border transition-colors",
                       checked
-                        ? "border-violet-600 bg-violet-600 text-white shadow-sm dark:border-violet-500 dark:bg-violet-500"
+                        ? "border-rose-600 bg-rose-600 text-white shadow-sm dark:border-rose-500 dark:bg-rose-500"
                         : "border-slate-300 bg-white dark:border-slate-500 dark:bg-slate-800",
                     )}
                   >

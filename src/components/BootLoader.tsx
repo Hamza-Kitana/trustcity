@@ -39,8 +39,8 @@ const BootLoader = ({ onComplete }: BootLoaderProps) => {
           className="mx-auto h-36 w-36 flex items-center justify-center"
         >
           <img
-            src="/INF_LOGO.png"
-            alt="Infinite City Logo"
+            src="/trustLogo.png"
+            alt="TRUST CFW Logo"
             className="h-32 w-32 object-contain drop-shadow-[0_0_30px_hsl(var(--primary)/0.95)]"
             loading="eager"
           />
@@ -52,7 +52,7 @@ const BootLoader = ({ onComplete }: BootLoaderProps) => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 font-latin-display text-4xl md:text-5xl font-bold tracking-[0.18em] text-foreground"
         >
-          INFINITE CITY
+          TRUST CFW
         </motion.h1>
 
         <motion.p

@@ -199,7 +199,7 @@ export async function buildActivityLogWordDocument(
             spacing: { after: 200 },
             children: [
               new TextRun({
-                text: "سجل النشاط — Infinite City Hub",
+                text: "سجل النشاط — TRUST CFW Hub",
                 bold: true,
                 size: 32,
                 color: BRAND_FILL,

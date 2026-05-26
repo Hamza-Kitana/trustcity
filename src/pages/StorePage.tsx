@@ -100,11 +100,11 @@ const StorePage = () => {
 
       <InstitutionHero
         badgeEn="STORE & INVESTMENT"
-        alt="متجر Infinite City"
+        alt="متجر TRUST CFW"
         title={
           <>
             <span className="text-gradient-neon">متجر</span>{" "}
-            <span className="text-foreground">Infinite City</span>
+            <span className="text-foreground">TRUST CFW</span>
           </>
         }
       />

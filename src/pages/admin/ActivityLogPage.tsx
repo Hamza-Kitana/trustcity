@@ -309,7 +309,7 @@ const ActivityLogPage = () => {
       <div className="grid gap-4 sm:grid-cols-4">
         <div className={adminStatCard}>
           <p className="text-xs font-medium text-slate-500 dark:text-slate-400">إجمالي اللوجات</p>
-          <p className="mt-1 font-display text-2xl font-bold text-violet-700 dark:text-violet-300">{totalEntries}</p>
+          <p className="mt-1 font-display text-2xl font-bold text-rose-700 dark:text-rose-300">{totalEntries}</p>
         </div>
         <div className={adminStatCard}>
           <p className="text-xs font-medium text-slate-500 dark:text-slate-400">المعروض</p>
@@ -341,12 +341,12 @@ const ActivityLogPage = () => {
       <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_2px_14px_-4px_rgba(15,23,42,0.08)] dark:border-slate-600/90 dark:bg-slate-800 dark:shadow-[0_2px_14px_-4px_rgba(0,0,0,0.35)]">
         <button
           type="button"
-          className="flex w-full items-center justify-between gap-3 border-b border-slate-200 bg-gradient-to-l from-violet-50/70 to-white px-4 py-3.5 text-right transition-colors hover:from-violet-50 hover:to-violet-50/30 dark:border-slate-600 dark:from-violet-950/40 dark:to-slate-800 dark:hover:from-violet-950/55 dark:hover:to-slate-800"
+          className="flex w-full items-center justify-between gap-3 border-b border-slate-200 bg-gradient-to-l from-rose-50/70 to-white px-4 py-3.5 text-right transition-colors hover:from-rose-50 hover:to-rose-50/30 dark:border-slate-600 dark:from-rose-950/40 dark:to-slate-800 dark:hover:from-rose-950/55 dark:hover:to-slate-800"
           onClick={() => setFiltersOpen((v) => !v)}
           aria-expanded={filtersOpen}
         >
           <div className="flex min-w-0 flex-1 items-center gap-2">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-violet-600/10 text-violet-700 dark:bg-violet-500/15 dark:text-violet-300">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-rose-600/10 text-rose-700 dark:bg-rose-500/15 dark:text-rose-300">
               <Filter className="h-4 w-4" />
             </div>
             <div className="min-w-0 text-right">
@@ -356,7 +356,7 @@ const ActivityLogPage = () => {
               </p>
             </div>
             {activeFiltersCount > 0 ? (
-              <Badge className="h-6 shrink-0 rounded-full bg-violet-600 px-2 text-[10px] text-white">
+              <Badge className="h-6 shrink-0 rounded-full bg-rose-600 px-2 text-[10px] text-white">
                 {activeFiltersCount}
               </Badge>
             ) : null}
@@ -372,7 +372,7 @@ const ActivityLogPage = () => {
               type="button"
               variant="outline"
               size="sm"
-              className="h-9 gap-1.5 border-violet-200 bg-white text-violet-700 hover:bg-violet-50 dark:border-violet-500/40 dark:bg-slate-900 dark:text-violet-200 dark:hover:bg-violet-950/50"
+              className="h-9 gap-1.5 border-rose-200 bg-white text-rose-700 hover:bg-rose-50 dark:border-rose-500/40 dark:bg-slate-900 dark:text-rose-200 dark:hover:bg-rose-950/50"
               onClick={(ev) => {
                 ev.stopPropagation();
                 void handleExportWord();
@@ -411,7 +411,7 @@ const ActivityLogPage = () => {
                     نص حر (الحساب، الفعل، التفاصيل)
                   </Label>
                   <div className="relative">
-                    <Search className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-violet-500 dark:text-violet-400" />
+                    <Search className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-rose-500 dark:text-rose-400" />
                     <Input
                       id="act-search-all"
                       value={searchQuery}
@@ -427,7 +427,7 @@ const ActivityLogPage = () => {
                     تكتات — ID أو كلمة في الفعل/التفاصيل
                   </Label>
                   <div className="relative">
-                    <FileSearch className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-violet-500 dark:text-violet-400" />
+                    <FileSearch className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-rose-500 dark:text-rose-400" />
                     <Input
                       id="act-ticket-q"
                       value={ticketFilter}
@@ -442,7 +442,7 @@ const ActivityLogPage = () => {
                     <Checkbox
                       checked={onlyTicketLogs}
                       onCheckedChange={(c) => setOnlyTicketLogs(c === true)}
-                      className="border-slate-300 data-[state=checked]:bg-violet-600 data-[state=checked]:text-white"
+                      className="border-slate-300 data-[state=checked]:bg-rose-600 data-[state=checked]:text-white"
                     />
                   </label>
                 </div>
@@ -461,8 +461,8 @@ const ActivityLogPage = () => {
                     className={cn(
                       "min-h-[2.25rem] rounded-xl border px-2 py-2 text-center font-display text-xs leading-tight transition sm:min-h-[2.5rem] sm:px-3 sm:text-[13px]",
                       rangePreset === opt.value
-                        ? "border-violet-500 bg-violet-100 font-semibold text-violet-900 shadow-sm dark:border-violet-400 dark:bg-violet-950/50 dark:text-violet-100"
-                        : "border-slate-200 bg-white text-slate-600 hover:border-violet-300 hover:bg-violet-50/80 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-300 dark:hover:border-violet-500/50 dark:hover:bg-violet-950/30",
+                        ? "border-rose-500 bg-rose-100 font-semibold text-rose-900 shadow-sm dark:border-rose-400 dark:bg-rose-950/50 dark:text-rose-100"
+                        : "border-slate-200 bg-white text-slate-600 hover:border-rose-300 hover:bg-rose-50/80 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-300 dark:hover:border-rose-500/50 dark:hover:bg-rose-950/30",
                     )}
                   >
                     {opt.label}
@@ -470,10 +470,10 @@ const ActivityLogPage = () => {
                 ))}
               </div>
               {rangePreset === "custom" ? (
-                <div className="grid gap-3 rounded-xl border border-violet-200/90 bg-violet-50/50 p-4 sm:grid-cols-2 dark:border-violet-500/30 dark:bg-violet-950/25">
+                <div className="grid gap-3 rounded-xl border border-rose-200/90 bg-rose-50/50 p-4 sm:grid-cols-2 dark:border-rose-500/30 dark:bg-rose-950/25">
                   <div className="space-y-2">
                     <Label className="flex items-center justify-end gap-1.5 text-xs font-medium text-slate-700 dark:text-slate-300">
-                      <Clock4 className="h-3.5 w-3.5 text-violet-600 dark:text-violet-400" />
+                      <Clock4 className="h-3.5 w-3.5 text-rose-600 dark:text-rose-400" />
                       من
                     </Label>
                     <Input
@@ -486,7 +486,7 @@ const ActivityLogPage = () => {
                   </div>
                   <div className="space-y-2">
                     <Label className="flex items-center justify-end gap-1.5 text-xs font-medium text-slate-700 dark:text-slate-300">
-                      <Clock4 className="h-3.5 w-3.5 text-violet-600 dark:text-violet-400" />
+                      <Clock4 className="h-3.5 w-3.5 text-rose-600 dark:text-rose-400" />
                       إلى
                     </Label>
                     <Input
@@ -506,7 +506,7 @@ const ActivityLogPage = () => {
               <FilterSectionTitle icon={<Users className="h-4 w-4" />}>تصفية حسب الحساب أو نوع الفعل</FilterSectionTitle>
               <div className="grid gap-4 lg:grid-cols-2">
                 <MultiSelectFacet
-                  icon={<Users className="h-3.5 w-3.5 text-violet-600 dark:text-violet-400" />}
+                  icon={<Users className="h-3.5 w-3.5 text-rose-600 dark:text-rose-400" />}
                   label="الحساب"
                   placeholder="كل الحسابات"
                   options={uniqueActors}
@@ -516,7 +516,7 @@ const ActivityLogPage = () => {
                   emptyHint="لا توجد حسابات بعد"
                 />
                 <MultiSelectFacet
-                  icon={<ListFilter className="h-3.5 w-3.5 text-violet-600 dark:text-violet-400" />}
+                  icon={<ListFilter className="h-3.5 w-3.5 text-rose-600 dark:text-rose-400" />}
                   label="نوع الفعل"
                   placeholder="كل الأفعال"
                   options={uniqueActions}
@@ -549,7 +549,7 @@ const ActivityLogPage = () => {
                     ? [...selectedActors].map((a) => (
                         <FilterChip
                           key={`actor-${a}`}
-                          tone="violet"
+                          tone="rose"
                           onRemove={() =>
                             setSelectedActors((s) => {
                               const n = new Set(s);
@@ -643,7 +643,7 @@ const ActivityLogPage = () => {
                           return n;
                         });
                       }}
-                      className="text-right font-medium text-slate-900 hover:text-violet-700 hover:underline dark:text-slate-100 dark:hover:text-violet-300"
+                      className="text-right font-medium text-slate-900 hover:text-rose-700 hover:underline dark:text-slate-100 dark:hover:text-rose-300"
                       title="فلترة لوجات هذا المستخدم"
                     >
                       {e.actor}
@@ -658,7 +658,7 @@ const ActivityLogPage = () => {
                           return n;
                         });
                       }}
-                      className="text-right font-display text-sm font-medium text-violet-700 hover:underline dark:text-violet-300"
+                      className="text-right font-display text-sm font-medium text-rose-700 hover:underline dark:text-rose-300"
                       title="فلترة لوجات هذا الفعل"
                     >
                       {e.action}
@@ -684,8 +684,8 @@ export default ActivityLogPage;
 
 function FilterSectionTitle({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
   return (
-    <h3 className="flex items-center justify-end gap-2 border-r-4 border-violet-500 pr-3 font-display text-sm font-semibold text-slate-800 dark:border-violet-400 dark:text-slate-100">
-      <span className="text-violet-600 dark:text-violet-400">{icon}</span>
+    <h3 className="flex items-center justify-end gap-2 border-r-4 border-rose-500 pr-3 font-display text-sm font-semibold text-slate-800 dark:border-rose-400 dark:text-slate-100">
+      <span className="text-rose-600 dark:text-rose-400">{icon}</span>
       {children}
     </h3>
   );
@@ -698,11 +698,11 @@ function FilterChip({
 }: {
   children: React.ReactNode;
   onRemove: () => void;
-  tone?: "slate" | "violet" | "indigo" | "amber";
+  tone?: "slate" | "rose" | "indigo" | "amber";
 }) {
   const toneClass =
-    tone === "violet"
-      ? "border-violet-200 bg-violet-50 text-violet-800 dark:border-violet-500/40 dark:bg-violet-950/45 dark:text-violet-200"
+    tone === "rose"
+      ? "border-rose-200 bg-rose-50 text-rose-800 dark:border-rose-500/40 dark:bg-rose-950/45 dark:text-rose-200"
       : tone === "indigo"
         ? "border-indigo-200 bg-indigo-50 text-indigo-800 dark:border-indigo-500/40 dark:bg-indigo-950/45 dark:text-indigo-200"
         : tone === "amber"
@@ -772,9 +772,9 @@ function MultiSelectFacet({
             type="button"
             variant="outline"
             className={cn(
-              "flex h-10 w-full items-center justify-between gap-2 rounded-md border-slate-200 bg-white px-3 text-right text-sm font-normal text-slate-700 hover:bg-violet-50/50 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-violet-950/30",
+              "flex h-10 w-full items-center justify-between gap-2 rounded-md border-slate-200 bg-white px-3 text-right text-sm font-normal text-slate-700 hover:bg-rose-50/50 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-rose-950/30",
               selected.size > 0 &&
-                "border-violet-300 bg-violet-50 text-violet-900 dark:border-violet-500/50 dark:bg-violet-950/40 dark:text-violet-100",
+                "border-rose-300 bg-rose-50 text-rose-900 dark:border-rose-500/50 dark:bg-rose-950/40 dark:text-rose-100",
             )}
           >
             <span className="min-w-0 flex-1 truncate">{triggerLabel}</span>
@@ -784,7 +784,7 @@ function MultiSelectFacet({
         <PopoverContent
           align="end"
           dir="rtl"
-          className="w-[min(420px,90vw)] border-violet-200 bg-white p-0 text-slate-900 shadow-xl dark:border-slate-600 dark:bg-slate-900 dark:text-slate-50"
+          className="w-[min(420px,90vw)] border-rose-200 bg-white p-0 text-slate-900 shadow-xl dark:border-slate-600 dark:bg-slate-900 dark:text-slate-50"
         >
           <div className="border-b border-slate-200 p-2 dark:border-slate-700">
             <Input
@@ -810,7 +810,7 @@ function MultiSelectFacet({
                         className={cn(
                           "flex w-full items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-right text-sm transition",
                           checked
-                            ? "bg-violet-50 text-violet-900 dark:bg-violet-950/55 dark:text-violet-100"
+                            ? "bg-rose-50 text-rose-900 dark:bg-rose-950/55 dark:text-rose-100"
                             : "text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800",
                         )}
                       >
@@ -818,7 +818,7 @@ function MultiSelectFacet({
                           checked={checked}
                           onCheckedChange={() => onToggle(opt)}
                           onClick={(ev) => ev.stopPropagation()}
-                          className="border-slate-300 data-[state=checked]:bg-violet-600 data-[state=checked]:text-white dark:border-slate-500"
+                          className="border-slate-300 data-[state=checked]:bg-rose-600 data-[state=checked]:text-white dark:border-slate-500"
                         />
                         <span className="min-w-0 flex-1 truncate text-right">{opt}</span>
                       </button>

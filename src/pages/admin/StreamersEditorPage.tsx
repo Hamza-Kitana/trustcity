@@ -77,7 +77,7 @@ function SortableStreamerRow({
       style={style}
       className={cn(
         "flex items-stretch gap-2 rounded-xl border bg-white/95 p-2 text-right shadow-sm transition-shadow",
-        active ? "border-violet-400 ring-1 ring-violet-300" : "border-violet-200",
+        active ? "border-rose-400 ring-1 ring-rose-300" : "border-rose-200",
         isDragging && "z-20 opacity-90 shadow-lg",
       )}
     >
@@ -94,7 +94,7 @@ function SortableStreamerRow({
         <img
           src={entry.image}
           alt=""
-          className="h-12 w-12 shrink-0 rounded-lg border border-violet-200 object-cover"
+          className="h-12 w-12 shrink-0 rounded-lg border border-rose-200 object-cover"
         />
         <div className="min-w-0 flex-1">
           <p className="truncate font-display font-semibold text-slate-900">{entry.name}</p>
@@ -110,7 +110,7 @@ function SortableStreamerRow({
         type="button"
         variant="outline"
         size="sm"
-        className="h-9 shrink-0 border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+        className="h-9 shrink-0 border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
         onClick={onEdit}
       >
         تعديل
@@ -274,12 +274,12 @@ const StreamersEditorPage = () => {
       <div className="flex flex-col gap-4 text-right sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="flex items-center justify-end gap-2 font-display text-2xl font-bold text-slate-900">
-            <Video className="h-7 w-7 text-violet-700" />
+            <Video className="h-7 w-7 text-rose-700" />
             ستريمر منجر — صنّاع المحتوى
           </h1>
           <p className="mt-2 max-w-xl text-sm text-slate-600">
             أضف، عدّل، احذف، ورتّب البطاقات. الصور تُخزَّن في المتصفح (رفع يتحول إلى Data URL). التحديث يظهر في{" "}
-            <a href="/streamers" target="_blank" rel="noreferrer" className="text-violet-700 underline-offset-4 hover:underline">
+            <a href="/streamers" target="_blank" rel="noreferrer" className="text-rose-700 underline-offset-4 hover:underline">
               /streamers
             </a>{" "}
             فوراً.
@@ -289,7 +289,7 @@ const StreamersEditorPage = () => {
           <Button
             type="button"
             variant="outline"
-            className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+            className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
             onClick={() => setPageVisible("streamers", !visibility.pages.streamers)}
           >
             {visibility.pages.streamers ? "إخفاء صفحة الستريمرز" : "إظهار صفحة الستريمرز"}
@@ -298,7 +298,7 @@ const StreamersEditorPage = () => {
             <Button
               type="button"
               variant="outline"
-              className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+              className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
               onClick={() => {
                 const working = items.map((x) => x.id);
                 for (let targetIndex = 0; targetIndex < orderedIds.length; targetIndex += 1) {
@@ -321,14 +321,14 @@ const StreamersEditorPage = () => {
         </div>
       </div>
 
-      <div className="space-y-3 rounded-2xl border border-violet-200/80 bg-white/85 p-4 shadow-[0_18px_44px_-28px_rgba(54,22,79,0.45)]">
+      <div className="space-y-3 rounded-2xl border border-rose-200/80 bg-white/85 p-4 shadow-[0_18px_44px_-28px_rgba(127,29,29,0.45)]">
         <div className="text-right">
           <Label htmlFor="streamer-search" className="text-slate-700">بحث بالاسم أو رابط البث</Label>
           <Input
             id="streamer-search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="mt-1.5 border-violet-200 bg-violet-50/35 text-slate-900 placeholder:text-slate-400 focus-visible:ring-violet-400"
+            className="mt-1.5 border-rose-200 bg-rose-50/35 text-slate-900 placeholder:text-slate-400 focus-visible:ring-rose-400"
             placeholder="اكتب اسم الستريمر أو جزء من رابط البث..."
             autoComplete="off"
             dir="rtl"
@@ -349,7 +349,7 @@ const StreamersEditorPage = () => {
                   />
                 ))
               ) : (
-                <div className="rounded-xl border border-violet-200 bg-white/80 px-4 py-8 text-center text-sm text-slate-500">
+                <div className="rounded-xl border border-rose-200 bg-white/80 px-4 py-8 text-center text-sm text-slate-500">
                   لا توجد نتائج مطابقة للبحث.
                 </div>
               )}
@@ -363,7 +363,7 @@ const StreamersEditorPage = () => {
           dir="rtl"
           className="flex max-h-[min(90dvh,90svh)] w-[calc(100%-1rem)] max-w-4xl flex-col gap-0 overflow-hidden rounded-2xl border border-slate-200/95 bg-white p-0 shadow-[0_28px_72px_-24px_rgba(15,23,42,0.38)] dark:border-slate-600 dark:bg-slate-900 sm:w-full lg:max-w-5xl"
         >
-          <div className="shrink-0 border-b border-violet-200 bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.22),transparent_58%)] px-6 pb-4 pt-14 dark:border-slate-700 dark:bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.12),transparent_55%)] sm:px-8 sm:pt-16">
+          <div className="shrink-0 border-b border-rose-200 bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(244,63,94,0.22),transparent_58%)] px-6 pb-4 pt-14 dark:border-slate-700 dark:bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.12),transparent_55%)] sm:px-8 sm:pt-16">
             <DialogHeader className="space-y-1.5 text-right sm:text-right">
               <DialogTitle className="font-display text-xl font-bold text-slate-900 dark:text-slate-50 sm:text-2xl">
                 {editing.id ? "تعديل صانع محتوى" : "صانع محتوى جديد"}
@@ -390,29 +390,29 @@ const StreamersEditorPage = () => {
           <div className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain bg-white px-6 py-5 dark:bg-slate-900 sm:px-8">
             <EditorDialogSection
               title="بيانات البطاقة"
-              className="border-violet-200 bg-violet-50/55 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] [&>h3]:border-violet-200 [&>h3]:text-violet-700 dark:border-slate-600 dark:bg-slate-800/55 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] dark:[&>h3]:border-slate-600 dark:[&>h3]:text-violet-300"
+              className="border-rose-200 bg-rose-50/55 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] [&>h3]:border-rose-200 [&>h3]:text-rose-700 dark:border-slate-600 dark:bg-slate-800/55 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] dark:[&>h3]:border-slate-600 dark:[&>h3]:text-rose-300"
             >
               <StreamerCardEditFields
                 value={cardDraft}
                 onChange={setCardDraft}
                 inputClassName={cn(
                   editorDialogInputClass,
-                  "border-violet-200 bg-white text-slate-900 dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100",
+                  "border-rose-200 bg-white text-slate-900 dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100",
                 )}
                 textareaClassName={cn(
                   editorDialogTextareaClass,
-                  "border-violet-200 bg-white text-slate-900 dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100",
+                  "border-rose-200 bg-white text-slate-900 dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100",
                 )}
               />
             </EditorDialogSection>
           </div>
 
-          <div className="shrink-0 border-t border-violet-200 bg-white/80 px-6 py-4 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/95 sm:px-8">
+          <div className="shrink-0 border-t border-rose-200 bg-white/80 px-6 py-4 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/95 sm:px-8">
             <DialogFooter className="flex w-full flex-col-reverse gap-2 sm:flex-row sm:justify-start sm:gap-3">
               <Button
                 type="button"
                 variant="outline"
-                className="rounded-lg border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-slate-600 dark:bg-slate-800 dark:text-violet-200 dark:hover:bg-slate-700 sm:min-w-[7rem]"
+                className="rounded-lg border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-slate-600 dark:bg-slate-800 dark:text-rose-200 dark:hover:bg-slate-700 sm:min-w-[7rem]"
                 onClick={() => setEditing((prev) => ({ ...prev, hidden: !prev.hidden }))}
               >
                 {editing.hidden ? "إظهار بالموقع" : "إخفاء من الموقع"}
@@ -420,7 +420,7 @@ const StreamersEditorPage = () => {
               <Button
                 type="button"
                 variant="outline"
-                className="rounded-lg border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-slate-600 dark:bg-slate-800 dark:text-violet-200 dark:hover:bg-slate-700 sm:min-w-[7rem]"
+                className="rounded-lg border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-slate-600 dark:bg-slate-800 dark:text-rose-200 dark:hover:bg-slate-700 sm:min-w-[7rem]"
                 onClick={() => setDialogOpen(false)}
               >
                 إلغاء

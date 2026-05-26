@@ -109,7 +109,7 @@ export const TICKET_TYPE_DEFINITIONS: readonly TicketTypeDefinition[] = [
     role: "ticket_rp_complaint_manager",
     staffRoleLabel: "تكت — شكوى رول بلي",
     hint: "مخالفات أو مشاكل في الرول بلاي",
-    accent: "from-violet-100 to-purple-50",
+    accent: "from-rose-100 to-red-50",
     publicVisible: true,
   },
   {

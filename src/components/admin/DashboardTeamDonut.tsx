@@ -28,7 +28,7 @@ const CATEGORY_ORDER: {
   fill: string;
 }[] = [
   { key: "leadership", label: "إدارة عليا", fill: "hsl(45 93% 52%)" },
-  { key: "content", label: "محتوى ومحررون", fill: "hsl(272 88% 58%)" },
+  { key: "content", label: "محتوى ومحررون", fill: "hsl(350 64% 40%)" },
   { key: "commerce", label: "متجر واقتصاد", fill: "hsl(188 94% 43%)" },
   { key: "tickets", label: "تكت ودعم", fill: "hsl(38 92% 50%)" },
   { key: "institution", label: "طواقم مؤسسات", fill: "hsl(158 64% 42%)" },
@@ -168,10 +168,10 @@ function TooltipBody({
     >
       <p className="font-display font-semibold">{row.name}</p>
       <p className="mt-1 text-[11px] text-slate-600 dark:text-slate-400">
-        أعضاء في هذا المجال: <span className="font-mono font-semibold text-violet-700 dark:text-violet-300">{row.members}</span>
+        أعضاء في هذا المجال: <span className="font-mono font-semibold text-rose-700 dark:text-rose-300">{row.members}</span>
       </p>
       <p className="text-[11px] text-slate-600 dark:text-slate-400">
-        نشاط مسجّل في السجل: <span className="font-mono font-semibold text-violet-700 dark:text-violet-300">{row.activity}</span>
+        نشاط مسجّل في السجل: <span className="font-mono font-semibold text-rose-700 dark:text-rose-300">{row.activity}</span>
       </p>
     </div>
   );
@@ -189,7 +189,7 @@ export function DashboardTeamDonut({ className }: { className?: string }) {
       <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="flex items-center gap-2">
-            <UsersRound className="h-5 w-5 text-violet-600 dark:text-violet-400" aria-hidden />
+            <UsersRound className="h-5 w-5 text-rose-600 dark:text-rose-400" aria-hidden />
             <h2 className="font-display text-lg font-bold text-slate-900 dark:text-slate-50">الطاقم والتفاعل</h2>
           </div>
           <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -198,9 +198,9 @@ export function DashboardTeamDonut({ className }: { className?: string }) {
             <span className="font-medium text-slate-800 dark:text-slate-200">سجل النشاط</span> (بما في ذلك نشاط سوبر الأدمن في خانة الإدارة العليا).
           </p>
         </div>
-        <div className="rounded-xl border border-violet-200/80 bg-gradient-to-br from-violet-50 to-white px-4 py-3 text-left shadow-sm dark:border-violet-700/50 dark:from-violet-950/50 dark:to-slate-900/80">
+        <div className="rounded-xl border border-rose-200/80 bg-gradient-to-br from-rose-50 to-white px-4 py-3 text-left shadow-sm dark:border-rose-700/50 dark:from-rose-950/50 dark:to-slate-900/80">
           <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400">ملخص سريع</p>
-          <p className="mt-1 font-display text-lg font-bold tabular-nums text-violet-700 dark:text-violet-300">{totalMembers} عضواً</p>
+          <p className="mt-1 font-display text-lg font-bold tabular-nums text-rose-700 dark:text-rose-300">{totalMembers} عضواً</p>
           <p className="mt-0.5 text-[11px] text-slate-600 dark:text-slate-400">
             {totalStaffActivity} حدثاً في السجل
             {superActivity > 0 ? (
@@ -246,7 +246,7 @@ export function DashboardTeamDonut({ className }: { className?: string }) {
                     return (
                       <span className="text-[11px] leading-snug text-slate-700 dark:text-slate-300">
                         {value}{" "}
-                        <span className="font-mono text-violet-600 dark:text-violet-400">({pct}%)</span>
+                        <span className="font-mono text-rose-600 dark:text-rose-400">({pct}%)</span>
                         <span className="mr-1 block text-[10px] text-slate-500 dark:text-slate-500">
                           {m} عضو — {a} نشاط
                         </span>

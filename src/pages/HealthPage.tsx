@@ -20,7 +20,7 @@ const HealthPage = () => {
 
       <InstitutionHero
         badgeEn="MINISTRY OF HEALTH"
-        alt="وزارة الصحة — Infinite City"
+        alt="وزارة الصحة — TRUST CFW"
         title={<span className="text-gradient-neon">وزارة الصحة</span>}
       />
 

@@ -134,7 +134,7 @@ const ReflectiveCard = ({
           side="top"
           align="center"
           sideOffset={10}
-          className="z-[110] w-[min(94vw,440px)] border-violet-200 bg-[#0f0f12] p-0 text-right shadow-xl data-[state=open]:animate-in"
+          className="z-[110] w-[min(94vw,440px)] border-rose-200 bg-[#0f0f12] p-0 text-right shadow-xl data-[state=open]:animate-in"
           dir="rtl"
         >
           <div className="border-b border-white/10 px-3 py-2">
@@ -159,7 +159,7 @@ const ReflectiveCard = ({
               href={streamUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 text-[11px] font-medium text-violet-300 underline-offset-4 hover:text-white hover:underline"
+              className="inline-flex items-center gap-1 text-[11px] font-medium text-rose-300 underline-offset-4 hover:text-white hover:underline"
             >
               <ExternalLink className="h-3.5 w-3.5" aria-hidden />
               فتح على Kick
@@ -184,7 +184,7 @@ const ReflectiveCard = ({
           side="top"
           align="center"
           sideOffset={10}
-          className="z-[110] w-[min(94vw,440px)] border-violet-200 bg-[#0f0f12] p-0 text-right shadow-xl data-[state=open]:animate-in"
+          className="z-[110] w-[min(94vw,440px)] border-rose-200 bg-[#0f0f12] p-0 text-right shadow-xl data-[state=open]:animate-in"
           dir="rtl"
         >
           <div className="border-b border-white/10 px-3 py-2">
@@ -209,7 +209,7 @@ const ReflectiveCard = ({
               href={streamUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 text-[11px] font-medium text-violet-300 underline-offset-4 hover:text-white hover:underline"
+              className="inline-flex items-center gap-1 text-[11px] font-medium text-rose-300 underline-offset-4 hover:text-white hover:underline"
             >
               <ExternalLink className="h-3.5 w-3.5" aria-hidden />
               فتح على TikTok

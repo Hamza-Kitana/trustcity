@@ -14,14 +14,14 @@ const CARD_THEMES = [
   {
     border: "border-slate-200/90",
     bg: "bg-white",
-    iconBg: "bg-violet-100",
-    iconText: "text-violet-700",
-    hover: "hover:border-violet-300/60 hover:shadow-lg",
+    iconBg: "bg-rose-100",
+    iconText: "text-rose-700",
+    hover: "hover:border-rose-300/60 hover:shadow-lg",
     darkBorder: "dark:border-slate-600/85",
     darkBg: "dark:bg-slate-800/95",
-    darkIconBg: "dark:bg-violet-950/70 dark:ring-1 dark:ring-violet-500/25",
-    darkIconText: "dark:text-violet-300",
-    darkHover: "dark:hover:border-violet-500/45",
+    darkIconBg: "dark:bg-rose-950/70 dark:ring-1 dark:ring-rose-500/25",
+    darkIconText: "dark:text-rose-300",
+    darkHover: "dark:hover:border-rose-500/45",
   },
   {
     border: "border-slate-200/90",
@@ -38,26 +38,26 @@ const CARD_THEMES = [
   {
     border: "border-slate-200/90",
     bg: "bg-white",
-    iconBg: "bg-fuchsia-100",
-    iconText: "text-fuchsia-700",
-    hover: "hover:border-fuchsia-300/60 hover:shadow-lg",
+    iconBg: "bg-red-100",
+    iconText: "text-red-700",
+    hover: "hover:border-red-300/60 hover:shadow-lg",
     darkBorder: "dark:border-slate-600/85",
     darkBg: "dark:bg-slate-800/95",
-    darkIconBg: "dark:bg-fuchsia-950/70 dark:ring-1 dark:ring-fuchsia-500/25",
-    darkIconText: "dark:text-fuchsia-300",
-    darkHover: "dark:hover:border-fuchsia-500/45",
+    darkIconBg: "dark:bg-red-950/70 dark:ring-1 dark:ring-red-500/25",
+    darkIconText: "dark:text-red-300",
+    darkHover: "dark:hover:border-red-500/45",
   },
   {
     border: "border-slate-200/90",
     bg: "bg-white",
-    iconBg: "bg-purple-100",
-    iconText: "text-purple-700",
-    hover: "hover:border-purple-300/60 hover:shadow-lg",
+    iconBg: "bg-rose-100",
+    iconText: "text-rose-700",
+    hover: "hover:border-rose-300/60 hover:shadow-lg",
     darkBorder: "dark:border-slate-600/85",
     darkBg: "dark:bg-slate-800/95",
-    darkIconBg: "dark:bg-purple-950/70 dark:ring-1 dark:ring-purple-500/25",
-    darkIconText: "dark:text-purple-300",
-    darkHover: "dark:hover:border-purple-500/45",
+    darkIconBg: "dark:bg-rose-950/70 dark:ring-1 dark:ring-rose-500/25",
+    darkIconText: "dark:text-rose-300",
+    darkHover: "dark:hover:border-rose-500/45",
   },
 ] as const;
 
@@ -122,7 +122,7 @@ const InstitutionRosterHubPage = () => {
                 قائد، نائب، أعضاء، وطلبات التوظيف.
               </p>
 
-              <span className="mt-5 inline-flex items-center justify-end gap-1 text-sm font-medium text-violet-700 group-hover:text-violet-900 dark:text-violet-300 dark:group-hover:text-violet-100">
+              <span className="mt-5 inline-flex items-center justify-end gap-1 text-sm font-medium text-rose-700 group-hover:text-rose-900 dark:text-rose-300 dark:group-hover:text-rose-100">
                 تحرير الطاقم
                 <ChevronLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
               </span>

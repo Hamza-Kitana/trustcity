@@ -132,7 +132,7 @@ export const STREAMERS_SEED: StreamerSeedRow[] = [
     role: "صانع محتوى معتمد",
     bio: "بث مباشر على Kick.",
     streamUrl: "https://kick.com/abuyousef1",
-    image: "/INF_LOGO.png",
+    image: "/trustLogo.png",
   },
 ];
 

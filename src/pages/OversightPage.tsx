@@ -19,7 +19,7 @@ const OversightPage = () => {
       <Navbar />
       <InstitutionHero
         badgeEn="OVERSIGHT"
-        alt="الرقابة — Infinite City"
+        alt="الرقابة — TRUST CFW"
         title={
           <>
             صفحة <span className="text-gradient-neon">الرقابة</span>

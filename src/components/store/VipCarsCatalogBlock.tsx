@@ -204,7 +204,7 @@ function VipCarCompactCard({
       className={cn(
         "relative w-full rounded-2xl p-[2px] shadow-[0_16px_44px_-22px_rgba(0,0,0,0.5)] transition-shadow duration-300",
         /* تدرّج ثابت بدل الحركة المستمرة — يخفّض جداً إعادة الرسم عند عرض شبكة كبيرة */
-        "bg-gradient-to-br from-fuchsia-500 via-primary to-cyan-400",
+        "bg-gradient-to-br from-red-500 via-primary to-cyan-400",
         "hover:shadow-[0_22px_52px_-20px_hsl(var(--primary)/0.4)]",
         car.taken && "opacity-[0.92]",
         "supports-[content-visibility:auto]:[content-visibility:auto] supports-[content-visibility:auto]:[contain-intrinsic-size:auto_280px]",

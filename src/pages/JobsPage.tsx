@@ -72,8 +72,8 @@ const JobsPage = () => {
       <Navbar />
 
       <div className="relative overflow-hidden">
-        <div className="pointer-events-none absolute -left-28 top-0 h-64 w-64 rounded-full bg-violet-400/20 blur-[100px]" />
-        <div className="pointer-events-none absolute -right-20 top-20 h-56 w-56 rounded-full bg-fuchsia-400/15 blur-[85px]" />
+        <div className="pointer-events-none absolute -left-28 top-0 h-64 w-64 rounded-full bg-rose-400/20 blur-[100px]" />
+        <div className="pointer-events-none absolute -right-20 top-20 h-56 w-56 rounded-full bg-red-400/15 blur-[85px]" />
 
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 12 }}
@@ -82,7 +82,7 @@ const JobsPage = () => {
           className="relative mx-auto max-w-6xl px-4 pb-10 pt-24 md:px-8"
         >
           <div className="text-right">
-            <p className="font-display text-[11px] tracking-[0.32em] text-violet-700/90">التوظيف</p>
+            <p className="font-display text-[11px] tracking-[0.32em] text-rose-700/90">التوظيف</p>
             <h1 className="mt-2 font-display text-3xl font-bold text-slate-900 md:text-4xl">التقديم لوظيفة</h1>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
               اختر الجهة المناسبة، أكمل النموذج، وتابع حالة طلبك من القسم أسفل الصفحة.
@@ -112,7 +112,7 @@ const JobsPage = () => {
                 ) : null}
                 <div className="flex flex-wrap gap-2 pt-1">
                   {!citizenApplyPending ? (
-                    <Button asChild size="sm" className="rounded-full bg-violet-600 text-white hover:bg-violet-700">
+                    <Button asChild size="sm" className="rounded-full bg-rose-600 text-white hover:bg-rose-700">
                       <Link to="/apply/citizen">التقديم الإلكتروني للمواطن</Link>
                     </Button>
                   ) : null}
@@ -133,7 +133,7 @@ const JobsPage = () => {
         <motion.section initial={reduceMotion ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.05 }}>
           <div className="mb-4 flex items-center justify-between gap-2">
             <h2 className="flex items-center gap-2 font-display text-lg font-bold text-slate-900">
-              <Briefcase className="h-5 w-5 text-violet-600" />
+              <Briefcase className="h-5 w-5 text-rose-600" />
               الجهات المتاحة
             </h2>
             <span className="text-xs text-slate-500">{visibleJobs.length} جهة</span>
@@ -151,7 +151,7 @@ const JobsPage = () => {
               >
                 <Card
                   className={cn(
-                    "group relative h-full overflow-hidden border-violet-200/90 bg-white/95 shadow-md transition-all hover:-translate-y-0.5 hover:border-violet-300 hover:shadow-lg",
+                    "group relative h-full overflow-hidden border-rose-200/90 bg-white/95 shadow-md transition-all hover:-translate-y-0.5 hover:border-rose-300 hover:shadow-lg",
                     closed && "border-rose-200/90 bg-rose-50/40 hover:border-rose-300 hover:translate-y-0",
                     !jobApplyUnlocked && !closed && "border-amber-200/90 bg-amber-50/30 hover:translate-y-0",
                   )}
@@ -174,7 +174,7 @@ const JobsPage = () => {
                           "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ring-1",
                           closed
                             ? "bg-gradient-to-br from-rose-100 to-rose-50 text-rose-700 ring-rose-200/80"
-                            : "bg-gradient-to-br from-violet-100 to-violet-50 text-violet-700 ring-violet-200/80",
+                            : "bg-gradient-to-br from-rose-100 to-rose-50 text-rose-700 ring-rose-200/80",
                         )}
                       >
                         {closed ? <Lock className="h-5 w-5" /> : <Sparkles className="h-5 w-5" />}
@@ -193,13 +193,13 @@ const JobsPage = () => {
                           {closed ? "مغلق حالياً" : "غير متاح"}
                         </Button>
                       ) : (
-                        <Button asChild size="sm" className="rounded-full bg-gradient-to-l from-violet-700 to-violet-600 px-4 text-white shadow-md opacity-90 transition-opacity group-hover:opacity-100">
+                        <Button asChild size="sm" className="rounded-full bg-gradient-to-l from-rose-700 to-rose-600 px-4 text-white shadow-md opacity-90 transition-opacity group-hover:opacity-100">
                           <Link to={`/jobs/apply/${job.role}`}>تقديم الآن</Link>
                         </Button>
                       )}
                     </div>
                     <h3 className="mt-4 font-display text-lg font-semibold leading-snug text-slate-900">{job.title}</h3>
-                    <p className={cn("mt-1 text-sm", closed ? "text-rose-700/90" : "text-violet-700/90")}>{job.subtitle}</p>
+                    <p className={cn("mt-1 text-sm", closed ? "text-rose-700/90" : "text-rose-700/90")}>{job.subtitle}</p>
                     {closed ? (
                       <p className="mt-3 rounded-xl border border-rose-200 bg-white/70 px-3 py-2 text-xs leading-relaxed text-rose-800">
                         أُغلق التقديم لهذه الجهة حالياً. يُرجى المتابعة لاحقاً.
@@ -214,18 +214,18 @@ const JobsPage = () => {
         </motion.section>
 
         <motion.section initial={reduceMotion ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.1 }}>
-          <Card className="overflow-hidden border-violet-200/90 bg-white/95 shadow-[0_24px_60px_-28px_rgba(54,22,79,0.22)]">
-            <div className="border-b border-violet-100 bg-gradient-to-l from-violet-50/90 to-white px-5 py-4">
+          <Card className="overflow-hidden border-rose-200/90 bg-white/95 shadow-[0_24px_60px_-28px_rgba(54,22,79,0.22)]">
+            <div className="border-b border-rose-100 bg-gradient-to-l from-rose-50/90 to-white px-5 py-4">
               <h2 className="flex items-center gap-2 font-display text-lg font-bold text-slate-900">
-                <ClipboardList className="h-5 w-5 text-violet-600" />
+                <ClipboardList className="h-5 w-5 text-rose-600" />
                 طلباتي
               </h2>
               <p className="mt-1 text-sm text-slate-600">حالة طلبات التوظيف التي أرسلتها من هذا الحساب.</p>
             </div>
             <CardContent className="p-5 md:p-6">
               {myApps.length === 0 ? (
-                <div className="flex flex-col items-center rounded-2xl border border-dashed border-violet-200 bg-violet-50/40 py-12 text-center">
-                  <ClipboardList className="mb-3 h-10 w-10 text-violet-400" />
+                <div className="flex flex-col items-center rounded-2xl border border-dashed border-rose-200 bg-rose-50/40 py-12 text-center">
+                  <ClipboardList className="mb-3 h-10 w-10 text-rose-400" />
                   <p className="font-medium text-slate-700">لا توجد طلبات بعد</p>
                   <p className="mt-1 max-w-sm text-sm text-slate-500">اختر جهة من الأعلى وابدأ التقديم.</p>
                 </div>
@@ -234,7 +234,7 @@ const JobsPage = () => {
                   {myApps.map((app) => (
                     <div
                       key={app.id}
-                      className="rounded-2xl border border-violet-200/90 bg-gradient-to-l from-white to-violet-50/30 p-4 shadow-sm transition-colors hover:border-violet-300"
+                      className="rounded-2xl border border-rose-200/90 bg-gradient-to-l from-white to-rose-50/30 p-4 shadow-sm transition-colors hover:border-rose-300"
                     >
                       <div className="flex flex-wrap items-center justify-between gap-3">
                         <p className="font-display font-semibold text-slate-900">{app.targetTitle}</p>
@@ -254,8 +254,8 @@ const JobsPage = () => {
                         </div>
                       </div>
                       {app.note ? (
-                        <p className="mt-3 rounded-xl border border-violet-100 bg-white/80 px-3 py-2 text-sm text-slate-700">
-                          <span className="font-medium text-violet-800">ملاحظة الإدارة:</span> {app.note}
+                        <p className="mt-3 rounded-xl border border-rose-100 bg-white/80 px-3 py-2 text-sm text-slate-700">
+                          <span className="font-medium text-rose-800">ملاحظة الإدارة:</span> {app.note}
                         </p>
                       ) : null}
                     </div>

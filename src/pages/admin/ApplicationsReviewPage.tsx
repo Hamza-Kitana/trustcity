@@ -277,7 +277,7 @@ function ApplicationDetail({
           <div>
             <Label className="text-xs font-medium text-slate-700 dark:text-slate-300">ملاحظة للقرار (اختياري)</Label>
             <Textarea
-              className="mt-1 min-h-[72px] border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus-visible:ring-violet-500/30 dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500"
+              className="mt-1 min-h-[72px] border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus-visible:ring-rose-500/30 dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500"
               value={decisionNote}
               onChange={(e) => setDecisionNote(e.target.value)}
               placeholder="تظهر مع الطلب بعد القبول أو الرفض…"
@@ -286,7 +286,7 @@ function ApplicationDetail({
           <div className="flex flex-wrap gap-2 justify-end">
             <Button
               type="button"
-              className="bg-gradient-to-l from-violet-600 to-violet-700 text-white shadow-sm hover:from-violet-700 hover:to-violet-800"
+              className="bg-gradient-to-l from-rose-600 to-rose-700 text-white shadow-sm hover:from-rose-700 hover:to-rose-800"
               onClick={onApprove}
             >
               <CheckCircle2 className="ms-2 h-4 w-4" /> قبول

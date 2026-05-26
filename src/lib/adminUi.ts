@@ -28,7 +28,7 @@ export const adminRow =
 
 /** حقول داخل اللوحة */
 export const adminInput =
-  "border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus-visible:border-violet-400 focus-visible:ring-violet-500/25 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus-visible:border-violet-500 dark:focus-visible:ring-violet-500/30";
+  "border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus-visible:border-rose-400 focus-visible:ring-rose-500/25 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus-visible:border-rose-500 dark:focus-visible:ring-rose-500/30";
 
 /** شريط تبويب */
 export const adminTabsList =
@@ -36,7 +36,7 @@ export const adminTabsList =
 
 /** يصلح تمييز التبويب النشط داخل اللوحة الفاتحة */
 export const adminTabsTrigger =
-  "rounded-lg px-3 py-2 font-display text-sm text-slate-600 transition-all data-[state=active]:bg-white data-[state=active]:font-semibold data-[state=active]:text-violet-900 data-[state=active]:shadow-sm dark:text-slate-400 dark:data-[state=active]:bg-slate-900 dark:data-[state=active]:text-violet-200";
+  "rounded-lg px-3 py-2 font-display text-sm text-slate-600 transition-all data-[state=active]:bg-white data-[state=active]:font-semibold data-[state=active]:text-rose-900 data-[state=active]:shadow-sm dark:text-slate-400 dark:data-[state=active]:bg-slate-900 dark:data-[state=active]:text-rose-200";
 
 /** محتوى نوافذ الحوار */
 export const adminDialogSurface =
@@ -47,7 +47,7 @@ export const adminAlertSurface =
   "border-slate-200 bg-white text-slate-900 shadow-xl sm:rounded-2xl dark:border-slate-600 dark:bg-slate-900 dark:text-slate-50";
 
 /** أيقونة عنوان الصفحة */
-export const adminTitleIcon = "h-7 w-7 shrink-0 text-violet-600 dark:text-violet-400";
+export const adminTitleIcon = "h-7 w-7 shrink-0 text-rose-600 dark:text-rose-400";
 
 /** دمج سطح نافذة مع أصناف إضافية */
 export function adminDialogClass(...extra: (string | undefined)[]): string {

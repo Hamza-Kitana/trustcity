@@ -97,7 +97,7 @@ export function NotificationsBell({
             unreadCount > 0 ? `${unreadCount} إشعارات جديدة` : "لا توجد إشعارات جديدة"
           }
           className={cn(
-            "relative inline-flex h-10 w-10 items-center justify-center rounded-xl border border-violet-300 bg-white text-violet-700 transition-colors hover:bg-violet-50",
+            "relative inline-flex h-10 w-10 items-center justify-center rounded-xl border border-rose-300 bg-white text-rose-700 transition-colors hover:bg-rose-50",
             buttonClassName,
           )}
         >
@@ -120,11 +120,11 @@ export function NotificationsBell({
         sideOffset={12}
         alignOffset={-8}
         collisionPadding={20}
-        className="z-[140] w-[min(94vw,22rem)] overflow-hidden rounded-2xl border-violet-200 bg-white p-0 text-right shadow-[0_24px_72px_-24px_rgba(54,22,79,0.45)]"
+        className="z-[140] w-[min(94vw,22rem)] overflow-hidden rounded-2xl border-rose-200 bg-white p-0 text-right shadow-[0_24px_72px_-24px_rgba(127,29,29,0.45)]"
       >
-        <div className="flex items-center justify-between gap-2 border-b border-violet-100 bg-gradient-to-l from-violet-50 to-white px-4 py-3">
+        <div className="flex items-center justify-between gap-2 border-b border-rose-100 bg-gradient-to-l from-rose-50 to-white px-4 py-3">
           <div className="flex items-center gap-2 text-right">
-            <Bell className="h-4 w-4 text-violet-600" aria-hidden />
+            <Bell className="h-4 w-4 text-rose-600" aria-hidden />
             <p className="font-display text-sm font-bold text-slate-900">الإشعارات</p>
           </div>
           {unreadCount > 0 ? (
@@ -141,8 +141,8 @@ export function NotificationsBell({
         <div className="max-h-[28rem] overflow-y-auto">
           {items.length === 0 ? (
             <div className="flex flex-col items-center gap-2 px-5 py-9 text-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-violet-100">
-                <Inbox className="h-6 w-6 text-violet-500" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-rose-100">
+                <Inbox className="h-6 w-6 text-rose-500" />
               </div>
               <p className="font-display text-sm font-semibold text-slate-800">لا إشعارات حالياً</p>
               <p className="max-w-[18rem] text-xs leading-relaxed text-slate-500">
@@ -150,7 +150,7 @@ export function NotificationsBell({
               </p>
             </div>
           ) : (
-            <ul className="divide-y divide-violet-100">
+            <ul className="divide-y divide-rose-100">
               {items.map((n) => (
                 <li key={n.messageId}>
                   <Link
@@ -165,16 +165,16 @@ export function NotificationsBell({
                       }
                       setOpen(false);
                     }}
-                    className="flex items-start gap-3 px-4 py-3 transition-colors hover:bg-violet-50/70"
+                    className="flex items-start gap-3 px-4 py-3 transition-colors hover:bg-rose-50/70"
                   >
-                    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-violet-700">
+                    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-rose-100 text-rose-700">
                       <MessageSquareMore className="h-[18px] w-[18px]" />
                     </span>
                     <div className="min-w-0 flex-1 text-right">
                       <div className="flex flex-wrap items-center justify-end gap-2">
                         <Badge
                           variant="outline"
-                          className="rounded-full border-violet-200 bg-white px-2 py-0 text-[10px] text-violet-700"
+                          className="rounded-full border-rose-200 bg-white px-2 py-0 text-[10px] text-rose-700"
                         >
                           {n.typeLabel}
                         </Badge>
@@ -196,7 +196,7 @@ export function NotificationsBell({
           )}
         </div>
 
-        <div className="border-t border-violet-100 bg-violet-50/40 px-4 py-2.5 text-center">
+        <div className="border-t border-rose-100 bg-rose-50/40 px-4 py-2.5 text-center">
           <Link
             to="/tickets"
             onClick={(e) => {
@@ -209,7 +209,7 @@ export function NotificationsBell({
               }
               setOpen(false);
             }}
-            className="inline-flex items-center justify-center gap-1.5 font-display text-xs font-semibold text-violet-700 transition-colors hover:text-violet-900"
+            className="inline-flex items-center justify-center gap-1.5 font-display text-xs font-semibold text-rose-700 transition-colors hover:text-rose-900"
           >
             فتح مركز التكت لمتابعة كل المحادثات
           </Link>

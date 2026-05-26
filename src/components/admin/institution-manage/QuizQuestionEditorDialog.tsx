@@ -44,7 +44,7 @@ export function QuizQuestionEditorDialog({
         dir="rtl"
         className="flex max-h-[min(90dvh,90svh)] w-[calc(100%-1rem)] max-w-2xl flex-col gap-0 overflow-hidden rounded-2xl border border-slate-200/95 bg-white p-0 text-right text-slate-900 shadow-[0_28px_72px_-24px_rgba(15,23,42,0.38)] dark:border-slate-600 dark:bg-slate-900 dark:text-slate-50 sm:w-full"
       >
-        <div className="shrink-0 border-b border-violet-200 bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.18),transparent_58%)] px-5 pb-4 pt-12 dark:border-slate-700 dark:bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.1),transparent_55%)] sm:px-6 sm:pt-14">
+        <div className="shrink-0 border-b border-rose-200 bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.18),transparent_58%)] px-5 pb-4 pt-12 dark:border-slate-700 dark:bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.1),transparent_55%)] sm:px-6 sm:pt-14">
           <DialogHeader className="space-y-1.5 text-right sm:text-right">
             <DialogTitle className="font-display text-xl font-bold text-slate-900 dark:text-slate-50 sm:text-2xl">
               {mode === "edit" ? "تعديل السؤال" : "إضافة سؤال جديد"}
@@ -76,7 +76,7 @@ export function QuizQuestionEditorDialog({
                   size="sm"
                   onClick={onAddOption}
                   disabled={draft.options.length >= QUIZ_OPTION_IDS.length}
-                  className="h-8 gap-1 rounded-full border-violet-200 bg-violet-50 text-xs text-violet-800 hover:bg-violet-100 dark:border-violet-700 dark:bg-violet-950/40 dark:text-violet-200"
+                  className="h-8 gap-1 rounded-full border-rose-200 bg-rose-50 text-xs text-rose-800 hover:bg-rose-100 dark:border-rose-700 dark:bg-rose-950/40 dark:text-rose-200"
                 >
                   <Plus className="h-3.5 w-3.5" />
                   خيار
@@ -151,7 +151,7 @@ export function QuizQuestionEditorDialog({
         ) : null}
 
         <DialogFooter className="shrink-0 flex-row-reverse gap-2 border-t border-slate-200 bg-slate-50/90 px-5 py-4 dark:border-slate-700 dark:bg-slate-900/95 sm:justify-start sm:px-6">
-          <Button type="button" onClick={onConfirm} className="rounded-xl bg-violet-600 text-white hover:bg-violet-700">
+          <Button type="button" onClick={onConfirm} className="rounded-xl bg-rose-600 text-white hover:bg-rose-700">
             {mode === "edit" ? "حفظ التعديل" : "إضافة السؤال"}
           </Button>
           <Button type="button" variant="outline" onClick={() => onOpenChange(false)} className="rounded-xl">

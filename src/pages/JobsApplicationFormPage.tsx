@@ -204,14 +204,14 @@ const JobsApplicationFormPage = () => {
                 ) : null}
                 <div className="mt-4 flex flex-wrap justify-center gap-2 sm:justify-start">
                   {!citizenApplyPending ? (
-                    <Button asChild className="bg-violet-600 text-white hover:bg-violet-700">
+                    <Button asChild className="bg-rose-600 text-white hover:bg-rose-700">
                       <Link to="/apply/citizen">التقديم الإلكتروني للمواطن</Link>
                     </Button>
                   ) : null}
-                  <Button asChild variant="outline" className="border-violet-300 bg-white">
+                  <Button asChild variant="outline" className="border-rose-300 bg-white">
                     <Link to="/jobs">العودة للوظائف</Link>
                   </Button>
-                  <Button asChild variant="outline" className="border-violet-300 bg-white">
+                  <Button asChild variant="outline" className="border-rose-300 bg-white">
                     <Link to="/profile">البروفايل</Link>
                   </Button>
                 </div>
@@ -230,7 +230,7 @@ const JobsApplicationFormPage = () => {
       <div dir="rtl" className="min-h-screen bg-[#f4f0fb] text-slate-900 antialiased">
         <Navbar />
         <main className="relative z-10 mx-auto flex min-h-[calc(100vh-200px)] max-w-3xl flex-col items-center justify-center px-4 py-24 md:px-8">
-          <div className="w-full overflow-hidden rounded-3xl border border-indigo-200/80 bg-gradient-to-l from-indigo-50 via-white to-violet-50 p-8 text-right shadow-[0_28px_70px_-30px_rgba(99,102,241,0.45)] md:p-10">
+          <div className="w-full overflow-hidden rounded-3xl border border-indigo-200/80 bg-gradient-to-l from-indigo-50 via-white to-rose-50 p-8 text-right shadow-[0_28px_70px_-30px_rgba(99,102,241,0.45)] md:p-10">
             <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-right">
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#5865F2] text-white shadow-inner">
                 <DiscordIcon className="h-8 w-8" />
@@ -263,7 +263,7 @@ const JobsApplicationFormPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                    className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                     onClick={() => navigate("/jobs")}
                   >
                     العودة لصفحة التوظيف
@@ -288,8 +288,8 @@ const JobsApplicationFormPage = () => {
       <Navbar />
 
       <div className="relative overflow-hidden">
-        <div className="pointer-events-none absolute -left-24 top-0 h-56 w-56 rounded-full bg-violet-400/25 blur-[90px]" />
-        <div className="pointer-events-none absolute -right-20 top-24 h-48 w-48 rounded-full bg-fuchsia-400/20 blur-[80px]" />
+        <div className="pointer-events-none absolute -left-24 top-0 h-56 w-56 rounded-full bg-rose-400/25 blur-[90px]" />
+        <div className="pointer-events-none absolute -right-20 top-24 h-48 w-48 rounded-full bg-red-400/20 blur-[80px]" />
 
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 12 }}
@@ -298,7 +298,7 @@ const JobsApplicationFormPage = () => {
           className="relative mx-auto max-w-4xl px-4 pb-6 pt-24 md:px-8"
         >
           <div className="text-center md:text-right">
-            <p className="font-display text-[11px] tracking-[0.28em] text-violet-700/90">طلب توظيف</p>
+            <p className="font-display text-[11px] tracking-[0.28em] text-rose-700/90">طلب توظيف</p>
             <h1 className="mt-2 font-display text-3xl font-bold text-slate-900 md:text-4xl">{titleShort}</h1>
             <p className="mt-2 text-sm leading-relaxed text-slate-600">{lawSet.subtitle}</p>
           </div>
@@ -306,11 +306,11 @@ const JobsApplicationFormPage = () => {
           <div className="mt-7">
             <div className="flex items-center justify-between text-[11px] font-display text-slate-500">
               <span>اكتمال البيانات</span>
-              <span className="font-mono text-violet-700">{progressPct}%</span>
+              <span className="font-mono text-rose-700">{progressPct}%</span>
             </div>
-            <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-violet-100">
+            <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-rose-100">
               <div
-                className="h-full bg-gradient-to-l from-violet-600 to-fuchsia-500 transition-all duration-500"
+                className="h-full bg-gradient-to-l from-rose-600 to-red-500 transition-all duration-500"
                 style={{ width: `${progressPct}%` }}
               />
             </div>
@@ -359,7 +359,7 @@ const JobsApplicationFormPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                    className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                     onClick={() => navigate("/")}
                   >
                     الصفحة الرئيسية
@@ -377,11 +377,11 @@ const JobsApplicationFormPage = () => {
         >
           <Card
             className={cn(
-              "overflow-hidden border-violet-200/90 bg-white/95 shadow-[0_24px_60px_-28px_rgba(54,22,79,0.28)] backdrop-blur-sm",
+              "overflow-hidden border-rose-200/90 bg-white/95 shadow-[0_24px_60px_-28px_rgba(54,22,79,0.28)] backdrop-blur-sm",
               isClosed && "pointer-events-none opacity-60",
             )}
           >
-            <CardHeader className="border-b border-violet-100 bg-gradient-to-l from-violet-50/90 to-white text-right">
+            <CardHeader className="border-b border-rose-100 bg-gradient-to-l from-rose-50/90 to-white text-right">
               <CardTitle className="font-display text-xl text-slate-900">نموذج التوظيف</CardTitle>
               <CardDescription className="text-pretty text-slate-600">
                 {isClosed
@@ -391,7 +391,7 @@ const JobsApplicationFormPage = () => {
             </CardHeader>
             <CardContent className="space-y-6 p-6 md:p-8">
               {/* بطاقة Discord (تلقائية) */}
-              <section className="rounded-2xl border border-indigo-200 bg-gradient-to-l from-indigo-50/80 via-white to-violet-50/60 p-4">
+              <section className="rounded-2xl border border-indigo-200 bg-gradient-to-l from-indigo-50/80 via-white to-rose-50/60 p-4">
                 <div className="flex items-start gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#5865F2] text-white shadow-sm">
                     <DiscordIcon className="h-5 w-5" />
@@ -417,7 +417,7 @@ const JobsApplicationFormPage = () => {
                       <div className="rounded-xl border border-indigo-100 bg-white px-3 py-2">
                         <p className="text-[11px] text-slate-500">الجهة المتقدَّم لها</p>
                         <p className="flex items-center gap-1.5 truncate text-sm font-semibold text-slate-900">
-                          <Briefcase className="h-3.5 w-3.5 text-violet-700" />
+                          <Briefcase className="h-3.5 w-3.5 text-rose-700" />
                           {titleShort}
                         </p>
                       </div>
@@ -430,10 +430,10 @@ const JobsApplicationFormPage = () => {
               </section>
 
               {/* اسم الشخصية في المدينة — من التقديم الإلكتروني */}
-              <section className="space-y-2 rounded-2xl border border-violet-200/80 bg-gradient-to-l from-violet-50/40 to-white p-4">
+              <section className="space-y-2 rounded-2xl border border-rose-200/80 bg-gradient-to-l from-rose-50/40 to-white p-4">
                 <div className="flex items-center justify-between gap-3">
                   <Label className="flex items-center gap-2 text-sm font-semibold text-slate-800">
-                    <User2 className="h-4 w-4 text-violet-700" />
+                    <User2 className="h-4 w-4 text-rose-700" />
                     اسمك داخل المدينة
                   </Label>
                   {cityNameFromProfile.length >= 3 ? (
@@ -443,7 +443,7 @@ const JobsApplicationFormPage = () => {
                   ) : null}
                 </div>
                 <div
-                  className="min-h-11 rounded-xl border border-violet-200 bg-white px-3 py-2.5 text-right text-base font-medium text-slate-900"
+                  className="min-h-11 rounded-xl border border-rose-200 bg-white px-3 py-2.5 text-right text-base font-medium text-slate-900"
                   dir="rtl"
                 >
                   {cityNameFromProfile || "—"}
@@ -454,10 +454,10 @@ const JobsApplicationFormPage = () => {
               </section>
 
               {/* النبذة */}
-              <section className="space-y-2 rounded-2xl border border-violet-200/80 bg-gradient-to-l from-violet-50/40 to-white p-4">
+              <section className="space-y-2 rounded-2xl border border-rose-200/80 bg-gradient-to-l from-rose-50/40 to-white p-4">
                 <div className="flex items-center justify-between gap-3">
                   <Label htmlFor="bio" className="flex items-center gap-2 text-sm font-semibold text-slate-800">
-                    <ScrollText className="h-4 w-4 text-violet-700" />
+                    <ScrollText className="h-4 w-4 text-rose-700" />
                     نبذة عنك (الخبرة والدوافع)
                   </Label>
                   <span className="inline-flex items-center gap-2 text-[11px] font-display text-slate-500">
@@ -474,16 +474,16 @@ const JobsApplicationFormPage = () => {
                   value={bio}
                   onChange={(e) => setBio(e.target.value.slice(0, 4000))}
                   placeholder="عرّف الأدمن عن نفسك، خبراتك السابقة، ولماذا ترغب بالانضمام لهذه الجهة (لا تقل عن 20 حرفاً)…"
-                  className="min-h-[160px] rounded-xl border-violet-200 bg-white text-base leading-relaxed text-slate-900"
+                  className="min-h-[160px] rounded-xl border-rose-200 bg-white text-base leading-relaxed text-slate-900"
                   disabled={isClosed}
                 />
               </section>
 
               {/* رفع الصورة */}
-              <section className="space-y-3 rounded-2xl border border-violet-200/80 bg-gradient-to-l from-violet-50/40 to-white p-4">
+              <section className="space-y-3 rounded-2xl border border-rose-200/80 bg-gradient-to-l from-rose-50/40 to-white p-4">
                 <div className="flex items-center justify-between gap-3">
                   <Label className="flex items-center gap-2 text-sm font-semibold text-slate-800">
-                    <ImagePlus className="h-4 w-4 text-violet-700" />
+                    <ImagePlus className="h-4 w-4 text-rose-700" />
                     صورة شخصية
                     <span className="text-xs font-normal text-slate-500">(اختياري)</span>
                   </Label>
@@ -494,7 +494,7 @@ const JobsApplicationFormPage = () => {
                   ) : null}
                 </div>
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <div className="flex h-32 w-32 shrink-0 items-center justify-center overflow-hidden rounded-2xl border-2 border-dashed border-violet-300 bg-violet-50/50">
+                  <div className="flex h-32 w-32 shrink-0 items-center justify-center overflow-hidden rounded-2xl border-2 border-dashed border-rose-300 bg-rose-50/50">
                     {avatarDataUrl ? (
                       <img
                         src={avatarDataUrl}
@@ -502,7 +502,7 @@ const JobsApplicationFormPage = () => {
                         className="h-full w-full object-cover"
                       />
                     ) : (
-                      <div className="flex flex-col items-center gap-1 text-violet-500">
+                      <div className="flex flex-col items-center gap-1 text-rose-500">
                         <ImagePlus className="h-7 w-7" />
                         <span className="text-[11px] font-display">لم تُرفع</span>
                       </div>
@@ -517,7 +517,7 @@ const JobsApplicationFormPage = () => {
                       <Button
                         type="button"
                         variant="outline"
-                        className="rounded-xl border-violet-300 bg-white text-violet-800 hover:bg-violet-50"
+                        className="rounded-xl border-rose-300 bg-white text-rose-800 hover:bg-rose-50"
                         onClick={() => fileInputRef.current?.click()}
                         disabled={isClosed}
                       >
@@ -552,10 +552,10 @@ const JobsApplicationFormPage = () => {
               </section>
 
               {/* قراءة القوانين */}
-              <section className="rounded-2xl border border-violet-200 bg-gradient-to-l from-violet-50/80 to-white p-4">
+              <section className="rounded-2xl border border-rose-200 bg-gradient-to-l from-rose-50/80 to-white p-4">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-start gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-violet-700">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-100 text-rose-700">
                       {acceptedLaws ? <ShieldCheck className="h-5 w-5" /> : <ShieldAlert className="h-5 w-5" />}
                     </div>
                     <div className="text-sm text-slate-700">
@@ -590,7 +590,7 @@ const JobsApplicationFormPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="shrink-0 rounded-xl border-violet-300 bg-white text-violet-800 hover:bg-violet-50"
+                    className="shrink-0 rounded-xl border-rose-300 bg-white text-rose-800 hover:bg-rose-50"
                     onClick={() => setOpenLaws(true)}
                   >
                     {acceptedLaws ? "إعادة عرض القوانين" : "عرض قوانين الجهة"}
@@ -602,14 +602,14 @@ const JobsApplicationFormPage = () => {
                 <Button
                   type="button"
                   variant="outline"
-                  className="rounded-xl border-violet-300 bg-white px-6 text-violet-800 hover:bg-violet-50"
+                  className="rounded-xl border-rose-300 bg-white px-6 text-rose-800 hover:bg-rose-50"
                   onClick={() => navigate("/jobs")}
                 >
                   رجوع
                 </Button>
                 <Button
                   type="button"
-                  className="rounded-xl bg-gradient-to-l from-violet-700 to-violet-600 px-8 text-white shadow-lg shadow-violet-500/25 hover:from-violet-800 hover:to-violet-700 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="rounded-xl bg-gradient-to-l from-rose-700 to-rose-600 px-8 text-white shadow-lg shadow-rose-500/25 hover:from-rose-800 hover:to-rose-700 disabled:cursor-not-allowed disabled:opacity-60"
                   onClick={submit}
                   disabled={submitting || isClosed}
                 >
@@ -624,9 +624,9 @@ const JobsApplicationFormPage = () => {
       <Dialog open={openLaws} onOpenChange={setOpenLaws}>
         <DialogContent
           dir="rtl"
-          className="flex max-h-[min(88dvh,720px)] w-[calc(100%-1rem)] max-w-2xl flex-col gap-0 overflow-hidden rounded-2xl border border-violet-200/90 bg-white p-0 text-slate-900 shadow-2xl sm:w-full"
+          className="flex max-h-[min(88dvh,720px)] w-[calc(100%-1rem)] max-w-2xl flex-col gap-0 overflow-hidden rounded-2xl border border-rose-200/90 bg-white p-0 text-slate-900 shadow-2xl sm:w-full"
         >
-          <div className="shrink-0 overflow-hidden rounded-t-2xl bg-gradient-to-l from-violet-600 via-violet-700 to-indigo-800 px-5 pb-5 pt-12 text-white sm:px-6 sm:pt-14">
+          <div className="shrink-0 overflow-hidden rounded-t-2xl bg-gradient-to-l from-rose-600 via-rose-700 to-indigo-800 px-5 pb-5 pt-12 text-white sm:px-6 sm:pt-14">
             <DialogHeader className="space-y-2 text-right">
               <div className="flex items-start gap-3">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/25">
@@ -635,7 +635,7 @@ const JobsApplicationFormPage = () => {
                 <div className="min-w-0 flex-1">
                   <DialogTitle className="font-display text-xl font-bold leading-snug">{lawSet.title}</DialogTitle>
                   {lawSet.subtitle?.trim() ? (
-                    <DialogDescription className="mt-1.5 text-sm leading-relaxed text-violet-100/95">
+                    <DialogDescription className="mt-1.5 text-sm leading-relaxed text-rose-100/95">
                       {lawSet.subtitle}
                     </DialogDescription>
                   ) : null}
@@ -648,11 +648,11 @@ const JobsApplicationFormPage = () => {
             {lawSet.rules.map((rule, idx) => (
               <div
                 key={idx}
-                className="relative overflow-hidden rounded-2xl border border-violet-100 bg-white p-4 shadow-sm"
+                className="relative overflow-hidden rounded-2xl border border-rose-100 bg-white p-4 shadow-sm"
               >
-                <div className="absolute inset-y-0 right-0 w-1 bg-gradient-to-b from-violet-500 to-fuchsia-500" />
+                <div className="absolute inset-y-0 right-0 w-1 bg-gradient-to-b from-rose-500 to-red-500" />
                 <div className="flex gap-3 pr-2">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-100 font-display text-sm font-bold text-violet-800">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-rose-100 font-display text-sm font-bold text-rose-800">
                     {idx + 1}
                   </span>
                   <p className="text-sm leading-relaxed text-slate-800">{rule}</p>
@@ -661,7 +661,7 @@ const JobsApplicationFormPage = () => {
             ))}
           </div>
 
-          <div className="shrink-0 space-y-3 border-t border-violet-100 bg-white px-5 py-4 sm:px-6">
+          <div className="shrink-0 space-y-3 border-t border-rose-100 bg-white px-5 py-4 sm:px-6">
             <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/90 bg-gradient-to-l from-amber-50 to-orange-50/50 p-3.5 text-right">
               <ScrollText className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" />
               <p className="text-sm leading-relaxed text-amber-950/90">
@@ -673,7 +673,7 @@ const JobsApplicationFormPage = () => {
             <div className="flex justify-end">
               <Button
                 type="button"
-                className="rounded-xl bg-gradient-to-l from-violet-700 to-violet-600 px-6 text-white shadow-md hover:from-violet-800 hover:to-violet-700"
+                className="rounded-xl bg-gradient-to-l from-rose-700 to-rose-600 px-6 text-white shadow-md hover:from-rose-800 hover:to-rose-700"
                 onClick={() => {
                   setOpenLaws(false);
                   setQuizOpen(true);

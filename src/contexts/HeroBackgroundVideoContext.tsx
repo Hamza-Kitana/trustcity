@@ -10,7 +10,7 @@ import {
 } from "react";
 import { boostYoutubePlayerQuality } from "@/lib/youtube";
 
-const YOUTUBE_VIDEO_ID = "9w5SHL6nmkg";
+const YOUTUBE_VIDEO_ID = "i2LTjSqxTxY";
 
 export const getYoutubeEmbedUrl = () =>
   `https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=0&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&origin=${typeof window !== "undefined" ? encodeURIComponent(window.location.origin) : ""}`;

@@ -20,18 +20,18 @@ function GodfatherSpotlight() {
   return (
     <section
       id="godfather"
-      className="relative scroll-mt-28 overflow-hidden rounded-[2rem] border border-red-500/30 bg-gradient-to-br from-red-950/35 via-background to-purple-950/25 px-5 py-8 shadow-[0_32px_90px_-40px_rgba(0,0,0,0.55)] animate-godfather-glow md:px-10 md:py-11"
+      className="relative scroll-mt-28 overflow-hidden rounded-[2rem] border border-red-500/30 bg-gradient-to-br from-red-950/35 via-background to-rose-950/25 px-5 py-8 shadow-[0_32px_90px_-40px_rgba(0,0,0,0.55)] animate-godfather-glow md:px-10 md:py-11"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.12]"
         style={{
           backgroundImage:
-            "linear-gradient(105deg, transparent 40%, rgba(168,85,247,0.15) 50%, transparent 60%)",
+            "linear-gradient(105deg, transparent 40%, rgba(251,113,133,0.15) 50%, transparent 60%)",
           backgroundSize: "200% 100%",
         }}
       />
       <div className="pointer-events-none absolute -left-20 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-red-600/20 blur-[90px]" />
-      <div className="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-purple-600/15 blur-[80px]" />
+      <div className="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-rose-600/15 blur-[80px]" />
 
       <div className="relative grid gap-10 md:grid-cols-[minmax(0,220px)_minmax(0,1fr)] md:items-center md:gap-12">
         <div className="relative mx-auto flex w-full max-w-[220px] justify-center md:mx-0 md:max-w-none">
@@ -39,8 +39,8 @@ function GodfatherSpotlight() {
             <div className="h-[200px] w-[200px] origin-center rounded-full border border-dashed border-red-500/25 opacity-60 animate-godfather-ring" />
           </div>
           <div className="relative flex h-[180px] w-[180px] items-center justify-center animate-godfather-float">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/30 via-transparent to-purple-600/25 blur-xl" />
-            <div className="relative flex h-40 w-40 animate-pulse-glow items-center justify-center overflow-hidden rounded-full border-2 border-red-500/50 bg-gradient-to-b from-zinc-900/95 to-zinc-950 shadow-[0_0_40px_rgba(220,38,38,0.35)] ring-4 ring-purple-500/20">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/30 via-transparent to-rose-600/25 blur-xl" />
+            <div className="relative flex h-40 w-40 animate-pulse-glow items-center justify-center overflow-hidden rounded-full border-2 border-red-500/50 bg-gradient-to-b from-zinc-900/95 to-zinc-950 shadow-[0_0_40px_rgba(220,38,38,0.35)] ring-4 ring-rose-500/20">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.08),transparent_50%)]" />
               <UserRound className="relative h-20 w-20 text-zinc-600/90 blur-[2.5px]" strokeWidth={1.25} aria-hidden />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -61,7 +61,7 @@ function GodfatherSpotlight() {
             كبير العصابات — <span className="text-gradient-neon">Godfather</span>
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-            شخصية لا تُعرَف للعلن — صورة مموّهة، واسم لا يُعلَن في الساحة العامة. يجلس فوق هيكل العصابات في Infinite City: يوجِّه التوازن بين
+            شخصية لا تُعرَف للعلن — صورة مموّهة، واسم لا يُعلَن في الساحة العامة. يجلس فوق هيكل العصابات في TRUST CFW: يوجِّه التوازن بين
             الفصائل، ويُسوّي الخلافات الحادة، ويُقرِّر ما إذا كانت الحدود تُفتح أو تُغلق. قراره{" "}
             <span className="font-semibold text-foreground">نهائي</span> في ما يخص الصراعات الكبرى والعلاقة بين العصابات والإدارة؛ لا يُتوقع أن
             يظهر في كل موقف، لكن حضوره يُشعر به في كل توتر يهدّد الاستقرار.
@@ -316,8 +316,8 @@ const GangsPage = () => {
       <main className="pb-20">
         <section className="relative h-[46vh] min-h-[300px] max-h-[520px] overflow-hidden">
           <img
-            src="/INF-CONECT-LOGO.gif"
-            alt="العصابات — Infinite City"
+            src="/trustLogo.png"
+            alt="العصابات — TRUST CFW"
             className="absolute inset-0 h-full w-full object-cover"
             onError={(event) => {
               event.currentTarget.onerror = null;

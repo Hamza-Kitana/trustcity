@@ -19,7 +19,7 @@ const DeveloperPage = () => {
       <Navbar />
       <InstitutionHero
         badgeEn="DEVELOPER TEAM"
-        alt="المبرمجين — Infinite City"
+        alt="المبرمجين — TRUST CFW"
         title={
           <>
             صفحة <span className="text-gradient-neon">المبرمجين</span>

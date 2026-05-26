@@ -7,7 +7,7 @@ html[data-dashboard-theme="light"] {
   --card-foreground: 222 47% 11%;
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
-  --primary: 271 81% 56%;
+  --primary: 350 64% 40%;
   --primary-foreground: 0 0% 100%;
   --secondary: 214 32% 91%;
   --secondary-foreground: 222 47% 11%;
@@ -19,19 +19,19 @@ html[data-dashboard-theme="light"] {
   --destructive-foreground: 0 0% 98%;
   --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --ring: 271 81% 56%;
+  --ring: 350 64% 40%;
 }
 
 /* مساحة المحتوى — خلفية محايدة بنقاط خفيفة (داخل AdminLayout فقط) */
 .admin-workspace-main {
-  background-color: hsl(250 18% 96%);
-  background-image: radial-gradient(hsl(265 28% 82% / 0.55) 0.55px, transparent 0.55px);
+  background-color: hsl(352 22% 96%);
+  background-image: radial-gradient(hsl(350 30% 80% / 0.55) 0.55px, transparent 0.55px);
   background-size: 22px 22px;
 }
 
 html.dark .admin-workspace-main {
   background-color: hsl(222 47% 9%);
-  background-image: radial-gradient(hsl(265 35% 38% / 0.22) 0.55px, transparent 0.55px);
+  background-image: radial-gradient(hsl(350 35% 34% / 0.22) 0.55px, transparent 0.55px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -43,7 +43,7 @@ html.dark .admin-workspace-main {
 /* شريط تمرير أنيق داخل الشريط الجانبي */
 .admin-sidebar-nav {
   scrollbar-width: thin;
-  scrollbar-color: hsl(272 35% 45% / 0.55) transparent;
+  scrollbar-color: hsl(350 35% 45% / 0.55) transparent;
   scrollbar-gutter: stable;
   overscroll-behavior: contain;
 }
@@ -57,17 +57,17 @@ html.dark .admin-workspace-main {
 }
 
 .admin-sidebar-nav::-webkit-scrollbar-thumb {
-  background-color: hsl(272 35% 45% / 0.45);
+  background-color: hsl(350 35% 45% / 0.45);
   border-radius: 9999px;
   transition: background-color 0.2s ease;
 }
 
 .admin-sidebar-nav:hover::-webkit-scrollbar-thumb {
-  background-color: hsl(272 50% 60% / 0.65);
+  background-color: hsl(350 50% 60% / 0.65);
 }
 
 .admin-sidebar-nav::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(272 70% 70% / 0.85);
+  background-color: hsl(350 70% 70% / 0.85);
 }
 
 /**
@@ -118,28 +118,28 @@ html.dark .bg-slate-200 {
   background-color: rgb(51 65 85) !important;
 }
 
-html.dark .bg-violet-50\/35 {
-  background-color: rgb(76 29 149 / 0.28) !important;
+html.dark .bg-rose-50\/35 {
+  background-color: rgb(127 29 29 / 0.28) !important;
 }
 
-html.dark .bg-violet-50\/65 {
-  background-color: rgb(76 29 149 / 0.35) !important;
+html.dark .bg-rose-50\/65 {
+  background-color: rgb(127 29 29 / 0.35) !important;
 }
 
-html.dark .bg-violet-50\/75 {
-  background-color: rgb(76 29 149 / 0.38) !important;
+html.dark .bg-rose-50\/75 {
+  background-color: rgb(127 29 29 / 0.38) !important;
 }
 
-html.dark .bg-violet-50\/90 {
-  background-color: rgb(76 29 149 / 0.32) !important;
+html.dark .bg-rose-50\/90 {
+  background-color: rgb(127 29 29 / 0.32) !important;
 }
 
-html.dark .bg-violet-100 {
-  background-color: rgb(76 29 149 / 0.45) !important;
+html.dark .bg-rose-100 {
+  background-color: rgb(127 29 29 / 0.45) !important;
 }
 
-html.dark .bg-violet-200 {
-  background-color: rgb(91 33 182 / 0.5) !important;
+html.dark .bg-rose-200 {
+  background-color: rgb(153 27 27 / 0.5) !important;
 }
 
 html.dark .bg-amber-50\/90 {
@@ -191,16 +191,16 @@ html.dark .border-slate-300 {
   border-color: rgb(100 116 139) !important;
 }
 
-html.dark .border-violet-200 {
-  border-color: rgb(109 40 217 / 0.65) !important;
+html.dark .border-rose-200 {
+  border-color: rgb(153 27 27 / 0.65) !important;
 }
 
-html.dark .border-violet-200\/80 {
-  border-color: rgb(109 40 217 / 0.55) !important;
+html.dark .border-rose-200\/80 {
+  border-color: rgb(153 27 27 / 0.55) !important;
 }
 
-html.dark .border-violet-200\/90 {
-  border-color: rgb(109 40 217 / 0.6) !important;
+html.dark .border-rose-200\/90 {
+  border-color: rgb(153 27 27 / 0.6) !important;
 }
 
 html.dark .border-dashed.border-slate-300 {
@@ -211,20 +211,20 @@ html.dark .hover\:border-slate-200:hover {
   border-color: rgb(71 85 105) !important;
 }
 
-html.dark .hover\:border-violet-200:hover {
-  border-color: rgb(167 139 250 / 0.55) !important;
+html.dark .hover\:border-rose-200:hover {
+  border-color: rgb(251 113 133 / 0.55) !important;
 }
 
 html.dark .hover\:bg-slate-50:hover {
   background-color: rgb(51 65 85 / 0.65) !important;
 }
 
-html.dark .hover\:bg-violet-50:hover {
-  background-color: rgb(76 29 149 / 0.35) !important;
+html.dark .hover\:bg-rose-50:hover {
+  background-color: rgb(127 29 29 / 0.35) !important;
 }
 
-html.dark .hover\:bg-violet-50\/50:hover {
-  background-color: rgb(76 29 149 / 0.28) !important;
+html.dark .hover\:bg-rose-50\/50:hover {
+  background-color: rgb(127 29 29 / 0.28) !important;
 }
 
 html.dark .odd\:bg-white:nth-child(odd) {
@@ -236,14 +236,14 @@ html.dark .even\:bg-slate-50\/60:nth-child(even) {
 }
 
 /* أزرار outline شائعة في المحررات */
-html.dark button.border-violet-200.bg-white,
-html.dark .border-violet-200.bg-white {
+html.dark button.border-rose-200.bg-white,
+html.dark .border-rose-200.bg-white {
   background-color: rgb(30 41 59) !important;
-  color: rgb(196 181 253) !important;
+  color: rgb(254 205 211) !important;
 }
 
-html.dark button.border-violet-200.bg-white:hover,
-html.dark .border-violet-200.bg-white:hover {
-  background-color: rgb(76 29 149 / 0.35) !important;
-  color: rgb(221 214 254) !important;
+html.dark button.border-rose-200.bg-white:hover,
+html.dark .border-rose-200.bg-white:hover {
+  background-color: rgb(127 29 29 / 0.35) !important;
+  color: rgb(254 226 226) !important;
 }

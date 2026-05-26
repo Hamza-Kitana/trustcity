@@ -166,11 +166,11 @@ const QuizManagerPage = () => {
 
   return (
     <div dir="rtl" className="space-y-6 text-slate-900 dark:text-slate-100">
-      <Card className="border-violet-200/90 bg-white shadow-sm dark:border-slate-600 dark:bg-slate-900/95 dark:shadow-none">
+      <Card className="border-rose-200/90 bg-white shadow-sm dark:border-slate-600 dark:bg-slate-900/95 dark:shadow-none">
         <CardHeader className="text-right">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="space-y-2">
-              <Badge className="w-fit bg-violet-100 text-violet-700 hover:bg-violet-100 dark:bg-violet-950/60 dark:text-violet-200 dark:hover:bg-violet-950/60">
+              <Badge className="w-fit bg-rose-100 text-rose-700 hover:bg-rose-100 dark:bg-rose-950/60 dark:text-rose-200 dark:hover:bg-rose-950/60">
                 Quiz Manager
               </Badge>
               <CardTitle className="font-display text-2xl text-slate-900 dark:text-slate-50">
@@ -185,7 +185,7 @@ const QuizManagerPage = () => {
               <Button
                 type="button"
                 onClick={save}
-                className="gap-2 bg-violet-600 text-white hover:bg-violet-700 dark:bg-violet-600 dark:hover:bg-violet-500"
+                className="gap-2 bg-rose-600 text-white hover:bg-rose-700 dark:bg-rose-600 dark:hover:bg-rose-500"
               >
                 <Save className="h-4 w-4" />
                 حفظ الكل
@@ -199,7 +199,7 @@ const QuizManagerPage = () => {
         <Button
           type="button"
           onClick={openAddDialog}
-          className="gap-2 bg-violet-600 text-white hover:bg-violet-700 dark:bg-violet-600 dark:hover:bg-violet-500"
+          className="gap-2 bg-rose-600 text-white hover:bg-rose-700 dark:bg-rose-600 dark:hover:bg-rose-500"
         >
           <Plus className="h-4 w-4" />
           إضافة سؤال
@@ -223,11 +223,11 @@ const QuizManagerPage = () => {
             >
               <CardContent className="flex flex-wrap items-start justify-between gap-4 p-5 text-right">
                 <div className="flex min-w-0 flex-1 items-start gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-violet-700 dark:bg-violet-950/55 dark:text-violet-300">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-100 text-rose-700 dark:bg-rose-950/55 dark:text-rose-300">
                     <HelpCircle className="h-5 w-5" />
                   </div>
                   <div className="min-w-0 space-y-1">
-                    <p className="font-display text-sm font-semibold text-violet-700 dark:text-violet-300">
+                    <p className="font-display text-sm font-semibold text-rose-700 dark:text-rose-300">
                       السؤال {index + 1}
                     </p>
                     <p className="text-sm leading-relaxed text-slate-800 dark:text-slate-100">
@@ -290,7 +290,7 @@ const QuizManagerPage = () => {
           dir="rtl"
           className="flex max-h-[min(90dvh,90svh)] w-[calc(100%-1rem)] max-w-2xl flex-col gap-0 overflow-hidden rounded-2xl border border-slate-200/95 bg-white p-0 text-right text-slate-900 shadow-[0_28px_72px_-24px_rgba(15,23,42,0.38)] dark:border-slate-600 dark:bg-slate-900 dark:text-slate-50 sm:w-full"
         >
-          <div className="shrink-0 border-b border-violet-200 bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.18),transparent_58%)] px-5 pb-4 pt-12 dark:border-slate-700 dark:bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.1),transparent_55%)] sm:px-6 sm:pt-14">
+          <div className="shrink-0 border-b border-rose-200 bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.18),transparent_58%)] px-5 pb-4 pt-12 dark:border-slate-700 dark:bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.1),transparent_55%)] sm:px-6 sm:pt-14">
             <DialogHeader className="space-y-1.5 text-right sm:text-right">
               <DialogTitle className="font-display text-xl font-bold text-slate-900 dark:text-slate-50 sm:text-2xl">
                 {questionDialog?.mode === "edit" ? "تعديل السؤال" : "إضافة سؤال جديد"}
@@ -397,7 +397,7 @@ const QuizManagerPage = () => {
           ) : null}
 
           <DialogFooter className="shrink-0 flex-row-reverse gap-2 border-t border-slate-200 bg-slate-50/90 px-5 py-4 dark:border-slate-700 dark:bg-slate-900/95 sm:justify-start sm:px-6">
-            <Button type="button" onClick={confirmQuestionDialog} className="bg-violet-600 text-white hover:bg-violet-700">
+            <Button type="button" onClick={confirmQuestionDialog} className="bg-rose-600 text-white hover:bg-rose-700">
               {questionDialog?.mode === "edit" ? "حفظ التعديل" : "إضافة السؤال"}
             </Button>
             <Button

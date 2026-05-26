@@ -32,7 +32,7 @@ const JusticePage = () => {
 
       <InstitutionHero
         badgeEn="MINISTRY OF JUSTICE"
-        alt="وزارة العدل — Infinite City"
+        alt="وزارة العدل — TRUST CFW"
         title={
           <>
             صفحة <span className="text-gradient-neon">وزارة العدل</span>

@@ -302,7 +302,7 @@ const AdminLayout = () => {
         : path === "/dashboard/institution"
           ? "bg-sky-500"
           : path === "/dashboard/streamers"
-            ? "bg-fuchsia-500"
+            ? "bg-rose-500"
             : "bg-rose-500";
     const title =
       path === "/dashboard/applications"
@@ -459,7 +459,7 @@ const AdminLayout = () => {
           "flex items-center gap-2.5 rounded-xl px-3 py-2.5 font-display text-sm transition-all duration-200",
           options?.indent && "ps-5",
           isActive
-            ? "bg-violet-600/35 font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] ring-1 ring-violet-400/35"
+            ? "bg-rose-700/35 font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] ring-1 ring-rose-500/35"
             : "text-slate-400 hover:bg-white/[0.06] hover:text-white",
         )
       }
@@ -479,22 +479,22 @@ const AdminLayout = () => {
       )}
     >
       <div className="flex min-h-screen flex-col lg:flex-row">
-        <aside className="admin-sidebar relative z-40 flex max-h-screen w-full shrink-0 flex-col border-b border-white/10 bg-gradient-to-b from-slate-950 via-[hsl(265_32%_14%)] to-slate-950 pt-[env(safe-area-inset-top,0px)] shadow-[0_12px_40px_-24px_rgba(0,0,0,0.65)] lg:fixed lg:inset-y-0 lg:right-0 lg:h-screen lg:max-h-screen lg:w-[17.5rem] lg:border-b-0 lg:border-l lg:border-white/10">
+        <aside className="admin-sidebar relative z-40 flex max-h-screen w-full shrink-0 flex-col border-b border-white/10 bg-gradient-to-b from-slate-950 via-[hsl(350_28%_16%)] to-slate-950 pt-[env(safe-area-inset-top,0px)] shadow-[0_12px_40px_-24px_rgba(0,0,0,0.65)] lg:fixed lg:inset-y-0 lg:right-0 lg:h-screen lg:max-h-screen lg:w-[17.5rem] lg:border-b-0 lg:border-l lg:border-white/10">
           <div className="shrink-0 border-b border-white/10 px-5 py-6">
             <div className="flex items-center gap-3">
               <img
-                src="/INF_LOGO.png"
-                alt="Infinite City"
-                className="h-12 w-12 shrink-0 object-contain drop-shadow-[0_0_16px_hsl(272_82%_58%/0.45)]"
+                src="/trustLogo.png"
+                alt="TRUST CFW"
+                className="h-12 w-12 shrink-0 object-contain drop-shadow-[0_0_16px_hsl(350_70%_45%/0.45)]"
                 loading="eager"
               />
               <div className="min-w-0 flex-1 text-right">
-                <p className="font-display text-[10px] tracking-[0.28em] text-slate-400">INFINITE CITY</p>
+                <p className="font-display text-[10px] tracking-[0.28em] text-slate-400">TRUST CFW</p>
                 <p className="mt-1 font-display text-lg font-bold leading-tight text-white">{title}</p>
                 <p className="mt-1.5 text-xs text-slate-400">
                   {user?.username}
                   <span className="mx-1.5 text-slate-600">·</span>
-                  <span className="rounded-md bg-violet-600/35 px-1.5 py-0.5 font-mono text-[10px] text-violet-100">
+                  <span className="rounded-md bg-rose-700/35 px-1.5 py-0.5 font-mono text-[10px] text-rose-100">
                     {badge}
                   </span>
                 </p>
@@ -505,7 +505,7 @@ const AdminLayout = () => {
             <span className="px-3 py-2 font-display text-[11px] font-medium text-slate-500">التنقل</span>
             {sidebarNav.navLeading.map((item) => renderSidebarLink(item))}
             {sidebarNav.navStore.length > 0 ? (
-              <div className="mt-1 rounded-xl border border-violet-500/25 bg-violet-950/40 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+              <div className="mt-1 rounded-xl border border-rose-500/25 bg-rose-950/40 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
                 <button
                   type="button"
                   aria-expanded={storeGroupOpen}
@@ -513,14 +513,14 @@ const AdminLayout = () => {
                   className={cn(
                     "flex w-full items-center gap-2 rounded-lg px-2.5 py-2.5 font-display transition-all duration-200",
                     storeSectionActive
-                      ? "bg-violet-600/30 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] ring-1 ring-violet-400/35"
-                      : "text-slate-400 hover:bg-violet-600/15 hover:text-violet-100",
+                      ? "bg-rose-700/30 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] ring-1 ring-rose-500/35"
+                      : "text-slate-400 hover:bg-rose-700/15 hover:text-rose-100",
                   )}
                 >
                   <Store
                     className={cn(
                       "h-4 w-4 shrink-0 transition-colors",
-                      storeSectionActive ? "text-fuchsia-300" : "text-violet-400",
+                      storeSectionActive ? "text-rose-300" : "text-rose-400",
                     )}
                     aria-hidden
                   />
@@ -528,8 +528,8 @@ const AdminLayout = () => {
                     className={cn(
                       "min-w-0 flex-1 text-right text-sm font-bold tracking-wide sm:text-[15px]",
                       storeSectionActive
-                        ? "bg-gradient-to-l from-fuchsia-200 via-violet-100 to-violet-200 bg-clip-text text-transparent"
-                        : "bg-gradient-to-l from-slate-200 to-violet-300 bg-clip-text text-transparent",
+                        ? "bg-gradient-to-l from-rose-200 via-red-100 to-rose-200 bg-clip-text text-transparent"
+                        : "bg-gradient-to-l from-slate-200 to-rose-300 bg-clip-text text-transparent",
                     )}
                   >
                     المتجر
@@ -538,7 +538,7 @@ const AdminLayout = () => {
                   <ChevronDown
                     className={cn(
                       "h-4 w-4 shrink-0 transition-transform duration-200",
-                      storeGroupOpen ? "rotate-180 text-violet-200" : "text-slate-500",
+                      storeGroupOpen ? "rotate-180 text-rose-200" : "text-slate-500",
                     )}
                     aria-hidden
                   />
@@ -555,31 +555,31 @@ const AdminLayout = () => {
             <div className="mt-3 space-y-2 border-t border-white/10 pt-3">
               {isLawsEditor ? (
                 <p className="px-3 text-[11px] leading-relaxed text-slate-400">
-                  <Scale className="me-1 inline h-3 w-3 text-violet-400" />
+                  <Scale className="me-1 inline h-3 w-3 text-rose-400" />
                   القوانين تتحدث للزوّار بعد الحفظ.
                 </p>
               ) : null}
               {isStreamerManager ? (
                 <p className="px-3 text-[11px] leading-relaxed text-slate-400">
-                  <Video className="me-1 inline h-3 w-3 text-violet-400" />
+                  <Video className="me-1 inline h-3 w-3 text-rose-400" />
                   البطاقات و«طلبات الستريمر» — عند القبول تُضاف البطاقة تلقائياً لصفحة صنّاع المحتوى.
                 </p>
               ) : null}
               {isGangManager ? (
                 <p className="px-3 text-[11px] leading-relaxed text-slate-400">
-                  <Swords className="me-1 inline h-3 w-3 text-violet-400" />
+                  <Swords className="me-1 inline h-3 w-3 text-rose-400" />
                   بطاقات العصابات وطلبات فتح العصابة — من التبويبات داخل مدير العصابات.
                 </p>
               ) : null}
               {isVipCarsManager ? (
                 <p className="px-3 text-[11px] leading-relaxed text-slate-400">
-                  <Car className="me-1 inline h-3 w-3 text-violet-400" />
+                  <Car className="me-1 inline h-3 w-3 text-rose-400" />
                   كتالوج VIP والصور محلياً.
                 </p>
               ) : null}
               {isInstitutionRosterManager ? (
                 <p className="px-3 text-[11px] leading-relaxed text-slate-400">
-                  <Building2 className="me-1 inline h-3 w-3 text-violet-400" />
+                  <Building2 className="me-1 inline h-3 w-3 text-rose-400" />
                   {userRoles.filter((r) => isInstitutionRosterStaffRole(r)).length > 1
                     ? "اختر المؤسسة من الكروت لتحرير الطاقم؛ القوانين والأسئلة من داخل المحرر."
                     : "تحرير الطاقم وطلبات التوظيف؛ القوانين والأسئلة من زر داخل المحرر."}
@@ -587,7 +587,7 @@ const AdminLayout = () => {
               ) : null}
               {isApplicationReviewer ? (
                 <p className="px-3 text-[11px] leading-relaxed text-slate-400">
-                  <ClipboardList className="me-1 inline h-3 w-3 text-violet-400" />
+                  <ClipboardList className="me-1 inline h-3 w-3 text-rose-400" />
                   طلبات دخول السيرفر (/apply): قبول أو رفض — وليس طلبات الوظائف.
                 </p>
               ) : null}
@@ -639,7 +639,7 @@ const AdminLayout = () => {
                   "h-9 w-9 shrink-0",
                   isDashDark
                     ? "border-slate-600 bg-slate-800 text-amber-300 hover:border-amber-400/50 hover:bg-slate-700 hover:text-amber-200"
-                    : "border-slate-200 bg-white text-slate-700 hover:border-violet-300 hover:bg-violet-50 hover:text-violet-900",
+                    : "border-slate-200 bg-white text-slate-700 hover:border-rose-300 hover:bg-rose-50 hover:text-rose-900",
                 )}
                 aria-label={isDashDark ? "تفعيل الوضع الفاتح" : "تفعيل الوضع الداكن"}
                 title={isDashDark ? "وضع فاتح" : "وضع داكن"}
@@ -654,7 +654,7 @@ const AdminLayout = () => {
                   "shrink-0",
                   isDashDark
                     ? "border-slate-600 bg-slate-800 text-slate-200 hover:border-slate-500 hover:bg-slate-700 hover:text-white"
-                    : "border-slate-200 bg-white text-slate-700 hover:border-violet-300 hover:bg-violet-50 hover:text-violet-900",
+                    : "border-slate-200 bg-white text-slate-700 hover:border-rose-300 hover:bg-rose-50 hover:text-rose-900",
                 )}
                 onClick={() => {
                   logout();

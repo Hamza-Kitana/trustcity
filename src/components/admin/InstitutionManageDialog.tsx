@@ -241,7 +241,7 @@ export function InstitutionManageDialog({ branchId, open, onOpenChange }: Props)
           dir="rtl"
           className="flex max-h-[min(92dvh,880px)] w-[calc(100%-1rem)] max-w-4xl flex-col gap-0 overflow-hidden rounded-2xl border border-slate-200/95 bg-white p-0 text-right text-slate-900 shadow-[0_32px_80px_-28px_rgba(15,23,42,0.45)] dark:border-slate-600 dark:bg-slate-900 dark:text-slate-50 sm:w-full"
         >
-          <div className="shrink-0 border-b border-violet-200 bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.2),transparent_58%)] px-5 pb-4 pt-12 dark:border-slate-700 sm:px-6 sm:pt-14">
+          <div className="shrink-0 border-b border-rose-200 bg-[radial-gradient(ellipse_100%_120%_at_50%_0%,rgba(139,92,246,0.2),transparent_58%)] px-5 pb-4 pt-12 dark:border-slate-700 sm:px-6 sm:pt-14">
             <DialogHeader className="space-y-1.5 text-right sm:text-right">
               <DialogTitle className="font-display text-xl font-bold sm:text-2xl">{meta.labelAr}</DialogTitle>
               <DialogDescription className="text-sm text-slate-600 dark:text-slate-400">
@@ -265,17 +265,17 @@ export function InstitutionManageDialog({ branchId, open, onOpenChange }: Props)
           </div>
 
           <Tabs value={tab} onValueChange={(v) => setTab(v as "laws" | "quiz")} className="flex min-h-0 flex-1 flex-col">
-            <TabsList className="mx-5 mt-4 grid w-auto shrink-0 grid-cols-2 gap-1 rounded-xl bg-violet-100/80 p-1 dark:bg-slate-800">
+            <TabsList className="mx-5 mt-4 grid w-auto shrink-0 grid-cols-2 gap-1 rounded-xl bg-rose-100/80 p-1 dark:bg-slate-800">
               <TabsTrigger
                 value="laws"
-                className="gap-2 rounded-lg data-[state=active]:bg-white data-[state=active]:text-violet-900 data-[state=active]:shadow-sm dark:data-[state=active]:bg-slate-900 dark:data-[state=active]:text-violet-100"
+                className="gap-2 rounded-lg data-[state=active]:bg-white data-[state=active]:text-rose-900 data-[state=active]:shadow-sm dark:data-[state=active]:bg-slate-900 dark:data-[state=active]:text-rose-100"
               >
                 <BookOpen className="h-4 w-4" />
                 القوانين
               </TabsTrigger>
               <TabsTrigger
                 value="quiz"
-                className="gap-2 rounded-lg data-[state=active]:bg-white data-[state=active]:text-violet-900 data-[state=active]:shadow-sm dark:data-[state=active]:bg-slate-900 dark:data-[state=active]:text-violet-100"
+                className="gap-2 rounded-lg data-[state=active]:bg-white data-[state=active]:text-rose-900 data-[state=active]:shadow-sm dark:data-[state=active]:bg-slate-900 dark:data-[state=active]:text-rose-100"
               >
                 <ShieldQuestion className="h-4 w-4" />
                 أسئلة الاختبار

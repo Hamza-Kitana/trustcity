@@ -218,9 +218,9 @@ const ProfilePage = () => {
       */}
       <div className="light min-h-screen bg-[#f4f0fb] text-slate-900 antialiased">
       <div className="relative overflow-hidden pt-[env(safe-area-inset-top,0px)]">
-        <div className="pointer-events-none absolute -left-40 top-0 h-72 w-72 rounded-full bg-violet-400/25 blur-[100px]" />
-        <div className="pointer-events-none absolute -right-24 top-20 h-64 w-64 rounded-full bg-fuchsia-400/20 blur-[90px]" />
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-violet-200/40 via-transparent to-transparent" />
+        <div className="pointer-events-none absolute -left-40 top-0 h-72 w-72 rounded-full bg-rose-400/25 blur-[100px]" />
+        <div className="pointer-events-none absolute -right-24 top-20 h-64 w-64 rounded-full bg-red-400/20 blur-[90px]" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-rose-200/40 via-transparent to-transparent" />
 
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 16 }}
@@ -229,12 +229,12 @@ const ProfilePage = () => {
           className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 pb-10 pt-24 text-center sm:px-6 md:px-8 lg:px-12 xl:px-16"
         >
           <div className="relative mb-4">
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-violet-400 via-fuchsia-400 to-violet-600 opacity-80 blur-md" />
-            <div className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-white shadow-[0_20px_50px_-12px_rgba(54,22,79,0.45)] ring-2 ring-violet-200/60 md:h-32 md:w-32">
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-rose-400 via-red-400 to-rose-600 opacity-80 blur-md" />
+            <div className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-white shadow-[0_20px_50px_-12px_rgba(127,29,29,0.45)] ring-2 ring-rose-200/60 md:h-32 md:w-32">
               {avatarUrl ? (
                 <img src={avatarUrl} alt="" className="h-full w-full object-cover" />
               ) : (
-                <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-violet-600 to-violet-900 font-display text-2xl font-bold text-white md:text-3xl">
+                <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-rose-600 to-rose-900 font-display text-2xl font-bold text-white md:text-3xl">
                   {initials}
                 </div>
               )}
@@ -247,7 +247,7 @@ const ProfilePage = () => {
             ) : null}
           </div>
 
-          <p className="font-display text-[11px] tracking-[0.35em] text-violet-700/90">حسابك</p>
+          <p className="font-display text-[11px] tracking-[0.35em] text-rose-700/90">حسابك</p>
           <h1 className="mt-1 font-display text-2xl font-bold text-slate-900 md:text-3xl">{profileHeadline}</h1>
           <div className="mt-3 flex w-full max-w-md flex-col items-center gap-1.5 text-center">
             <p className="font-mono text-sm text-slate-600" dir="ltr">
@@ -334,7 +334,7 @@ const ProfilePage = () => {
                 myMembership.role === "leader"
                   ? "border-amber-300/80 bg-gradient-to-l from-amber-500 via-orange-600 to-amber-700 text-white"
                   : myMembership.role === "deputy"
-                    ? "border-indigo-300/80 bg-gradient-to-l from-indigo-600 via-violet-700 to-fuchsia-700 text-white"
+                    ? "border-indigo-300/80 bg-gradient-to-l from-indigo-600 via-rose-700 to-red-700 text-white"
                     : "border-emerald-300/80 bg-gradient-to-l from-emerald-50 via-white to-emerald-50 text-slate-900",
               )}
             >
@@ -428,30 +428,30 @@ const ProfilePage = () => {
           >
             <Link
               to={dashboardPath}
-              className="group relative flex items-center gap-4 overflow-hidden rounded-3xl border border-violet-300/60 bg-gradient-to-l from-slate-950 via-[hsl(265_45%_22%)] to-violet-900 px-5 py-5 text-right text-white shadow-[0_28px_72px_-22px_rgba(124,58,237,0.7)] transition-all hover:-translate-y-0.5 hover:shadow-[0_32px_80px_-22px_rgba(124,58,237,0.85)] sm:px-6 sm:py-6"
+              className="group relative flex items-center gap-4 overflow-hidden rounded-3xl border border-rose-300/60 bg-gradient-to-l from-slate-950 via-[hsl(350_45%_22%)] to-rose-900 px-5 py-5 text-right text-white shadow-[0_28px_72px_-22px_rgba(127,29,29,0.7)] transition-all hover:-translate-y-0.5 hover:shadow-[0_32px_80px_-22px_rgba(127,29,29,0.85)] sm:px-6 sm:py-6"
             >
               <span
                 aria-hidden
-                className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full bg-violet-500/30 blur-3xl transition-opacity duration-500 group-hover:opacity-90"
+                className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full bg-rose-500/30 blur-3xl transition-opacity duration-500 group-hover:opacity-90"
               />
               <span
                 aria-hidden
-                className="pointer-events-none absolute -bottom-12 -left-10 h-44 w-44 rounded-full bg-fuchsia-500/25 blur-3xl"
+                className="pointer-events-none absolute -bottom-12 -left-10 h-44 w-44 rounded-full bg-red-500/25 blur-3xl"
               />
-              <span className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-violet-500/25 ring-1 ring-violet-300/40 backdrop-blur-sm shadow-[0_0_28px_rgba(167,139,250,0.45)] sm:h-[4.5rem] sm:w-[4.5rem]">
-                <LayoutDashboard className="h-8 w-8 text-violet-100 sm:h-9 sm:w-9" />
+              <span className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-rose-500/25 ring-1 ring-rose-300/40 backdrop-blur-sm shadow-[0_0_28px_rgba(251,113,133,0.45)] sm:h-[4.5rem] sm:w-[4.5rem]">
+                <LayoutDashboard className="h-8 w-8 text-rose-100 sm:h-9 sm:w-9" />
               </span>
               <div className="relative min-w-0 flex-1">
                 <div className="flex flex-wrap items-center justify-end gap-2">
-                  <Badge className="rounded-full bg-violet-500/30 px-2 py-0.5 text-[10px] font-display font-semibold text-violet-100 ring-1 ring-violet-300/40">
+                  <Badge className="rounded-full bg-rose-500/30 px-2 py-0.5 text-[10px] font-display font-semibold text-rose-100 ring-1 ring-rose-300/40">
                     {auth.user?.roles.length ?? 0} صلاحية
                   </Badge>
-                  <p className="font-display text-[10px] tracking-[0.32em] text-violet-200/85">DASHBOARD</p>
+                  <p className="font-display text-[10px] tracking-[0.32em] text-rose-200/85">DASHBOARD</p>
                 </div>
                 <p className="mt-1 font-display text-xl font-bold leading-tight sm:text-2xl">
                   لوحة التحكم — صلاحيات الموظف
                 </p>
-                <p className="mt-1 line-clamp-2 text-[13px] leading-snug text-violet-100/85 sm:text-sm">
+                <p className="mt-1 line-clamp-2 text-[13px] leading-snug text-rose-100/85 sm:text-sm">
                   تم منحك صلاحيات إدارية. اضغط للدخول إلى لوحة التحكم وإدارة محتوى السيرفر.
                 </p>
               </div>
@@ -523,7 +523,7 @@ const ProfilePage = () => {
                   navigate("/profile");
                 }
               }}
-              className="group relative flex min-w-0 flex-1 items-center gap-3 overflow-hidden rounded-3xl border border-violet-200/90 bg-gradient-to-l from-violet-600 via-violet-700 to-fuchsia-700 px-4 py-4 text-right text-white shadow-[0_24px_60px_-28px_rgba(124,58,237,0.55)] transition-all hover:-translate-y-0.5 hover:shadow-[0_28px_70px_-22px_rgba(124,58,237,0.65)] sm:gap-4 sm:px-5 sm:py-5 md:min-w-[calc(50%-0.625rem)] lg:min-w-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5"
+              className="group relative flex min-w-0 flex-1 items-center gap-3 overflow-hidden rounded-3xl border border-rose-200/90 bg-gradient-to-l from-rose-600 via-rose-700 to-red-700 px-4 py-4 text-right text-white shadow-[0_24px_60px_-28px_rgba(127,29,29,0.55)] transition-all hover:-translate-y-0.5 hover:shadow-[0_28px_70px_-22px_rgba(127,29,29,0.65)] sm:gap-4 sm:px-5 sm:py-5 md:min-w-[calc(50%-0.625rem)] lg:min-w-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5"
             >
               <span
                 aria-hidden
@@ -531,7 +531,7 @@ const ProfilePage = () => {
               />
               <span
                 aria-hidden
-                className="pointer-events-none absolute -bottom-12 -left-8 h-40 w-40 rounded-full bg-fuchsia-400/25 blur-2xl"
+                className="pointer-events-none absolute -bottom-12 -left-8 h-40 w-40 rounded-full bg-red-400/25 blur-2xl"
               />
               <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/20 backdrop-blur-sm sm:h-14 sm:w-14 lg:h-12 lg:w-12 xl:h-14 xl:w-14">
                 <MessageSquareMore className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8" />
@@ -578,19 +578,19 @@ const ProfilePage = () => {
 
             {visibility.pages.streamers ? (
               streamerUiStatus === "approved" ? (
-                <div className="relative flex min-w-0 flex-1 items-center gap-3 overflow-hidden rounded-3xl border border-fuchsia-200/90 bg-gradient-to-l from-fuchsia-50 via-white to-violet-50 px-4 py-4 text-right text-fuchsia-950 shadow-[0_18px_44px_-22px_rgba(192,38,211,0.3)] sm:gap-4 sm:px-5 sm:py-5 md:min-w-[calc(50%-0.625rem)] lg:min-w-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
-                  <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-fuchsia-100 text-fuchsia-700 ring-1 ring-fuchsia-200/80 sm:h-14 sm:w-14 lg:h-12 lg:w-12 xl:h-14 xl:w-14">
+                <div className="relative flex min-w-0 flex-1 items-center gap-3 overflow-hidden rounded-3xl border border-red-200/90 bg-gradient-to-l from-red-50 via-white to-rose-50 px-4 py-4 text-right text-red-950 shadow-[0_18px_44px_-22px_rgba(192,38,211,0.3)] sm:gap-4 sm:px-5 sm:py-5 md:min-w-[calc(50%-0.625rem)] lg:min-w-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+                  <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-red-100 text-red-700 ring-1 ring-red-200/80 sm:h-14 sm:w-14 lg:h-12 lg:w-12 xl:h-14 xl:w-14">
                     <CheckCircle2 className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8" />
                   </span>
                   <div className="relative min-w-0 flex-1">
-                    <p className="font-display text-[10px] tracking-[0.32em] text-fuchsia-700/90">STREAMER</p>
+                    <p className="font-display text-[10px] tracking-[0.32em] text-red-700/90">STREAMER</p>
                     <p className="mt-1 font-display text-lg font-bold leading-tight sm:text-xl lg:text-base xl:text-lg">
                       {streamerCardTitle}
                     </p>
-                    <p className="mt-1 line-clamp-3 text-[13px] leading-snug text-fuchsia-900/85 sm:text-sm">
+                    <p className="mt-1 line-clamp-3 text-[13px] leading-snug text-red-900/85 sm:text-sm">
                       بطاقتك على صفحة صنّاع المحتوى — المسمى يحدّده ستريمر منجر.
                     </p>
-                    <Link to="/streamers" className="mt-2 inline-block text-sm font-semibold text-fuchsia-800 underline">
+                    <Link to="/streamers" className="mt-2 inline-block text-sm font-semibold text-red-800 underline">
                       عرض الصفحة
                     </Link>
                   </div>
@@ -628,7 +628,7 @@ const ProfilePage = () => {
                   </div>
                   <Link
                     to="/apply/streamers"
-                    className="inline-flex h-10 w-full items-center justify-center rounded-xl bg-gradient-to-l from-fuchsia-600 via-violet-600 to-indigo-700 px-4 text-sm font-semibold text-white shadow-md transition-all hover:brightness-110 sm:w-auto sm:min-w-[12rem] sm:self-end"
+                    className="inline-flex h-10 w-full items-center justify-center rounded-xl bg-gradient-to-l from-red-600 via-rose-600 to-indigo-700 px-4 text-sm font-semibold text-white shadow-md transition-all hover:brightness-110 sm:w-auto sm:min-w-[12rem] sm:self-end"
                   >
                     التقديم مرة أخرى
                   </Link>
@@ -636,7 +636,7 @@ const ProfilePage = () => {
               ) : (
                 <Link
                   to="/apply/streamers"
-                  className="group relative flex min-w-0 flex-1 items-center gap-3 overflow-hidden rounded-3xl border border-fuchsia-400/60 bg-gradient-to-l from-fuchsia-600 via-violet-600 to-indigo-700 px-4 py-4 text-right text-white shadow-[0_24px_60px_-28px_rgba(192,38,211,0.45)] transition-all hover:-translate-y-0.5 sm:gap-4 sm:px-5 sm:py-5 md:min-w-[calc(50%-0.625rem)] lg:min-w-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5"
+                  className="group relative flex min-w-0 flex-1 items-center gap-3 overflow-hidden rounded-3xl border border-red-400/60 bg-gradient-to-l from-red-600 via-rose-600 to-indigo-700 px-4 py-4 text-right text-white shadow-[0_24px_60px_-28px_rgba(192,38,211,0.45)] transition-all hover:-translate-y-0.5 sm:gap-4 sm:px-5 sm:py-5 md:min-w-[calc(50%-0.625rem)] lg:min-w-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5"
                 >
                   <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/25 sm:h-14 sm:w-14 lg:h-12 lg:w-12 xl:h-14 xl:w-14">
                     <Video className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8" />
@@ -660,8 +660,8 @@ const ProfilePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: reduceMotion ? 0 : 0.1 }}
         >
-          <Card className="overflow-hidden border-violet-200/90 bg-white/95 text-slate-900 shadow-[0_24px_60px_-28px_rgba(54,22,79,0.35)] backdrop-blur-sm">
-            <CardHeader className="border-b border-violet-100/90 bg-gradient-to-l from-violet-50/90 to-white pb-6 text-right">
+          <Card className="overflow-hidden border-rose-200/90 bg-white/95 text-slate-900 shadow-[0_24px_60px_-28px_rgba(54,22,79,0.35)] backdrop-blur-sm">
+            <CardHeader className="border-b border-rose-100/90 bg-gradient-to-l from-rose-50/90 to-white pb-6 text-right">
               <CardTitle className="font-display text-xl text-slate-900">معلومات الحساب</CardTitle>
               <CardDescription className="mt-1 text-pretty text-slate-600">
                 الاسم داخل المدينة والعمر يُحفظان من <span className="font-semibold">التقديم الإلكتروني</span> عند
@@ -672,7 +672,7 @@ const ProfilePage = () => {
               {profileIncomplete && !cityTicketsOk ? (
                 <div
                   role="status"
-                  className="rounded-xl border border-violet-300 bg-violet-50 px-4 py-3 text-right text-sm leading-relaxed text-violet-950"
+                  className="rounded-xl border border-rose-300 bg-rose-50 px-4 py-3 text-right text-sm leading-relaxed text-rose-950"
                 >
                   <span className="font-semibold">مطلوب:</span> أكمِل{" "}
                   <Link to="/apply/citizen" className="font-semibold underline underline-offset-2">
@@ -689,7 +689,7 @@ const ProfilePage = () => {
                   </p>
                   <div
                     dir="ltr"
-                    className="min-h-10 rounded-lg border border-violet-200 bg-slate-50 px-3 py-2.5 text-left font-mono text-sm text-slate-900"
+                    className="min-h-10 rounded-lg border border-rose-200 bg-slate-50 px-3 py-2.5 text-left font-mono text-sm text-slate-900"
                   >
                     @{user.username}
                   </div>
@@ -701,7 +701,7 @@ const ProfilePage = () => {
                   </p>
                   <div
                     dir="rtl"
-                    className="min-h-10 rounded-lg border border-violet-200 bg-slate-50 px-3 py-2.5 text-right text-sm font-medium text-slate-900"
+                    className="min-h-10 rounded-lg border border-rose-200 bg-slate-50 px-3 py-2.5 text-right text-sm font-medium text-slate-900"
                   >
                     {profile?.realName?.trim() ? profile.realName : "—"}
                   </div>
@@ -712,7 +712,7 @@ const ProfilePage = () => {
                   </Label>
                   <div
                     dir="rtl"
-                    className="min-h-10 rounded-lg border border-violet-200 bg-slate-50 px-3 py-2.5 text-right text-sm font-medium text-slate-900"
+                    className="min-h-10 rounded-lg border border-rose-200 bg-slate-50 px-3 py-2.5 text-right text-sm font-medium text-slate-900"
                   >
                     {cityNameParts.first}
                   </div>
@@ -723,7 +723,7 @@ const ProfilePage = () => {
                   </Label>
                   <div
                     dir="rtl"
-                    className="min-h-10 rounded-lg border border-violet-200 bg-slate-50 px-3 py-2.5 text-right text-sm font-medium text-slate-900"
+                    className="min-h-10 rounded-lg border border-rose-200 bg-slate-50 px-3 py-2.5 text-right text-sm font-medium text-slate-900"
                   >
                     {cityNameParts.second}
                   </div>
@@ -735,7 +735,7 @@ const ProfilePage = () => {
                   <div
                     id="prof-email"
                     dir="ltr"
-                    className="min-h-10 rounded-lg border border-violet-200 bg-slate-50 px-3 py-2.5 font-mono text-sm text-slate-900"
+                    className="min-h-10 rounded-lg border border-rose-200 bg-slate-50 px-3 py-2.5 font-mono text-sm text-slate-900"
                   >
                     {profile?.email?.trim() ? profile.email : "—"}
                   </div>
@@ -747,14 +747,14 @@ const ProfilePage = () => {
                   <div
                     id="prof-discord"
                     dir="ltr"
-                    className="min-h-10 rounded-lg border border-violet-200 bg-slate-50 px-3 py-2.5 font-mono text-sm text-slate-900"
+                    className="min-h-10 rounded-lg border border-rose-200 bg-slate-50 px-3 py-2.5 font-mono text-sm text-slate-900"
                   >
                     {profile?.discordId?.trim() ? profile.discordId : "—"}
                   </div>
                 </div>
                 <div className="space-y-2 text-right sm:col-span-2">
                   <Label className="text-sm font-medium text-slate-800">العمر</Label>
-                  <div className="min-h-10 rounded-lg border border-violet-200 bg-slate-50 px-3 py-2.5 text-right text-sm font-medium text-slate-900">
+                  <div className="min-h-10 rounded-lg border border-rose-200 bg-slate-50 px-3 py-2.5 text-right text-sm font-medium text-slate-900">
                     {profile && profile.age > 0 ? `${profile.age} سنة` : "—"}
                   </div>
                   <p className="text-[11px] text-slate-600">
@@ -762,8 +762,8 @@ const ProfilePage = () => {
                   </p>
                 </div>
               </div>
-              <div className="rounded-xl border border-violet-100 bg-violet-50/40 p-3 text-right">
-                <p className="text-[11px] font-medium text-violet-900">معاينة سريعة</p>
+              <div className="rounded-xl border border-rose-100 bg-rose-50/40 p-3 text-right">
+                <p className="text-[11px] font-medium text-rose-900">معاينة سريعة</p>
                 <div className="mt-2 grid gap-2 text-sm sm:grid-cols-2">
                   <span className="text-slate-600">
                     الاسم في المدينة:{" "}
@@ -789,26 +789,26 @@ const ProfilePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: reduceMotion ? 0 : 0.2 }}
         >
-          <Card className="overflow-hidden border-violet-200/90 bg-white/95 shadow-[0_18px_50px_-22px_rgba(54,22,79,0.25)]">
-            <CardHeader className="flex flex-row items-center justify-between gap-3 border-b border-violet-100 bg-gradient-to-l from-violet-50/90 to-white pb-4 text-right">
+          <Card className="overflow-hidden border-rose-200/90 bg-white/95 shadow-[0_18px_50px_-22px_rgba(54,22,79,0.25)]">
+            <CardHeader className="flex flex-row items-center justify-between gap-3 border-b border-rose-100 bg-gradient-to-l from-rose-50/90 to-white pb-4 text-right">
               <div>
                 <CardTitle className="flex items-center justify-end gap-2 font-display text-lg text-slate-900">
-                  <ClipboardList className="h-5 w-5 text-violet-600" />
+                  <ClipboardList className="h-5 w-5 text-rose-600" />
                   طلباتي السابقة
                 </CardTitle>
                 <CardDescription className="mt-1 text-slate-600">
                   سجل تقديماتك (دخول السيرفر والتوظيف) — مرتّب من الأحدث
                 </CardDescription>
               </div>
-              <Badge variant="outline" className="rounded-full border-violet-200 bg-white text-violet-700">
+              <Badge variant="outline" className="rounded-full border-rose-200 bg-white text-rose-700">
                 {myApplications.length} طلب
               </Badge>
             </CardHeader>
             <CardContent className="p-0">
               {myApplications.length === 0 ? (
                 <div className="flex flex-col items-center gap-3 px-6 py-12 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-violet-100">
-                    <ClipboardList className="h-7 w-7 text-violet-500" />
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-rose-100">
+                    <ClipboardList className="h-7 w-7 text-rose-500" />
                   </div>
                   <p className="font-display text-base font-semibold text-slate-800">لم تقدّم على شيء بعد</p>
                   <p className="max-w-xs text-sm text-slate-500">
@@ -820,7 +820,7 @@ const ProfilePage = () => {
                     {citizenElectronicApplyDone ? null : (
                       <Link
                         to="/apply/citizen"
-                        className="inline-flex h-9 items-center rounded-full bg-violet-600 px-4 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-violet-700"
+                        className="inline-flex h-9 items-center rounded-full bg-rose-600 px-4 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-rose-700"
                       >
                         التقديم الإلكتروني
                       </Link>
@@ -828,7 +828,7 @@ const ProfilePage = () => {
                     {citizenElectronicApplyDone ? (
                       <Link
                         to="/jobs"
-                        className="inline-flex h-9 items-center gap-1.5 rounded-full border border-violet-300 bg-white px-4 text-sm text-violet-800 shadow-sm transition-colors hover:bg-violet-50"
+                        className="inline-flex h-9 items-center gap-1.5 rounded-full border border-rose-300 bg-white px-4 text-sm text-rose-800 shadow-sm transition-colors hover:bg-rose-50"
                       >
                         <Briefcase className="h-4 w-4" />
                         التقديم لوظيفة
@@ -840,7 +840,7 @@ const ProfilePage = () => {
                 <div className="overflow-x-auto">
                   <table className="w-full min-w-[720px] border-collapse text-right text-sm">
                     <thead>
-                      <tr className="border-b border-violet-100 bg-violet-50/40 text-[12px] text-slate-600">
+                      <tr className="border-b border-rose-100 bg-rose-50/40 text-[12px] text-slate-600">
                         <th className="px-4 py-3 font-medium">النوع</th>
                         <th className="px-4 py-3 font-medium">المسار</th>
                         <th className="px-4 py-3 font-medium">الرتبة</th>
@@ -854,14 +854,14 @@ const ProfilePage = () => {
                         const isJob = isJobApplicationRoleKey(app.roleKey);
                         const approvedRank = rankLabelForApplication(app);
                         return (
-                          <tr key={app.id} className="border-b border-violet-50 transition-colors hover:bg-violet-50/40">
+                          <tr key={app.id} className="border-b border-rose-50 transition-colors hover:bg-rose-50/40">
                             <td className="px-4 py-3 align-top">
                               <span
                                 className={cn(
                                   "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-[11px] font-medium",
                                   isJob
                                     ? "border-amber-200 bg-amber-50 text-amber-800"
-                                    : "border-violet-200 bg-violet-50 text-violet-700",
+                                    : "border-rose-200 bg-rose-50 text-rose-700",
                                 )}
                               >
                                 {isJob ? (
@@ -934,11 +934,11 @@ const ProfilePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: reduceMotion ? 0 : 0.22 }}
         >
-          <Card className="overflow-hidden border-violet-200/90 bg-white/95 shadow-[0_18px_50px_-22px_rgba(54,22,79,0.25)]">
-            <CardHeader className="flex flex-row items-center justify-between gap-3 border-b border-violet-100 bg-gradient-to-l from-violet-50/90 to-white pb-4 text-right">
+          <Card className="overflow-hidden border-rose-200/90 bg-white/95 shadow-[0_18px_50px_-22px_rgba(54,22,79,0.25)]">
+            <CardHeader className="flex flex-row items-center justify-between gap-3 border-b border-rose-100 bg-gradient-to-l from-rose-50/90 to-white pb-4 text-right">
               <div>
                 <CardTitle className="flex items-center justify-end gap-2 font-display text-lg text-slate-900">
-                  <MessageSquareMore className="h-5 w-5 text-violet-600" />
+                  <MessageSquareMore className="h-5 w-5 text-rose-600" />
                   تكتاتي
                 </CardTitle>
                 <CardDescription className="mt-1 text-slate-600">
@@ -951,7 +951,7 @@ const ProfilePage = () => {
                     {unreadTicketsCount} رد جديد
                   </Badge>
                 ) : null}
-                <Badge variant="outline" className="rounded-full border-violet-200 bg-white text-violet-700">
+                <Badge variant="outline" className="rounded-full border-rose-200 bg-white text-rose-700">
                   {myTickets.length} تكت
                 </Badge>
               </div>
@@ -959,8 +959,8 @@ const ProfilePage = () => {
             <CardContent className="p-0">
               {myTickets.length === 0 ? (
                 <div className="flex flex-col items-center gap-3 px-6 py-12 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-violet-100">
-                    <MessageSquareMore className="h-7 w-7 text-violet-500" />
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-rose-100">
+                    <MessageSquareMore className="h-7 w-7 text-rose-500" />
                   </div>
                   <p className="font-display text-base font-semibold text-slate-800">لم تفتح أي تكت بعد</p>
                   <p className="max-w-xs text-sm text-slate-500">
@@ -976,7 +976,7 @@ const ProfilePage = () => {
                           navigate("/profile");
                         }
                       }}
-                      className="inline-flex h-9 items-center gap-1.5 rounded-full bg-violet-600 px-4 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-violet-700"
+                      className="inline-flex h-9 items-center gap-1.5 rounded-full bg-rose-600 px-4 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-rose-700"
                     >
                       <MessageSquareMore className="h-4 w-4" />
                       افتح تكت جديد
@@ -987,7 +987,7 @@ const ProfilePage = () => {
                 <div className="overflow-x-auto">
                   <table className="w-full min-w-[640px] border-collapse text-right text-sm">
                     <thead>
-                      <tr className="border-b border-violet-100 bg-violet-50/40 text-[12px] text-slate-600">
+                      <tr className="border-b border-rose-100 bg-rose-50/40 text-[12px] text-slate-600">
                         <th className="px-4 py-3 font-medium">النوع</th>
                         <th className="px-4 py-3 font-medium">الموضوع</th>
                         <th className="px-4 py-3 font-medium">الحالة</th>
@@ -1008,10 +1008,10 @@ const ProfilePage = () => {
                         return (
                           <tr
                             key={t.id}
-                            className="border-b border-violet-50 transition-colors hover:bg-violet-50/40"
+                            className="border-b border-rose-50 transition-colors hover:bg-rose-50/40"
                           >
                             <td className="px-4 py-3 align-top">
-                              <span className="inline-flex items-center gap-1.5 rounded-full border border-violet-200 bg-violet-50 px-2.5 py-0.5 text-[11px] font-medium text-violet-700">
+                              <span className="inline-flex items-center gap-1.5 rounded-full border border-rose-200 bg-rose-50 px-2.5 py-0.5 text-[11px] font-medium text-rose-700">
                                 <MessageSquareMore className="h-3 w-3" />
                                 {t.typeLabel}
                               </span>
@@ -1062,7 +1062,7 @@ const ProfilePage = () => {
                                     navigate("/profile");
                                   }
                                 }}
-                                className="inline-flex h-7 items-center gap-1 rounded-full border border-violet-200 bg-white px-2.5 text-[11px] font-display font-semibold text-violet-700 transition-colors hover:bg-violet-50"
+                                className="inline-flex h-7 items-center gap-1 rounded-full border border-rose-200 bg-white px-2.5 text-[11px] font-display font-semibold text-rose-700 transition-colors hover:bg-rose-50"
                               >
                                 فتح
                               </Link>
@@ -1101,7 +1101,7 @@ const ProfilePage = () => {
               toast.success("تم تسجيل الخروج");
               navigate("/", { replace: true });
             }}
-            className="group mt-1 inline-flex h-11 items-center gap-2 rounded-full bg-gradient-to-l from-rose-600 to-rose-700 px-7 font-display text-sm font-semibold text-white shadow-[0_12px_32px_-12px_rgba(244,63,94,0.6)] transition-all hover:from-rose-700 hover:to-rose-800 hover:shadow-[0_16px_40px_-12px_rgba(244,63,94,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2 focus-visible:ring-offset-violet-50"
+            className="group mt-1 inline-flex h-11 items-center gap-2 rounded-full bg-gradient-to-l from-rose-600 to-rose-700 px-7 font-display text-sm font-semibold text-white shadow-[0_12px_32px_-12px_rgba(244,63,94,0.6)] transition-all hover:from-rose-700 hover:to-rose-800 hover:shadow-[0_16px_40px_-12px_rgba(244,63,94,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2 focus-visible:ring-offset-rose-50"
           >
             <LogOut className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" aria-hidden />
             تسجيل الخروج الآن

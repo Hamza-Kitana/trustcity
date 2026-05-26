@@ -47,7 +47,7 @@ export function PostCitizenApplyGate({ profile, applications, children, classNam
           ) : null}
           <div className="flex flex-wrap gap-2 pt-1">
             {!pending ? (
-              <Button asChild size="sm" className="rounded-full bg-violet-600 text-white hover:bg-violet-700">
+              <Button asChild size="sm" className="rounded-full bg-rose-600 text-white hover:bg-rose-700">
                 <Link to="/apply/citizen">التقديم الإلكتروني للمواطن</Link>
               </Button>
             ) : null}

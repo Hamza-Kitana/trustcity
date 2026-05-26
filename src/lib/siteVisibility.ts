@@ -17,7 +17,7 @@ function defaultState(): SiteVisibilityPersisted {
     v: 1,
     pages: {
       laws: true,
-      streamers: true,
+      streamers: false,
       gangs: true,
       vipCars: true,
       houses: true,

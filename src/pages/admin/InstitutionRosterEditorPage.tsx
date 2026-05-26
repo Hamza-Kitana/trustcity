@@ -150,8 +150,8 @@ function SortableMemberRow({
       ref={setNodeRef}
       style={style}
       className={cn(
-        "space-y-2 rounded-xl border border-violet-200 bg-violet-50/70 p-3 text-right text-slate-900 dark:border-violet-700/45 dark:bg-slate-800/95 dark:text-slate-100",
-        isDragging && "z-20 opacity-90 shadow-lg dark:shadow-violet-950/40",
+        "space-y-2 rounded-xl border border-rose-200 bg-rose-50/70 p-3 text-right text-slate-900 dark:border-rose-700/45 dark:bg-slate-800/95 dark:text-slate-100",
+        isDragging && "z-20 opacity-90 shadow-lg dark:shadow-rose-950/40",
       )}
     >
       <div className="flex items-start gap-2">
@@ -169,7 +169,7 @@ function SortableMemberRow({
             <img
               src={member.image}
               alt=""
-              className="h-14 w-14 shrink-0 rounded-lg border border-violet-200 object-cover dark:border-violet-600/60"
+              className="h-14 w-14 shrink-0 rounded-lg border border-rose-200 object-cover dark:border-rose-600/60"
             />
             <div className="min-w-0 flex-1 text-right">
               <p className="truncate font-display font-semibold text-slate-900 dark:text-slate-50">{member.title}</p>
@@ -187,7 +187,7 @@ function SortableMemberRow({
             type="button"
             variant="outline"
             size="sm"
-            className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-violet-600 dark:bg-slate-900 dark:text-violet-200 dark:hover:bg-slate-950 dark:hover:text-violet-100"
+            className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-rose-600 dark:bg-slate-900 dark:text-rose-200 dark:hover:bg-slate-950 dark:hover:text-rose-100"
             onClick={onEdit}
           >
             تعديل
@@ -224,10 +224,10 @@ function SortableMemberRow({
 
 function PersonSummaryCard({ label, person, onEdit }: { label: string; person: RosterPerson; onEdit: () => void }) {
   return (
-    <div className="space-y-3 rounded-xl border border-violet-200 bg-white/90 p-4 text-right text-slate-900 shadow-[0_14px_30px_-22px_rgba(54,22,79,0.35)] dark:border-slate-600 dark:bg-slate-800/95 dark:text-slate-100 dark:shadow-[0_14px_30px_-22px_rgba(0,0,0,0.4)]">
+    <div className="space-y-3 rounded-xl border border-rose-200 bg-white/90 p-4 text-right text-slate-900 shadow-[0_14px_30px_-22px_rgba(54,22,79,0.35)] dark:border-slate-600 dark:bg-slate-800/95 dark:text-slate-100 dark:shadow-[0_14px_30px_-22px_rgba(0,0,0,0.4)]">
       <div className="flex items-start justify-between gap-3">
         <div className="text-right">
-          <p className="font-display text-sm font-semibold text-violet-700 dark:text-violet-300">{label}</p>
+          <p className="font-display text-sm font-semibold text-rose-700 dark:text-rose-300">{label}</p>
           {person.hidden ? (
             <p className="mt-1 text-[11px] font-display text-slate-500 dark:text-slate-400">مخفي من الموقع</p>
           ) : null}
@@ -238,7 +238,7 @@ function PersonSummaryCard({ label, person, onEdit }: { label: string; person: R
           type="button"
           variant="outline"
           size="sm"
-          className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-violet-600 dark:bg-slate-900 dark:text-violet-200 dark:hover:bg-slate-950 dark:hover:text-violet-100"
+          className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-rose-600 dark:bg-slate-900 dark:text-rose-200 dark:hover:bg-slate-950 dark:hover:text-rose-100"
           onClick={onEdit}
         >
           تعديل
@@ -691,7 +691,7 @@ const InstitutionRosterEditorPage = () => {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="flex items-center justify-end gap-2 font-display text-2xl font-bold text-slate-900 dark:text-slate-50">
-            <Building2 className="h-7 w-7 text-violet-700 dark:text-violet-400" />
+            <Building2 className="h-7 w-7 text-rose-700 dark:text-rose-400" />
             محرر الطاقم — {INSTITUTION_BRANCH_META[branchId].labelAr}
           </h1>
           <p className="mt-2 max-w-xl text-sm text-slate-600 dark:text-slate-400">
@@ -703,7 +703,7 @@ const InstitutionRosterEditorPage = () => {
             type="button"
             variant="outline"
             size="sm"
-            className="relative border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-violet-600 dark:bg-slate-900 dark:text-violet-200 dark:hover:bg-slate-950 dark:hover:text-violet-100"
+            className="relative border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-rose-600 dark:bg-slate-900 dark:text-rose-200 dark:hover:bg-slate-950 dark:hover:text-rose-100"
             onClick={() => setApplicationsOpen(true)}
           >
             طلبات التوظيف
@@ -718,7 +718,7 @@ const InstitutionRosterEditorPage = () => {
               type="button"
               variant="outline"
               size="sm"
-              className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-violet-600 dark:bg-slate-900 dark:text-violet-200 dark:hover:bg-slate-950 dark:hover:text-violet-100"
+              className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-rose-600 dark:bg-slate-900 dark:text-rose-200 dark:hover:bg-slate-950 dark:hover:text-rose-100"
               onClick={() => setInstitutionVisible(branchId, !visibility.institutions[branchId])}
             >
               {visibility.institutions[branchId] ? "إخفاء المؤسسة من الموقع" : "إظهار المؤسسة بالموقع"}
@@ -760,7 +760,7 @@ const InstitutionRosterEditorPage = () => {
           <Button type="button" size="sm" className="bg-[#36164f] text-white hover:bg-[#2f1344]" onClick={save}>
             حفظ الطاقم
           </Button>
-          <Button type="button" variant="outline" size="sm" className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-violet-600 dark:bg-slate-900 dark:text-violet-200 dark:hover:bg-slate-950 dark:hover:text-violet-100" asChild>
+          <Button type="button" variant="outline" size="sm" className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-rose-600 dark:bg-slate-900 dark:text-rose-200 dark:hover:bg-slate-950 dark:hover:text-rose-100" asChild>
             <a href={previewPath} target="_blank" rel="noreferrer">
               معاينة الفرع
             </a>
@@ -768,18 +768,18 @@ const InstitutionRosterEditorPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 rounded-2xl border border-violet-200 bg-gradient-to-l from-violet-50/80 via-white to-fuchsia-50/30 p-4 sm:flex-row sm:items-center sm:justify-between dark:border-violet-700/45 dark:bg-gradient-to-l dark:from-slate-800/95 dark:via-slate-900/90 dark:to-violet-950/35">
+      <div className="flex flex-col gap-3 rounded-2xl border border-rose-200 bg-gradient-to-l from-rose-50/80 via-white to-red-50/30 p-4 sm:flex-row sm:items-center sm:justify-between dark:border-rose-700/45 dark:bg-gradient-to-l dark:from-slate-800/95 dark:via-slate-900/90 dark:to-rose-950/35">
         <div className="space-y-1 text-right">
           <p className="font-display text-sm font-semibold text-slate-900 dark:text-slate-50">تقديم الوظيفة — قوانين واختبار</p>
           <p className="text-xs leading-relaxed text-slate-600 dark:text-slate-400">
             ما يقرأه المتقدم ويجيب عليه قبل إرسال طلب التوظيف لهذه المؤسسة.
           </p>
           <div className="flex flex-wrap justify-end gap-2 pt-1">
-            <span className="inline-flex items-center gap-1 rounded-full bg-violet-100 px-2.5 py-0.5 text-[11px] font-medium text-violet-800 dark:bg-violet-950/60 dark:text-violet-200">
+            <span className="inline-flex items-center gap-1 rounded-full bg-rose-100 px-2.5 py-0.5 text-[11px] font-medium text-rose-800 dark:bg-rose-950/60 dark:text-rose-200">
               <BookOpen className="h-3 w-3" />
               {lawsRulesCount} بند قانون
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-fuchsia-100 px-2.5 py-0.5 text-[11px] font-medium text-fuchsia-800 dark:bg-fuchsia-950/50 dark:text-fuchsia-200">
+            <span className="inline-flex items-center gap-1 rounded-full bg-red-100 px-2.5 py-0.5 text-[11px] font-medium text-red-800 dark:bg-red-950/50 dark:text-red-200">
               <ShieldQuestion className="h-3 w-3" />
               {quizQuestionsCount} سؤال
             </span>
@@ -787,7 +787,7 @@ const InstitutionRosterEditorPage = () => {
         </div>
         <Button
           type="button"
-          className="shrink-0 gap-2 bg-violet-600 text-white hover:bg-violet-700 dark:bg-violet-600 dark:hover:bg-violet-500"
+          className="shrink-0 gap-2 bg-rose-600 text-white hover:bg-rose-700 dark:bg-rose-600 dark:hover:bg-rose-500"
           onClick={() => setManageLawsOpen(true)}
         >
           <Settings2 className="h-4 w-4" />
@@ -800,7 +800,7 @@ const InstitutionRosterEditorPage = () => {
           <div className="max-w-md w-full space-y-2 sm:ms-auto">
             <Label>تبديل الفرع</Label>
             <Select value={branchId} onValueChange={(v) => navigate(`/dashboard/institution/${v}`)}>
-              <SelectTrigger className="border-violet-200 bg-white text-slate-900 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-100">
+              <SelectTrigger className="border-rose-200 bg-white text-slate-900 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-100">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent dir="rtl">
@@ -812,22 +812,22 @@ const InstitutionRosterEditorPage = () => {
               </SelectContent>
             </Select>
           </div>
-          <Button type="button" variant="outline" size="sm" className="shrink-0 border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-violet-600 dark:bg-slate-900 dark:text-violet-200 dark:hover:bg-slate-950 dark:hover:text-violet-100" asChild>
+          <Button type="button" variant="outline" size="sm" className="shrink-0 border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-rose-600 dark:bg-slate-900 dark:text-rose-200 dark:hover:bg-slate-950 dark:hover:text-rose-100" asChild>
             <Link to="/dashboard/institution">كل الفروع</Link>
           </Button>
         </div>
       ) : rosterBranches.length > 1 ? (
-        <p className="rounded-lg border border-violet-200 bg-violet-50/70 px-4 py-3 text-sm text-slate-700 dark:border-violet-700/45 dark:bg-violet-950/25 dark:text-slate-300">
+        <p className="rounded-lg border border-rose-200 bg-rose-50/70 px-4 py-3 text-sm text-slate-700 dark:border-rose-700/45 dark:bg-rose-950/25 dark:text-slate-300">
           الفرع الحالي: <strong>{INSTITUTION_BRANCH_META[branchId].labelAr}</strong>
           {" — "}
           للأفرع الأخرى استخدم{" "}
-            <Link to="/dashboard/institution" className="font-semibold text-violet-700 underline-offset-4 hover:underline dark:text-violet-300">
+            <Link to="/dashboard/institution" className="font-semibold text-rose-700 underline-offset-4 hover:underline dark:text-rose-300">
             صفحة المؤسسات
           </Link>{" "}
           أو القائمة الجانبية.
         </p>
       ) : (
-        <p className="rounded-lg border border-violet-200 bg-violet-50/70 px-4 py-3 text-sm text-slate-700 dark:border-violet-700/45 dark:bg-violet-950/25 dark:text-slate-300">
+        <p className="rounded-lg border border-rose-200 bg-rose-50/70 px-4 py-3 text-sm text-slate-700 dark:border-rose-700/45 dark:bg-rose-950/25 dark:text-slate-300">
           أنت تدير: <strong>{INSTITUTION_BRANCH_META[branchId].labelAr}</strong>
         </p>
       )}
@@ -883,12 +883,12 @@ const InstitutionRosterEditorPage = () => {
 
       <div ref={membersSectionRef} className="space-y-3 scroll-mt-24">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <p className="font-display text-sm font-semibold text-violet-700 dark:text-violet-300">أعضاء الشبكة (Chroma)</p>
+          <p className="font-display text-sm font-semibold text-rose-700 dark:text-rose-300">أعضاء الشبكة (Chroma)</p>
           <Button
             type="button"
             variant="outline"
             size="sm"
-            className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 dark:border-violet-600 dark:bg-slate-900 dark:text-violet-200 dark:hover:bg-slate-950 dark:hover:text-violet-100"
+            className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 dark:border-rose-600 dark:bg-slate-900 dark:text-rose-200 dark:hover:bg-slate-950 dark:hover:text-rose-100"
             onClick={() =>
               setDraft((d) =>
                 d
@@ -919,7 +919,7 @@ const InstitutionRosterEditorPage = () => {
             value={memberSearch}
             onChange={(e) => setMemberSearch(e.target.value)}
             placeholder="ابحث بالاسم أو المنصب..."
-            className="border-violet-200 bg-white text-slate-900 placeholder:text-slate-400 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-100 dark:placeholder:text-slate-500"
+            className="border-rose-200 bg-white text-slate-900 placeholder:text-slate-400 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-100 dark:placeholder:text-slate-500"
             autoComplete="off"
           />
         </div>
@@ -939,7 +939,7 @@ const InstitutionRosterEditorPage = () => {
                 />
               ))}
               {filteredMembers.length === 0 ? (
-                <p className="rounded-lg border border-violet-200 bg-white px-4 py-3 text-sm text-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                <p className="rounded-lg border border-rose-200 bg-white px-4 py-3 text-sm text-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300">
                   لا يوجد أعضاء مطابقون للبحث.
                 </p>
               ) : null}
@@ -958,25 +958,25 @@ const InstitutionRosterEditorPage = () => {
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <Label className="text-xs text-slate-700">الاسم</Label>
-                  <Input className="mt-1 border-violet-200 bg-white text-slate-900" value={personToEdit.name} onChange={(e) => setDraft((d) => d ? { ...d, [personEditTarget as "leader" | "deputy"]: { ...d[personEditTarget as "leader" | "deputy"], name: e.target.value } } : d)} />
+                  <Input className="mt-1 border-rose-200 bg-white text-slate-900" value={personToEdit.name} onChange={(e) => setDraft((d) => d ? { ...d, [personEditTarget as "leader" | "deputy"]: { ...d[personEditTarget as "leader" | "deputy"], name: e.target.value } } : d)} />
                 </div>
                 <div>
                   <Label className="text-xs text-slate-700">المنصب</Label>
-                  <Input className="mt-1 border-violet-200 bg-white text-slate-900" value={personToEdit.title} onChange={(e) => setDraft((d) => d ? { ...d, [personEditTarget as "leader" | "deputy"]: { ...d[personEditTarget as "leader" | "deputy"], title: e.target.value } } : d)} />
+                  <Input className="mt-1 border-rose-200 bg-white text-slate-900" value={personToEdit.title} onChange={(e) => setDraft((d) => d ? { ...d, [personEditTarget as "leader" | "deputy"]: { ...d[personEditTarget as "leader" | "deputy"], title: e.target.value } } : d)} />
                 </div>
               </div>
               <div>
                 <Label className="text-xs text-slate-700">سطر تعريفي</Label>
-                <Input className="mt-1 border-violet-200 bg-white text-slate-900" value={personToEdit.tagline ?? ""} onChange={(e) => setDraft((d) => d ? { ...d, [personEditTarget as "leader" | "deputy"]: { ...d[personEditTarget as "leader" | "deputy"], tagline: e.target.value || undefined } } : d)} />
+                <Input className="mt-1 border-rose-200 bg-white text-slate-900" value={personToEdit.tagline ?? ""} onChange={(e) => setDraft((d) => d ? { ...d, [personEditTarget as "leader" | "deputy"]: { ...d[personEditTarget as "leader" | "deputy"], tagline: e.target.value || undefined } } : d)} />
               </div>
               <div>
                 <Label className="text-xs text-slate-700">نبذة</Label>
-                <Textarea className="mt-1 min-h-[90px] border-violet-200 bg-white text-slate-900" value={personToEdit.bio} onChange={(e) => setDraft((d) => d ? { ...d, [personEditTarget as "leader" | "deputy"]: { ...d[personEditTarget as "leader" | "deputy"], bio: e.target.value } } : d)} />
+                <Textarea className="mt-1 min-h-[90px] border-rose-200 bg-white text-slate-900" value={personToEdit.bio} onChange={(e) => setDraft((d) => d ? { ...d, [personEditTarget as "leader" | "deputy"]: { ...d[personEditTarget as "leader" | "deputy"], bio: e.target.value } } : d)} />
               </div>
               <div>
                 <Label className="text-xs text-slate-700">نقاط المسؤوليات (سطر لكل نقطة)</Label>
                 <Textarea
-                  className="mt-1 min-h-[90px] border-violet-200 bg-white text-slate-900"
+                  className="mt-1 min-h-[90px] border-rose-200 bg-white text-slate-900"
                   value={(personToEdit.highlights ?? []).join("\n")}
                   onChange={(e) => {
                     const lines = e.target.value.split("\n").map((l) => l.trim()).filter(Boolean);
@@ -1001,7 +1001,7 @@ const InstitutionRosterEditorPage = () => {
                     type="button"
                     variant="outline"
                     size="sm"
-                    className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+                    className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
                     onClick={() => {
                       const input = document.createElement("input");
                       input.type = "file";
@@ -1018,7 +1018,7 @@ const InstitutionRosterEditorPage = () => {
                   </Button>
                 </div>
               </div>
-              <div className="rounded-lg border border-violet-200 bg-white/70 p-3">
+              <div className="rounded-lg border border-rose-200 bg-white/70 p-3">
                 <p className="text-xs text-slate-600">
                   الظهور في الموقع:{" "}
                   <span className="font-display text-slate-900">{personToEdit.hidden ? "مخفي" : "ظاهر"}</span>
@@ -1043,7 +1043,7 @@ const InstitutionRosterEditorPage = () => {
             <Button
               type="button"
               variant="outline"
-              className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+              className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
               onClick={() =>
                 setDraft((d) =>
                   d && personEditTarget
@@ -1060,7 +1060,7 @@ const InstitutionRosterEditorPage = () => {
             >
               {personToEdit?.hidden ? "إظهار بالموقع" : "إخفاء من الموقع"}
             </Button>
-            <Button type="button" variant="outline" className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800" onClick={() => setPersonEditTarget(null)}>
+            <Button type="button" variant="outline" className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800" onClick={() => setPersonEditTarget(null)}>
               إغلاق
             </Button>
           </DialogFooter>
@@ -1077,11 +1077,11 @@ const InstitutionRosterEditorPage = () => {
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <Label className="text-xs text-slate-700">الاسم</Label>
-                  <Input className="mt-1 border-violet-200 bg-white text-slate-900" value={memberToEdit.title} onChange={(e) => setDraft((d) => d ? { ...d, members: d.members.map((x) => (x._key === memberToEdit._key ? { ...x, title: e.target.value } : x)) } : d)} />
+                  <Input className="mt-1 border-rose-200 bg-white text-slate-900" value={memberToEdit.title} onChange={(e) => setDraft((d) => d ? { ...d, members: d.members.map((x) => (x._key === memberToEdit._key ? { ...x, title: e.target.value } : x)) } : d)} />
                 </div>
                 <div>
                   <Label className="text-xs text-slate-700">المنصب</Label>
-                  <Input className="mt-1 border-violet-200 bg-white text-slate-900" value={memberToEdit.subtitle} onChange={(e) => setDraft((d) => d ? { ...d, members: d.members.map((x) => (x._key === memberToEdit._key ? { ...x, subtitle: e.target.value } : x)) } : d)} />
+                  <Input className="mt-1 border-rose-200 bg-white text-slate-900" value={memberToEdit.subtitle} onChange={(e) => setDraft((d) => d ? { ...d, members: d.members.map((x) => (x._key === memberToEdit._key ? { ...x, subtitle: e.target.value } : x)) } : d)} />
                 </div>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
@@ -1089,7 +1089,7 @@ const InstitutionRosterEditorPage = () => {
                   <Label className="text-xs text-slate-700">لون الإطار</Label>
                   <Input
                     type="color"
-                    className="mt-1 h-10 border-violet-200 bg-white p-1 text-slate-900"
+                    className="mt-1 h-10 border-rose-200 bg-white p-1 text-slate-900"
                     value={normalizeHexColor(memberToEdit.borderColor, "#22d3ee")}
                     onChange={(e) =>
                       setDraft((d) =>
@@ -1110,7 +1110,7 @@ const InstitutionRosterEditorPage = () => {
                   <div className="mt-1 grid grid-cols-2 gap-2">
                     <Input
                       type="color"
-                      className="h-10 border-violet-200 bg-white p-1 text-slate-900"
+                      className="h-10 border-rose-200 bg-white p-1 text-slate-900"
                       value={getGradientStops(memberToEdit.gradient).start}
                       onChange={(e) => {
                         const stops = getGradientStops(memberToEdit.gradient);
@@ -1129,7 +1129,7 @@ const InstitutionRosterEditorPage = () => {
                     />
                     <Input
                       type="color"
-                      className="h-10 border-violet-200 bg-white p-1 text-slate-900"
+                      className="h-10 border-rose-200 bg-white p-1 text-slate-900"
                       value={getGradientStops(memberToEdit.gradient).end}
                       onChange={(e) => {
                         const stops = getGradientStops(memberToEdit.gradient);
@@ -1156,7 +1156,7 @@ const InstitutionRosterEditorPage = () => {
                     type="button"
                     variant="outline"
                     size="sm"
-                    className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+                    className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
                     onClick={() => {
                       const input = document.createElement("input");
                       input.type = "file";
@@ -1169,7 +1169,7 @@ const InstitutionRosterEditorPage = () => {
                   </Button>
                 </div>
               </div>
-              <div className="rounded-lg border border-violet-200 bg-white/70 p-3">
+              <div className="rounded-lg border border-rose-200 bg-white/70 p-3">
                 <p className="text-xs text-slate-600">
                   الظهور في الموقع:{" "}
                   <span className="font-display text-slate-900">{memberToEdit.hidden ? "مخفي" : "ظاهر"}</span>
@@ -1178,7 +1178,7 @@ const InstitutionRosterEditorPage = () => {
                   type="button"
                   variant="outline"
                   size="sm"
-                  className="mt-2 border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+                  className="mt-2 border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
                   onClick={() =>
                     setDraft((d) =>
                       d
@@ -1218,7 +1218,7 @@ const InstitutionRosterEditorPage = () => {
                 </Button>
               </>
             ) : null}
-            <Button type="button" variant="outline" className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800" onClick={() => setMemberEditKey(null)}>
+            <Button type="button" variant="outline" className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800" onClick={() => setMemberEditKey(null)}>
               إغلاق
             </Button>
           </DialogFooter>
@@ -1240,7 +1240,7 @@ const InstitutionRosterEditorPage = () => {
             <DialogTitle className="text-slate-900">طلبات التوظيف — {INSTITUTION_BRANCH_META[branchId].labelAr}</DialogTitle>
           </DialogHeader>
           <div className="grid gap-3 md:grid-cols-[320px,1fr]">
-            <div className="max-h-[65vh] space-y-2 overflow-y-auto rounded-xl border border-violet-200 bg-white p-2">
+            <div className="max-h-[65vh] space-y-2 overflow-y-auto rounded-xl border border-rose-200 bg-white p-2">
               {branchApplications.length === 0 ? (
                 <p className="p-3 text-sm text-slate-500">لا توجد طلبات حالياً.</p>
               ) : (
@@ -1251,7 +1251,7 @@ const InstitutionRosterEditorPage = () => {
                     onClick={() => setSelectedApplicationId(app.id)}
                     className={cn(
                       "w-full rounded-lg border px-3 py-2 text-right",
-                      selectedApplicationId === app.id ? "border-violet-400 bg-violet-50" : "border-violet-100 bg-white hover:bg-violet-50/40",
+                      selectedApplicationId === app.id ? "border-rose-400 bg-rose-50" : "border-rose-100 bg-white hover:bg-rose-50/40",
                     )}
                   >
                     <div className="flex items-center justify-between gap-2">
@@ -1276,7 +1276,7 @@ const InstitutionRosterEditorPage = () => {
                 ))
               )}
             </div>
-            <div className="max-h-[65vh] overflow-y-auto rounded-xl border border-violet-200 bg-white p-4">
+            <div className="max-h-[65vh] overflow-y-auto rounded-xl border border-rose-200 bg-white p-4">
               {selectedApplication ? (
                 <ApplicationReviewBody
                   application={selectedApplication}
@@ -1461,17 +1461,17 @@ function ApplicationReviewBody({
   return (
     <div className="space-y-4 text-right">
       {/* رأس الطلب */}
-      <div className="flex flex-wrap items-start gap-4 rounded-2xl border border-violet-200 bg-gradient-to-l from-violet-50/60 via-white to-white p-4">
+      <div className="flex flex-wrap items-start gap-4 rounded-2xl border border-rose-200 bg-gradient-to-l from-rose-50/60 via-white to-white p-4">
         <img
           src={submittedAvatar || ROSTER_PLACEHOLDER_IMAGE}
           alt={cityName || "applicant"}
-          className="h-20 w-20 shrink-0 rounded-2xl border border-violet-200 object-cover shadow-sm"
+          className="h-20 w-20 shrink-0 rounded-2xl border border-rose-200 object-cover shadow-sm"
         />
         <div className="min-w-0 flex-1 space-y-1">
           <h3 className="font-display text-base font-bold text-slate-900">
             {cityName || "—"}
           </h3>
-          <p className="text-xs text-violet-700">{application.targetTitle}</p>
+          <p className="text-xs text-rose-700">{application.targetTitle}</p>
           <div className="grid gap-1 pt-1 text-[12px] text-slate-600 sm:grid-cols-2">
             <p className="truncate" dir="ltr">
               <span className="text-slate-400">Discord:</span> {s.discord || "—"}
@@ -1499,8 +1499,8 @@ function ApplicationReviewBody({
 
       {/* النبذة */}
       {bioText ? (
-        <div className="rounded-xl border border-violet-200 bg-violet-50/30 p-3">
-          <p className="text-[11px] font-display text-violet-700">نبذة المتقدم</p>
+        <div className="rounded-xl border border-rose-200 bg-rose-50/30 p-3">
+          <p className="text-[11px] font-display text-rose-700">نبذة المتقدم</p>
           <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-slate-700">
             {bioText}
           </p>
@@ -1508,7 +1508,7 @@ function ApplicationReviewBody({
       ) : null}
 
       {!isPending ? (
-        <div className="rounded-lg border border-violet-200 bg-violet-50/30 p-3 text-sm text-slate-700">
+        <div className="rounded-lg border border-rose-200 bg-rose-50/30 p-3 text-sm text-slate-700">
           <p>القرار بواسطة: {application.decidedBy ?? "—"}</p>
           {application.note ? <p className="mt-1">ملاحظة: {application.note}</p> : null}
         </div>
@@ -1529,7 +1529,7 @@ function ApplicationReviewBody({
                   value={applicantFinalName}
                   onChange={(e) => setApplicantFinalName(e.target.value)}
                   placeholder="مثلاً: الضابط آدم"
-                  className="border-violet-200 bg-white text-slate-900"
+                  className="border-rose-200 bg-white text-slate-900"
                 />
               </div>
               <div className="space-y-1.5">
@@ -1538,14 +1538,14 @@ function ApplicationReviewBody({
                   value={applicantRank}
                   onChange={(e) => setApplicantRank(e.target.value)}
                   placeholder="مسعف، شرطي، شرطي شريف…"
-                  className="border-violet-200 bg-white text-slate-900"
+                  className="border-rose-200 bg-white text-slate-900"
                 />
               </div>
             </div>
 
             <div className="space-y-1.5">
               <Label className="text-xs text-slate-700">الدور في المؤسسة</Label>
-              <div className="grid grid-cols-3 gap-2 rounded-xl border border-violet-200 bg-white p-1">
+              <div className="grid grid-cols-3 gap-2 rounded-xl border border-rose-200 bg-white p-1">
                 {(
                   [
                     { v: "member", l: "عضو" },
@@ -1565,7 +1565,7 @@ function ApplicationReviewBody({
                           : opt.v === "deputy"
                             ? "bg-indigo-100 text-indigo-800 ring-1 ring-indigo-400"
                             : "bg-emerald-100 text-emerald-800 ring-1 ring-emerald-400"
-                        : "text-slate-600 hover:bg-violet-50",
+                        : "text-slate-600 hover:bg-rose-50",
                     )}
                   >
                     {opt.l}
@@ -1609,14 +1609,14 @@ function ApplicationReviewBody({
                 <img
                   src={resolveApplicantRosterImage(applicantImage, submittedAvatar)}
                   alt=""
-                  className="h-16 w-16 rounded-xl border border-violet-200 object-cover"
+                  className="h-16 w-16 rounded-xl border border-rose-200 object-cover"
                 />
                 <div className="flex flex-wrap gap-2">
                   <Button
                     type="button"
                     variant="outline"
                     size="sm"
-                    className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+                    className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
                     onClick={onPickImage}
                   >
                     <ImagePlus className="ms-1 h-3 w-3" />
@@ -1640,7 +1640,7 @@ function ApplicationReviewBody({
                       type="button"
                       variant="outline"
                       size="sm"
-                      className="border-violet-200 bg-white text-slate-700 hover:bg-violet-50"
+                      className="border-rose-200 bg-white text-slate-700 hover:bg-rose-50"
                       onClick={() => setApplicantImage(submittedAvatar)}
                     >
                       استخدم صورة المتقدم
@@ -1654,14 +1654,14 @@ function ApplicationReviewBody({
           <div>
             <Label className="text-xs text-slate-700">ملاحظة القرار (اختياري)</Label>
             <Textarea
-              className="mt-1 min-h-[80px] border-violet-200 bg-white text-slate-900"
+              className="mt-1 min-h-[80px] border-rose-200 bg-white text-slate-900"
               value={decisionNote}
               onChange={(e) => setDecisionNote(e.target.value)}
               placeholder="ستُعرض مع الطلب بعد القرار."
             />
           </div>
 
-          <div className="flex flex-wrap justify-end gap-2 border-t border-violet-100 pt-3">
+          <div className="flex flex-wrap justify-end gap-2 border-t border-rose-100 pt-3">
             <Button
               type="button"
               className="bg-emerald-600 text-white hover:bg-emerald-700"

@@ -43,8 +43,6 @@ import AboutManagerPage from "./pages/admin/AboutManagerPage.tsx";
 import TicketsManagerPage from "./pages/admin/TicketsManagerPage.tsx";
 import Index from "./pages/Index.tsx";
 import ApplicationFormPage from "./pages/ApplicationFormPage.tsx";
-import StreamerApplyPage from "./pages/StreamerApplyPage.tsx";
-import StreamersPage from "./pages/StreamersPage.tsx";
 import HealthPage from "./pages/HealthPage.tsx";
 import InteriorDepartmentPage from "./pages/InteriorDepartmentPage.tsx";
 import InteriorHubPage from "./pages/InteriorHubPage.tsx";
@@ -98,9 +96,9 @@ const AppRoutes = () => {
       </AnimatePresence>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/apply/streamers" element={<StreamerApplyPage />} />
+        <Route path="/apply/streamers" element={<Navigate to="/" replace />} />
         <Route path="/apply/:role" element={<ApplicationFormPage />} />
-        <Route path="/streamers" element={<StreamersPage />} />
+        <Route path="/streamers" element={<Navigate to="/" replace />} />
         <Route path="/health" element={<HealthPage />} />
         <Route path="/ems" element={<Navigate to="/health" replace />} />
         <Route path="/interior" element={<InteriorHubPage />} />

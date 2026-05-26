@@ -7,20 +7,20 @@ export type TicketAttachmentChatVariant = "ticketsUser" | "ticketsStaff" | "dash
 
 const linkTone: Record<TicketAttachmentChatVariant, string> = {
   ticketsUser:
-    "border-white/30 bg-white/10 text-violet-100 hover:bg-white/15",
+    "border-white/30 bg-white/10 text-rose-100 hover:bg-white/15",
   ticketsStaff:
-    "border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100 dark:border-slate-600 dark:bg-slate-800 dark:text-violet-200 dark:hover:bg-slate-700",
+    "border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 dark:border-slate-600 dark:bg-slate-800 dark:text-rose-200 dark:hover:bg-slate-700",
   dashCustomer:
-    "border-violet-200 bg-violet-50 text-violet-800 hover:bg-violet-100 dark:border-slate-600 dark:bg-slate-800 dark:text-violet-200 dark:hover:bg-slate-700",
+    "border-rose-200 bg-rose-50 text-rose-800 hover:bg-rose-100 dark:border-slate-600 dark:bg-slate-800 dark:text-rose-200 dark:hover:bg-slate-700",
   dashStaff:
-    "border-violet-300 bg-white/80 text-violet-900 hover:bg-violet-50 dark:border-violet-600 dark:bg-violet-950/50 dark:text-violet-100 dark:hover:bg-violet-950/70",
+    "border-rose-300 bg-white/80 text-rose-900 hover:bg-rose-50 dark:border-rose-600 dark:bg-rose-950/50 dark:text-rose-100 dark:hover:bg-rose-950/70",
 };
 
 const videoBorder: Record<TicketAttachmentChatVariant, string> = {
   ticketsUser: "border-white/30",
-  ticketsStaff: "border-violet-200 dark:border-slate-600",
-  dashCustomer: "border-violet-200 dark:border-slate-600",
-  dashStaff: "border-violet-300 dark:border-violet-600",
+  ticketsStaff: "border-rose-200 dark:border-slate-600",
+  dashCustomer: "border-rose-200 dark:border-slate-600",
+  dashStaff: "border-rose-300 dark:border-rose-600",
 };
 
 type Props = {
@@ -56,7 +56,7 @@ export function TicketChatAttachmentMedia({ att, variant }: Props) {
   const linkCls = cn("rounded-md border px-2 py-1", linkTone[variant]);
 
   if (!objectUrl) {
-    return <p className="text-[11px] text-violet-200/90 dark:text-slate-400">جارٍ تحميل المرفق…</p>;
+    return <p className="text-[11px] text-rose-200/90 dark:text-slate-400">جارٍ تحميل المرفق…</p>;
   }
 
   if (isVideo) {
@@ -91,7 +91,7 @@ export function TicketChatAttachmentMedia({ att, variant }: Props) {
           alt={att.name}
           className={cn(
             "max-h-56 cursor-zoom-in rounded-lg border object-contain",
-            variant === "ticketsUser" ? "border-white/20" : "border-violet-200 dark:border-slate-600",
+            variant === "ticketsUser" ? "border-white/20" : "border-rose-200 dark:border-slate-600",
           )}
         />
       </a>

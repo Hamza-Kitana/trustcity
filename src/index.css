@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Infinite City - Cyberpunk Neon Design System
+/* TRUST CFW - Cyberpunk Neon Design System
    All colors HSL. Semantic tokens only.
 */
 
@@ -20,19 +20,19 @@
     --popover: 240 40% 6%;
     --popover-foreground: 265 22% 94%;
 
-    /* البنفسجي الأساسي للموقع الرئيسي (أوضح من نسخة لوحة التحكم) */
-    --primary: 272 88% 64%;
+    /* اللون الأساسي الخمري */
+    --primary: 350 64% 40%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 268 78% 54%;
+    --primary-glow: 352 66% 46%;
 
-    /* درجات مساندة أوضح للموقع الرئيسي */
-    --secondary: 268 78% 54%;
+    /* درجات مساندة متناسقة مع الخمري */
+    --secondary: 343 54% 34%;
     --secondary-foreground: 265 40% 98%;
 
     --muted: 250 22% 13%;
     --muted-foreground: 265 14% 68%;
 
-    --accent: 278 85% 58%;
+    --accent: 6 74% 52%;
     --accent-foreground: 265 40% 98%;
 
     --destructive: 0 95% 60%;
@@ -43,22 +43,22 @@
 
     --border: 240 40% 18%;
     --input: 240 35% 12%;
-    --ring: 272 88% 64%;
+    --ring: 350 64% 40%;
 
     --radius: 0.75rem;
 
-    /* تدرج بنفسجي فقط — بدون وردي/زهري */
-    --gradient-neon: linear-gradient(135deg, hsl(272 88% 64%), hsl(268 78% 54%), hsl(278 85% 58%));
+    /* تدرج خمري متناسق */
+    --gradient-neon: linear-gradient(135deg, hsl(350 64% 40%), hsl(343 54% 34%), hsl(6 74% 52%));
     --gradient-cyber: linear-gradient(180deg, hsl(240 30% 4% / 0), hsl(240 30% 4% / 0.85) 60%, hsl(240 30% 4%));
-    --gradient-grid: linear-gradient(hsl(272 88% 64% / 0.09) 1px, transparent 1px),
-                     linear-gradient(90deg, hsl(272 88% 64% / 0.09) 1px, transparent 1px);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(272 88% 64% / 0.32), transparent 60%);
+    --gradient-grid: linear-gradient(hsl(350 64% 40% / 0.09) 1px, transparent 1px),
+                     linear-gradient(90deg, hsl(350 64% 40% / 0.09) 1px, transparent 1px);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(350 64% 40% / 0.32), transparent 60%);
 
     /* Shadows / glows */
-    --glow-primary: 0 0 40px hsl(272 88% 64% / 0.55), 0 0 80px hsl(272 88% 64% / 0.28);
-    --glow-secondary: 0 0 40px hsl(268 78% 54% / 0.45), 0 0 80px hsl(268 78% 54% / 0.22);
-    --glow-accent: 0 0 40px hsl(278 85% 58% / 0.45), 0 0 80px hsl(278 85% 58% / 0.22);
-    --shadow-cyber: 0 20px 60px -10px hsl(272 88% 64% / 0.38);
+    --glow-primary: 0 0 40px hsl(350 64% 40% / 0.55), 0 0 80px hsl(350 64% 40% / 0.28);
+    --glow-secondary: 0 0 40px hsl(343 54% 34% / 0.45), 0 0 80px hsl(343 54% 34% / 0.22);
+    --glow-accent: 0 0 40px hsl(6 74% 52% / 0.45), 0 0 80px hsl(6 74% 52% / 0.22);
+    --shadow-cyber: 0 20px 60px -10px hsl(350 64% 40% / 0.38);
 
     /* Motion */
     --ease-cyber: cubic-bezier(0.16, 1, 0.3, 1);

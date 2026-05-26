@@ -238,9 +238,9 @@ function ManagedRolesDropdown({
           type="button"
           variant="outline"
           size="sm"
-          className="h-8 max-w-[min(100%,14rem)] gap-1.5 rounded-lg border-violet-200/90 bg-white px-2.5 text-xs font-medium text-violet-900 shadow-sm hover:bg-violet-50/90 dark:border-violet-700/45 dark:bg-slate-900 dark:text-violet-100 dark:hover:bg-violet-950/45"
+          className="h-8 max-w-[min(100%,14rem)] gap-1.5 rounded-lg border-rose-200/90 bg-white px-2.5 text-xs font-medium text-rose-900 shadow-sm hover:bg-rose-50/90 dark:border-rose-700/45 dark:bg-slate-900 dark:text-rose-100 dark:hover:bg-rose-950/45"
         >
-          <Layers className="h-3.5 w-3.5 shrink-0 text-violet-600 opacity-90 dark:text-violet-300" />
+          <Layers className="h-3.5 w-3.5 shrink-0 text-rose-600 opacity-90 dark:text-rose-300" />
           <span className="min-w-0 truncate">
             {sorted.length === 1 ? "رتبة واحدة" : `${sorted.length} رتب`}
           </span>
@@ -259,7 +259,7 @@ function ManagedRolesDropdown({
         {sorted.map((r) => (
           <DropdownMenuItem
             key={r}
-            className="cursor-default justify-end text-sm text-slate-800 focus:bg-violet-50 dark:text-slate-100 dark:focus:bg-violet-950/45"
+            className="cursor-default justify-end text-sm text-slate-800 focus:bg-rose-50 dark:text-slate-100 dark:focus:bg-rose-950/45"
             onSelect={(e) => e.preventDefault()}
           >
             {roleLabel(r)}
@@ -960,7 +960,7 @@ const StaffUsersPage = () => {
           <h1 className="font-display text-2xl font-bold text-slate-900 dark:text-slate-50">المستخدمون والأدوار</h1>
           <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
             المواطن يسجّل في الموقع بنفسه، ثم يرقّيه السوبر أدمن من قائمة المواطنين مع إسناد الرتب (من{" "}
-            <Link to="/dashboard/role-groups" className="font-display text-violet-700 hover:underline">
+            <Link to="/dashboard/role-groups" className="font-display text-rose-700 hover:underline">
               مجموعات الرتب
             </Link>{" "}
             أو لكل رتبة على حدة).
@@ -971,7 +971,7 @@ const StaffUsersPage = () => {
             asChild
             type="button"
             variant="outline"
-            className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 dark:border-violet-600 dark:bg-slate-800 dark:text-violet-300 dark:hover:bg-violet-950/40"
+            className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 dark:border-rose-600 dark:bg-slate-800 dark:text-rose-300 dark:hover:bg-rose-950/40"
           >
             <Link to="/dashboard/role-groups">
               <Layers className="ms-2 h-4 w-4 shrink-0 text-current" />
@@ -982,22 +982,22 @@ const StaffUsersPage = () => {
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <StatCard icon={<ShieldCheck className="h-5 w-5 text-violet-600 dark:text-violet-400" />} label="موظفون" value={totalManaged} />
+        <StatCard icon={<ShieldCheck className="h-5 w-5 text-rose-600 dark:text-rose-400" />} label="موظفون" value={totalManaged} />
         <StatCard icon={<Crown className="h-5 w-5 text-amber-600 dark:text-amber-400" />} label="مرقّون من المواطنين" value={totalPromoted} />
         <StatCard icon={<Users className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />} label="مواطنون مسجّلون" value={totalCitizens} />
       </div>
 
-      <div className="rounded-2xl border border-violet-200/80 bg-white/90 p-4 shadow-[0_14px_34px_-24px_rgba(54,22,79,0.45)] dark:border-slate-600 dark:bg-slate-800/90">
+      <div className="rounded-2xl border border-rose-200/80 bg-white/90 p-4 shadow-[0_14px_34px_-24px_rgba(127,29,29,0.45)] dark:border-slate-600 dark:bg-slate-800/90">
         <Label htmlFor="user-search" className="text-slate-700 dark:text-slate-200">
           البحث عن مستخدم
         </Label>
         <div className="relative mt-1.5">
-          <Search className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-violet-500 dark:text-violet-400" />
+          <Search className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-rose-500 dark:text-rose-400" />
           <Input
             id="user-search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="border-violet-200 bg-violet-50/40 pr-9 text-slate-900 placeholder:text-slate-400 focus-visible:ring-violet-400 dark:border-slate-600 dark:bg-slate-900/50 dark:text-slate-100 dark:placeholder:text-slate-500"
+            className="border-rose-200 bg-rose-50/40 pr-9 text-slate-900 placeholder:text-slate-400 focus-visible:ring-rose-400 dark:border-slate-600 dark:bg-slate-900/50 dark:text-slate-100 dark:placeholder:text-slate-500"
             placeholder="اكتب اسم المستخدم أو الإيميل للبحث..."
             autoComplete="off"
           />
@@ -1040,7 +1040,7 @@ const StaffUsersPage = () => {
                     id="edit-user"
                     value={editForm.username}
                     onChange={(e) => setEditForm((prev) => (prev ? { ...prev, username: e.target.value } : prev))}
-                    className="mt-1.5 border-violet-200 bg-violet-50/40 text-slate-900 placeholder:text-slate-400 focus-visible:ring-violet-400"
+                    className="mt-1.5 border-rose-200 bg-rose-50/40 text-slate-900 placeholder:text-slate-400 focus-visible:ring-rose-400"
                     autoComplete="off"
                   />
                 </div>
@@ -1052,7 +1052,7 @@ const StaffUsersPage = () => {
                       type="password"
                       value={editForm.password}
                       onChange={(e) => setEditForm((prev) => (prev ? { ...prev, password: e.target.value } : prev))}
-                      className="mt-1.5 border-violet-200 bg-violet-50/40 text-slate-900 placeholder:text-slate-400 focus-visible:ring-violet-400"
+                      className="mt-1.5 border-rose-200 bg-rose-50/40 text-slate-900 placeholder:text-slate-400 focus-visible:ring-rose-400"
                       autoComplete="new-password"
                       placeholder="اتركها فارغة للإبقاء على الحالية"
                     />
@@ -1132,14 +1132,14 @@ const StaffUsersPage = () => {
                   <SelectTrigger
                     id="edit-role-picker"
                     type="button"
-                    className="border-violet-200 bg-violet-50/40 text-right [&>span]:text-right [&>span]:text-slate-700"
+                    className="border-rose-200 bg-rose-50/40 text-right [&>span]:text-right [&>span]:text-slate-700"
                     dir="rtl"
                   >
                     <SelectValue
                       placeholder={editHasAvailableRoles ? "اختر رتبة لإضافتها" : "تم اختيار كل الرتب"}
                     />
                   </SelectTrigger>
-                  <SelectContent dir="rtl" className="max-h-[min(70vh,24rem)] border-violet-200 bg-white">
+                  <SelectContent dir="rtl" className="max-h-[min(70vh,24rem)] border-rose-200 bg-white">
                     {BASE_ROLES.some((b) => !editForm.roles.has(b.value)) ? (
                       <SelectGroup>
                         <SelectLabel className="text-right text-slate-500">رتب عامة</SelectLabel>
@@ -1147,7 +1147,7 @@ const StaffUsersPage = () => {
                           <SelectItem
                             key={b.value}
                             value={b.value}
-                            className="text-right text-slate-800 focus:bg-violet-50 focus:text-violet-900"
+                            className="text-right text-slate-800 focus:bg-rose-50 focus:text-rose-900"
                           >
                             {b.label}
                           </SelectItem>
@@ -1161,7 +1161,7 @@ const StaffUsersPage = () => {
                           <SelectItem
                             key={r}
                             value={r}
-                            className="text-right text-slate-800 focus:bg-violet-50 focus:text-violet-900"
+                            className="text-right text-slate-800 focus:bg-rose-50 focus:text-rose-900"
                           >
                             {institutionRosterStaffRoleLabelAr(r)}
                           </SelectItem>
@@ -1172,17 +1172,17 @@ const StaffUsersPage = () => {
                 </Select>
                 <div>
                   <p className="mb-2 text-xs font-medium text-slate-500">الرتب المختارة</p>
-                  <div className="flex min-h-[2.5rem] flex-wrap justify-end gap-2 rounded-xl border border-violet-200 bg-violet-50/55 p-3">
+                  <div className="flex min-h-[2.5rem] flex-wrap justify-end gap-2 rounded-xl border border-rose-200 bg-rose-50/55 p-3">
                     {Array.from(editForm.roles).map((r) => (
                       <span
                         key={r}
-                        className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-violet-300 bg-white px-3 py-1 text-xs font-medium text-violet-900 shadow-sm"
+                        className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-rose-300 bg-white px-3 py-1 text-xs font-medium text-rose-900 shadow-sm"
                       >
                         <span className="truncate">{roleLabel(r)}</span>
                         <button
                           type="button"
                           disabled={cannotEditOwnStaffRoles}
-                          className="shrink-0 rounded-full p-0.5 text-violet-700 hover:bg-violet-200/80 disabled:pointer-events-none disabled:opacity-40"
+                          className="shrink-0 rounded-full p-0.5 text-rose-700 hover:bg-rose-200/80 disabled:pointer-events-none disabled:opacity-40"
                           aria-label={`إزالة ${roleLabel(r)}`}
                           onClick={() => removeEditRole(r)}
                         >
@@ -1197,7 +1197,7 @@ const StaffUsersPage = () => {
                 <Button
                   type="button"
                   variant="outline"
-                  className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50"
+                  className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50"
                   onClick={() => {
                     setEditOpen(false);
                     setEditForm(null);
@@ -1205,7 +1205,7 @@ const StaffUsersPage = () => {
                 >
                   إلغاء
                 </Button>
-                <Button type="submit" className="bg-[#36164f] text-white hover:bg-[#2f1344] dark:bg-violet-700 dark:hover:bg-violet-600">
+                <Button type="submit" className="bg-[#36164f] text-white hover:bg-[#2f1344] dark:bg-rose-700 dark:hover:bg-rose-600">
                   حفظ التعديلات
                 </Button>
               </DialogFooter>
@@ -1214,17 +1214,17 @@ const StaffUsersPage = () => {
         </DialogContent>
       </Dialog>
 
-      <div className="overflow-hidden rounded-2xl border border-violet-200/80 bg-white/95 shadow-[0_18px_44px_-28px_rgba(54,22,79,0.45)] dark:border-slate-600 dark:bg-slate-800/95">
-        <div className="flex items-center justify-between border-b border-violet-100 px-4 py-3 text-right font-display text-sm font-semibold text-slate-800 dark:border-slate-600 dark:text-slate-100">
-          <span className="rounded-full bg-violet-100 px-2 py-0.5 text-[10px] font-display text-violet-700 dark:bg-violet-950/55 dark:text-violet-200">
+      <div className="overflow-hidden rounded-2xl border border-rose-200/80 bg-white/95 shadow-[0_18px_44px_-28px_rgba(127,29,29,0.45)] dark:border-slate-600 dark:bg-slate-800/95">
+        <div className="flex items-center justify-between border-b border-rose-100 px-4 py-3 text-right font-display text-sm font-semibold text-slate-800 dark:border-slate-600 dark:text-slate-100">
+          <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-display text-rose-700 dark:bg-rose-950/55 dark:text-rose-200">
             {list.length}
           </span>
           <span className="flex items-center gap-2">
             الموظفون
-            <ShieldCheck className="h-4 w-4 text-violet-600 dark:text-violet-400" />
+            <ShieldCheck className="h-4 w-4 text-rose-600 dark:text-rose-400" />
           </span>
         </div>
-        <ul className="divide-y divide-violet-100 dark:divide-slate-600">
+        <ul className="divide-y divide-rose-100 dark:divide-slate-600">
           {list.length === 0 ? (
             <li className="px-4 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
               {searchQuery.trim() ? "لا توجد نتائج مطابقة للبحث." : "لا يوجد موظفون بعد."}
@@ -1264,7 +1264,7 @@ const StaffUsersPage = () => {
                       type="button"
                       variant="outline"
                       size="sm"
-                      className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 dark:border-violet-600 dark:bg-slate-800 dark:text-violet-300 dark:hover:bg-violet-950/40"
+                      className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 dark:border-rose-600 dark:bg-slate-800 dark:text-rose-300 dark:hover:bg-rose-950/40"
                       onClick={() => openEdit(u)}
                     >
                       <Pencil className="h-4 w-4 ms-1 shrink-0 text-current" />
@@ -1335,7 +1335,7 @@ const StaffUsersPage = () => {
                   value={editPublicForm.username}
                   onChange={(e) => setEditPublicForm((p) => (p ? { ...p, username: e.target.value } : p))}
                   placeholder="اسم المستخدم"
-                  className="border-violet-200 bg-white text-slate-900"
+                  className="border-rose-200 bg-white text-slate-900"
                 />
               </div>
               <div className="space-y-1.5">
@@ -1350,7 +1350,7 @@ const StaffUsersPage = () => {
                   value={editPublicForm.realName}
                   onChange={(e) => setEditPublicForm((p) => (p ? { ...p, realName: e.target.value } : p))}
                   placeholder="مثال: الاسم المعروض username"
-                  className="border-violet-200 bg-white text-slate-900"
+                  className="border-rose-200 bg-white text-slate-900"
                 />
               </div>
               <div className="space-y-1.5">
@@ -1365,7 +1365,7 @@ const StaffUsersPage = () => {
                   value={editPublicForm.fullName}
                   onChange={(e) => setEditPublicForm((p) => (p ? { ...p, fullName: e.target.value } : p))}
                   placeholder="الاسم داخل المدينة"
-                  className="border-violet-200 bg-white text-slate-900"
+                  className="border-rose-200 bg-white text-slate-900"
                 />
               </div>
               <div className="space-y-1.5">
@@ -1377,7 +1377,7 @@ const StaffUsersPage = () => {
                   value={editPublicForm.email}
                   onChange={(e) => setEditPublicForm((p) => (p ? { ...p, email: e.target.value } : p))}
                   placeholder="الإيميل"
-                  className="border-violet-200 bg-white text-slate-900"
+                  className="border-rose-200 bg-white text-slate-900"
                   dir="ltr"
                 />
               </div>
@@ -1393,7 +1393,7 @@ const StaffUsersPage = () => {
                   value={editPublicForm.discordId}
                   onChange={(e) => setEditPublicForm((p) => (p ? { ...p, discordId: e.target.value } : p))}
                   placeholder="Discord ID"
-                  className="border-violet-200 bg-white text-slate-900"
+                  className="border-rose-200 bg-white text-slate-900"
                   dir="ltr"
                 />
               </div>
@@ -1406,7 +1406,7 @@ const StaffUsersPage = () => {
                   value={String(editPublicForm.age)}
                   onChange={(e) => setEditPublicForm((p) => (p ? { ...p, age: Number(e.target.value) || 0 } : p))}
                   placeholder="العمر"
-                  className="border-violet-200 bg-white text-slate-900"
+                  className="border-rose-200 bg-white text-slate-900"
                   inputMode="numeric"
                 />
               </div>
@@ -1416,8 +1416,8 @@ const StaffUsersPage = () => {
                 </Button>
               </div>
               <DialogFooter className="gap-2 sm:justify-start">
-                <Button type="button" variant="outline" className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50" onClick={() => setEditPublicOpen(false)}>إلغاء</Button>
-                <Button type="submit" className="bg-[#36164f] text-white hover:bg-[#2f1344] dark:bg-violet-700 dark:hover:bg-violet-600">حفظ التعديل</Button>
+                <Button type="button" variant="outline" className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50" onClick={() => setEditPublicOpen(false)}>إلغاء</Button>
+                <Button type="submit" className="bg-[#36164f] text-white hover:bg-[#2f1344] dark:bg-rose-700 dark:hover:bg-rose-600">حفظ التعديل</Button>
               </DialogFooter>
             </form>
           ) : null}
@@ -1552,14 +1552,14 @@ const StaffUsersPage = () => {
                   <SelectTrigger
                     id="promote-role-picker"
                     type="button"
-                    className="border-violet-200 bg-violet-50/40 text-right text-slate-900 [&>span]:text-right [&>span]:text-slate-700 dark:border-violet-700 dark:bg-violet-950/35 dark:text-slate-100 [&>span]:dark:text-slate-200"
+                    className="border-rose-200 bg-rose-50/40 text-right text-slate-900 [&>span]:text-right [&>span]:text-slate-700 dark:border-rose-700 dark:bg-rose-950/35 dark:text-slate-100 [&>span]:dark:text-slate-200"
                     dir="rtl"
                   >
                     <SelectValue
                       placeholder={promoteHasAvailableRoles ? "اختر رتبة لإضافتها" : "تم اختيار كل الرتب"}
                     />
                   </SelectTrigger>
-                  <SelectContent dir="rtl" className="max-h-[min(70vh,24rem)] border-violet-200 bg-white dark:border-slate-600 dark:bg-slate-900">
+                  <SelectContent dir="rtl" className="max-h-[min(70vh,24rem)] border-rose-200 bg-white dark:border-slate-600 dark:bg-slate-900">
                     {BASE_ROLES.some((b) => !promote.roles.has(b.value)) ? (
                       <SelectGroup>
                         <SelectLabel className="text-right text-slate-500 dark:text-slate-400">رتب عامة</SelectLabel>
@@ -1567,7 +1567,7 @@ const StaffUsersPage = () => {
                           <SelectItem
                             key={b.value}
                             value={b.value}
-                            className="text-right text-slate-800 focus:bg-violet-50 focus:text-violet-900 dark:text-slate-200 dark:focus:bg-violet-950/45 dark:focus:text-violet-100"
+                            className="text-right text-slate-800 focus:bg-rose-50 focus:text-rose-900 dark:text-slate-200 dark:focus:bg-rose-950/45 dark:focus:text-rose-100"
                           >
                             {b.label}
                           </SelectItem>
@@ -1581,7 +1581,7 @@ const StaffUsersPage = () => {
                           <SelectItem
                             key={r}
                             value={r}
-                            className="text-right text-slate-800 focus:bg-violet-50 focus:text-violet-900 dark:text-slate-200 dark:focus:bg-violet-950/45 dark:focus:text-violet-100"
+                            className="text-right text-slate-800 focus:bg-rose-50 focus:text-rose-900 dark:text-slate-200 dark:focus:bg-rose-950/45 dark:focus:text-rose-100"
                           >
                             {institutionRosterStaffRoleLabelAr(r)}
                           </SelectItem>
@@ -1592,20 +1592,20 @@ const StaffUsersPage = () => {
                 </Select>
                 <div>
                   <p className="mb-2 text-xs font-medium text-slate-500 dark:text-slate-400">الرتب التي ستُمنح للمواطن</p>
-                  <div className="flex min-h-[2.5rem] flex-wrap justify-end gap-2 rounded-xl border border-violet-200 bg-violet-50/55 p-3 dark:border-violet-700/60 dark:bg-violet-950/25">
+                  <div className="flex min-h-[2.5rem] flex-wrap justify-end gap-2 rounded-xl border border-rose-200 bg-rose-50/55 p-3 dark:border-rose-700/60 dark:bg-rose-950/25">
                     {Array.from(promote.roles).length === 0 ? (
                       <p className="text-xs text-slate-500 dark:text-slate-400">لم تُضف رتب بعد</p>
                     ) : null}
                     {Array.from(promote.roles).map((r) => (
                       <span
                         key={r}
-                        className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-violet-300 bg-white px-3 py-1 text-xs font-medium text-violet-900 shadow-sm dark:border-violet-600 dark:bg-slate-800 dark:text-violet-200"
+                        className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-rose-300 bg-white px-3 py-1 text-xs font-medium text-rose-900 shadow-sm dark:border-rose-600 dark:bg-slate-800 dark:text-rose-200"
                       >
                         <span className="truncate">{roleLabel(r)}</span>
                         <button
                           type="button"
                           disabled={promoteTargetsOwnPublicAccount}
-                          className="shrink-0 rounded-full p-0.5 text-violet-700 hover:bg-violet-200/80 disabled:pointer-events-none disabled:opacity-40 dark:text-violet-300 dark:hover:bg-violet-950/70"
+                          className="shrink-0 rounded-full p-0.5 text-rose-700 hover:bg-rose-200/80 disabled:pointer-events-none disabled:opacity-40 dark:text-rose-300 dark:hover:bg-rose-950/70"
                           aria-label={`إزالة ${roleLabel(r)}`}
                           onClick={() => removePromoteRole(r)}
                         >
@@ -1635,12 +1635,12 @@ const StaffUsersPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 dark:border-violet-600 dark:bg-slate-800 dark:text-violet-300 dark:hover:bg-violet-950/40"
+                    className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 dark:border-rose-600 dark:bg-slate-800 dark:text-rose-300 dark:hover:bg-rose-950/40"
                     onClick={() => setPromoteOpen(false)}
                   >
                     إلغاء
                   </Button>
-                  <Button type="submit" className="bg-[#36164f] text-white hover:bg-[#2f1344] dark:bg-violet-700 dark:hover:bg-violet-600">
+                  <Button type="submit" className="bg-[#36164f] text-white hover:bg-[#2f1344] dark:bg-rose-700 dark:hover:bg-rose-600">
                     <Crown className="ms-2 h-4 w-4 shrink-0 text-white" />
                     {promote.existingManaged ? "تحديث الصلاحيات" : "منح صلاحيات الموظف"}
                   </Button>
@@ -1651,8 +1651,8 @@ const StaffUsersPage = () => {
         </DialogContent>
       </Dialog>
 
-      <div className="overflow-hidden rounded-2xl border border-violet-200/80 bg-white/95 shadow-[0_18px_44px_-28px_rgba(54,22,79,0.45)] dark:border-slate-600 dark:bg-slate-800/95">
-        <div className="flex items-center justify-between border-b border-violet-100 px-4 py-3 text-right font-display text-sm font-semibold text-slate-800 dark:border-slate-600 dark:text-slate-100">
+      <div className="overflow-hidden rounded-2xl border border-rose-200/80 bg-white/95 shadow-[0_18px_44px_-28px_rgba(127,29,29,0.45)] dark:border-slate-600 dark:bg-slate-800/95">
+        <div className="flex items-center justify-between border-b border-rose-100 px-4 py-3 text-right font-display text-sm font-semibold text-slate-800 dark:border-slate-600 dark:text-slate-100">
           <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-display text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
             {publicList.length}
           </span>
@@ -1661,7 +1661,7 @@ const StaffUsersPage = () => {
             <Users className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
           </span>
         </div>
-        <ul className="divide-y divide-violet-100 dark:divide-slate-600">
+        <ul className="divide-y divide-rose-100 dark:divide-slate-600">
           {publicList.length === 0 ? (
             <li className="px-4 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
               {searchQuery.trim() ? "لا توجد نتائج مطابقة للبحث." : "لا يوجد مواطنون مسجّلون بعد."}
@@ -1752,7 +1752,7 @@ const StaffUsersPage = () => {
                       type="button"
                       variant="outline"
                       size="sm"
-                      className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 dark:border-violet-600 dark:bg-slate-800 dark:text-violet-300 dark:hover:bg-violet-950/40"
+                      className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 dark:border-rose-600 dark:bg-slate-800 dark:text-rose-300 dark:hover:bg-rose-950/40"
                       onClick={() => {
                         setEditPublicForm({ ...u, password: "" });
                         setEditPublicOpen(true);
@@ -1829,8 +1829,8 @@ export default StaffUsersPage;
 
 function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string; value: number }) {
   return (
-    <div className="flex items-center justify-between gap-3 rounded-2xl border border-violet-200 bg-white px-4 py-3 text-right shadow-sm dark:border-slate-600 dark:bg-slate-800">
-      <div className="rounded-xl bg-violet-50 p-2 dark:bg-violet-950/45">{icon}</div>
+    <div className="flex items-center justify-between gap-3 rounded-2xl border border-rose-200 bg-white px-4 py-3 text-right shadow-sm dark:border-slate-600 dark:bg-slate-800">
+      <div className="rounded-xl bg-rose-50 p-2 dark:bg-rose-950/45">{icon}</div>
       <div>
         <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400">{label}</p>
         <p className="font-display text-2xl font-bold text-slate-900 dark:text-slate-50">{value}</p>

@@ -89,12 +89,12 @@ const Navbar = () => {
   const hideCitizenApplyForOnboardedUser =
     !!discordPublicProfile && isCitizenApplyFormBlocked(discordPublicProfile, applications);
   const showPublicApplyButton = !hideApplyNowForPublicProfile && !hideCitizenApplyForOnboardedUser;
-  /** صفحات بخلفية فاتحة بنفسجية — يتغيّر معها لون شريط التنقّل عند التمرير */
+  /** صفحات بخلفية فاتحة — يتغيّر معها لون شريط التنقّل عند التمرير */
   const isLightSurface = (() => {
     const lightPaths = ["/profile", "/tickets", "/jobs", "/apply/streamers"];
     return lightPaths.some((p) => location.pathname === p || location.pathname.startsWith(`${p}/`));
   })();
-  /** نوحّد لون علامة INFINITE مع لون السطح حتى تظل واضحة فوق الخلفيات الفاتحة */
+  /** نوحّد لون علامة TRUST مع لون السطح حتى تظل واضحة فوق الخلفيات الفاتحة */
   const useLightBrandText = isLightSurface;
   /** لون النص للروابط غير النشطة — أغمق على الخلفيات الفاتحة لقابلية القراءة */
   const navInactiveTextCls = isLightSurface
@@ -102,7 +102,7 @@ const Navbar = () => {
     : "text-muted-foreground hover:text-primary";
   /** زر دائري/مستطيل في الناڤبار (الجرس + قائمة المستخدم) — يتكيّف مع لون الخلفية */
   const navTriggerButtonCls = isLightSurface
-    ? "border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+    ? "border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
     : "border-primary/30 bg-background/40 text-foreground backdrop-blur-md hover:bg-primary/15 hover:border-primary/50";
 
   const publicUnreadTickets = (() => {
@@ -151,7 +151,7 @@ const Navbar = () => {
         className={`fixed inset-x-0 top-0 z-[100] py-3 pt-[calc(env(safe-area-inset-top,0px)+0.75rem)] transition-[background-color,border-color,box-shadow,backdrop-filter] duration-500 sm:py-4 sm:pt-[calc(env(safe-area-inset-top,0px)+1rem)] ${
           scrolled
             ? isLightSurface
-              ? "border-b border-violet-300/45 bg-gradient-to-l from-violet-100/75 via-white/72 to-fuchsia-50/78 shadow-[0_10px_36px_-18px_rgba(124,58,237,0.45)] backdrop-blur-xl supports-[backdrop-filter]:from-violet-100/65 supports-[backdrop-filter]:via-white/60 supports-[backdrop-filter]:to-fuchsia-50/68"
+              ? "border-b border-rose-300/45 bg-gradient-to-l from-rose-100/75 via-white/72 to-red-50/78 shadow-[0_10px_36px_-18px_rgba(159,18,57,0.35)] backdrop-blur-xl supports-[backdrop-filter]:from-rose-100/65 supports-[backdrop-filter]:via-white/60 supports-[backdrop-filter]:to-red-50/68"
               : "border-b border-primary/20 bg-background/70 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent"
         }`}
@@ -161,8 +161,8 @@ const Navbar = () => {
           <div className="flex min-w-0 items-center gap-2 sm:gap-3">
             <Link to="/" className="group inline-block shrink-0 leading-none" aria-label="العودة للرئيسية">
               <img
-                src="/INF_LOGO.png"
-                alt="Infinite City Logo"
+                src="/trustLogo.png"
+                alt="TRUST CFW Logo"
                 className="h-9 w-9 object-contain drop-shadow-[0_0_22px_hsl(var(--primary)/0.95)] sm:h-10 sm:w-10"
                 loading="eager"
               />
@@ -173,10 +173,10 @@ const Navbar = () => {
                   useLightBrandText ? "text-slate-900" : "text-white"
                 }`}
               >
-                INFINITE
+                TRUST
               </div>
               <div className="-mt-1 font-latin-display text-[9px] tracking-[0.28em] text-primary sm:text-[10px] sm:tracking-[0.3em]">
-                C I T Y
+                C F W
               </div>
             </div>
           </div>
@@ -323,17 +323,17 @@ const Navbar = () => {
                   <ChevronDown className={`me-2 h-4 w-4 transition-transform ${publicMenuOpen ? "rotate-180" : ""}`} />
                 </button>
                 {publicMenuOpen ? (
-                  <div className="absolute left-0 z-[130] mt-2 w-48 overflow-hidden rounded-xl border border-violet-200 bg-white shadow-xl">
+                  <div className="absolute left-0 z-[130] mt-2 w-48 overflow-hidden rounded-xl border border-rose-200 bg-white shadow-xl">
                     <Link
                       to="/profile"
-                      className="block px-3 py-2 text-right text-sm text-slate-700 transition-colors hover:bg-violet-50 hover:text-violet-800"
+                      className="block px-3 py-2 text-right text-sm text-slate-700 transition-colors hover:bg-rose-50 hover:text-rose-800"
                       onClick={() => setPublicMenuOpen(false)}
                     >
                       البروفايل
                     </Link>
                     <button
                       type="button"
-                      className="flex w-full items-center justify-between border-t border-violet-100 px-3 py-2 text-right text-sm text-slate-700 transition-colors hover:bg-violet-50 hover:text-violet-800"
+                      className="flex w-full items-center justify-between border-t border-rose-100 px-3 py-2 text-right text-sm text-slate-700 transition-colors hover:bg-rose-50 hover:text-rose-800"
                       onClick={() => {
                         setPublicMenuOpen(false);
                         goToPublicTickets();
@@ -348,7 +348,7 @@ const Navbar = () => {
                     </button>
                     <Link
                       to="/jobs"
-                      className="block border-t border-violet-100 px-3 py-2 text-right text-sm text-slate-700 transition-colors hover:bg-violet-50 hover:text-violet-800"
+                      className="block border-t border-rose-100 px-3 py-2 text-right text-sm text-slate-700 transition-colors hover:bg-rose-50 hover:text-rose-800"
                       onClick={() => setPublicMenuOpen(false)}
                     >
                       التقديم لوظيفة
@@ -367,7 +367,7 @@ const Navbar = () => {
                     ) : null}
                     <button
                       type="button"
-                      className="block w-full border-t border-violet-100 px-3 py-2 text-right text-sm text-rose-700 transition-colors hover:bg-rose-50"
+                      className="block w-full border-t border-rose-100 px-3 py-2 text-right text-sm text-rose-700 transition-colors hover:bg-rose-50"
                       onClick={() => {
                         publicUser.logout();
                         setPublicMenuOpen(false);
@@ -588,7 +588,7 @@ const Navbar = () => {
               ) : null}
               {publicUser.user ? (
                 <>
-                  <Button asChild className="w-full touch-manipulation bg-violet-600 text-white hover:bg-violet-700">
+                  <Button asChild className="w-full touch-manipulation bg-rose-700 text-white hover:bg-rose-800">
                     <Link to="/profile" onClick={() => setOpen(false)}>
                       <UserCircle2 className="h-4 w-4 ml-2" /> حسابي
                     </Link>
@@ -596,7 +596,7 @@ const Navbar = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="w-full touch-manipulation border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                    className="w-full touch-manipulation border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                     onClick={() => {
                       publicUser.logout();
                       setOpen(false);
@@ -642,17 +642,17 @@ const Navbar = () => {
       >
         <DialogContent
           dir="rtl"
-          className="max-h-[90dvh] gap-0 overflow-y-auto rounded-3xl border border-violet-300/40 bg-[linear-gradient(180deg,rgba(255,255,255,0.97)_0%,rgba(248,241,252,0.97)_100%)] p-0 text-slate-900 shadow-[0_30px_80px_-24px_rgba(54,22,79,0.45)] backdrop-blur-xl sm:max-w-[560px]"
+          className="max-h-[90dvh] gap-0 overflow-y-auto rounded-3xl border border-rose-300/40 bg-[linear-gradient(180deg,rgba(255,255,255,0.97)_0%,rgba(255,241,244,0.97)_100%)] p-0 text-slate-900 shadow-[0_30px_80px_-24px_rgba(127,29,29,0.30)] backdrop-blur-xl sm:max-w-[560px]"
         >
-          <div className="relative bg-[radial-gradient(ellipse_120%_100%_at_50%_-20%,rgba(54,22,79,0.18),transparent_58%)] px-6 pb-2 pt-12 text-center sm:px-8 sm:pt-14">
+          <div className="relative bg-[radial-gradient(ellipse_120%_100%_at_50%_-20%,rgba(127,29,29,0.16),transparent_58%)] px-6 pb-2 pt-12 text-center sm:px-8 sm:pt-14">
             <img
-              src="/INF_LOGO.png"
-              alt="Infinite City"
-              className="mx-auto h-[4.25rem] w-[4.25rem] object-contain drop-shadow-[0_0_24px_rgba(54,22,79,0.35)]"
+              src="/trustLogo.png"
+              alt="TRUST CFW"
+              className="mx-auto h-[4.25rem] w-[4.25rem] object-contain drop-shadow-[0_0_24px_rgba(127,29,29,0.35)]"
               loading="eager"
             />
             <p className="mt-3 font-latin-display text-[10px] font-semibold tracking-[0.38em] text-primary/90 sm:text-[11px] sm:tracking-[0.42em]">
-              INFINITE CITY
+              TRUST CFW
             </p>
             <DialogHeader className="mt-5 space-y-2 text-center sm:text-center">
               <DialogTitle className="font-display text-xl font-bold text-slate-900 sm:text-2xl">تسجيل الدخول</DialogTitle>
@@ -663,7 +663,7 @@ const Navbar = () => {
             </DialogHeader>
           </div>
 
-          <div className="h-px bg-gradient-to-l from-transparent via-violet-200 to-transparent" aria-hidden />
+          <div className="h-px bg-gradient-to-l from-transparent via-rose-200 to-transparent" aria-hidden />
 
           <div className="space-y-4 px-6 py-6 sm:px-9 sm:py-7">
             <div className="space-y-2">
@@ -698,7 +698,7 @@ const Navbar = () => {
             <Button
               type="button"
               variant="outline"
-              className="flex h-11 w-full items-center justify-center gap-2 rounded-xl border-violet-300 bg-white text-sm font-semibold text-violet-900 shadow-sm hover:border-violet-400 hover:bg-violet-100 hover:text-violet-950 focus-visible:ring-violet-300"
+              className="flex h-11 w-full items-center justify-center gap-2 rounded-xl border-rose-300 bg-white text-sm font-semibold text-rose-900 shadow-sm hover:border-rose-400 hover:bg-rose-100 hover:text-rose-950 focus-visible:ring-rose-300"
               onClick={() => {
                 setStaffLoginVisible((v) => {
                   const next = !v;
@@ -719,7 +719,7 @@ const Navbar = () => {
               noValidate
               hidden={!staffLoginVisible}
               aria-hidden={!staffLoginVisible}
-              className="space-y-4 border-t border-violet-200/90 pt-4"
+              className="space-y-4 border-t border-rose-200/90 pt-4"
               onSubmit={(e: FormEvent) => {
                   e.preventDefault();
                   try {
@@ -744,7 +744,7 @@ const Navbar = () => {
                   }
                 }}
               >
-                <p className="text-center text-xs font-medium text-violet-800">لوحة التحكم — موظفون معتمدون فقط</p>
+                <p className="text-center text-xs font-medium text-rose-800">لوحة التحكم — موظفون معتمدون فقط</p>
                 <div className="space-y-1.5 text-right">
                   <Label htmlFor="staff-user" className="text-xs font-medium text-slate-700">
                     اسم المستخدم
@@ -764,7 +764,7 @@ const Navbar = () => {
                       }
                     }}
                     placeholder="اسم المستخدم"
-                    className="h-11 rounded-xl border-violet-200 bg-white text-right text-slate-900 shadow-sm transition-colors placeholder:text-slate-400 focus-visible:border-violet-400 focus-visible:ring-violet-200"
+                    className="h-11 rounded-xl border-rose-200 bg-white text-right text-slate-900 shadow-sm transition-colors placeholder:text-slate-400 focus-visible:border-rose-400 focus-visible:ring-rose-200"
                   />
                 </div>
                 <div className="space-y-1.5 text-right">
@@ -787,7 +787,7 @@ const Navbar = () => {
                       }
                     }}
                     placeholder="كلمة المرور"
-                    className="h-11 rounded-xl border-violet-200 bg-white text-right text-slate-900 shadow-sm transition-colors placeholder:text-slate-400 focus-visible:border-violet-400 focus-visible:ring-violet-200"
+                    className="h-11 rounded-xl border-rose-200 bg-white text-right text-slate-900 shadow-sm transition-colors placeholder:text-slate-400 focus-visible:border-rose-400 focus-visible:ring-rose-200"
                   />
                 </div>
                 <Button

@@ -226,7 +226,7 @@ const LeadershipPanelPage = () => {
                 <div className="mt-4 flex flex-wrap justify-center gap-2 sm:justify-start">
                   <Button
                     type="button"
-                    className="rounded-xl bg-violet-700 text-white hover:bg-violet-800"
+                    className="rounded-xl bg-rose-700 text-white hover:bg-rose-800"
                     onClick={() => navigate("/profile")}
                   >
                     العودة إلى البروفايل
@@ -234,7 +234,7 @@ const LeadershipPanelPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                    className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                     onClick={() => navigate("/")}
                   >
                     الصفحة الرئيسية
@@ -265,7 +265,7 @@ const LeadershipPanelPage = () => {
 
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute -left-24 top-0 h-56 w-56 rounded-full bg-amber-300/30 blur-[90px]" />
-        <div className="pointer-events-none absolute -right-20 top-24 h-48 w-48 rounded-full bg-fuchsia-300/25 blur-[80px]" />
+        <div className="pointer-events-none absolute -right-20 top-24 h-48 w-48 rounded-full bg-red-300/25 blur-[80px]" />
 
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 12 }}
@@ -292,7 +292,7 @@ const LeadershipPanelPage = () => {
               <Button
                 type="button"
                 variant="outline"
-                className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                 onClick={() => navigate(branchMeta.previewPath)}
               >
                 معاينة في الموقع
@@ -300,7 +300,7 @@ const LeadershipPanelPage = () => {
               <Button
                 type="button"
                 variant="outline"
-                className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                 onClick={() => navigate("/profile")}
               >
                 البروفايل
@@ -358,10 +358,10 @@ const LeadershipPanelPage = () => {
         </Card>
 
         {/* الأعضاء */}
-        <Card className="border-violet-200/80 bg-white shadow-[0_24px_60px_-28px_rgba(54,22,79,0.28)]">
-          <CardHeader className="border-b border-violet-100 bg-gradient-to-l from-violet-50/80 to-white text-right">
+        <Card className="border-rose-200/80 bg-white shadow-[0_24px_60px_-28px_rgba(54,22,79,0.28)]">
+          <CardHeader className="border-b border-rose-100 bg-gradient-to-l from-rose-50/80 to-white text-right">
             <CardTitle className="flex items-center justify-end gap-2 font-display text-lg text-slate-900">
-              <Users className="h-5 w-5 text-violet-600" />
+              <Users className="h-5 w-5 text-rose-600" />
               أعضاء الطاقم ({roster.members.length})
             </CardTitle>
             <CardDescription className="text-slate-600">
@@ -371,7 +371,7 @@ const LeadershipPanelPage = () => {
           </CardHeader>
           <CardContent className="space-y-2 p-4 md:p-6">
             {roster.members.length === 0 ? (
-              <div className="rounded-xl border border-dashed border-violet-200 bg-violet-50/40 p-6 text-center text-sm text-slate-600">
+              <div className="rounded-xl border border-dashed border-rose-200 bg-rose-50/40 p-6 text-center text-sm text-slate-600">
                 لا يوجد أعضاء حالياً في الطاقم.
               </div>
             ) : (
@@ -381,12 +381,12 @@ const LeadershipPanelPage = () => {
                   return (
                   <li
                     key={`${member.userId ?? idx}-${idx}`}
-                    className="flex flex-wrap items-center gap-3 rounded-2xl border border-violet-200 bg-white p-3 shadow-sm md:flex-nowrap"
+                    className="flex flex-wrap items-center gap-3 rounded-2xl border border-rose-200 bg-white p-3 shadow-sm md:flex-nowrap"
                   >
                     <img
                       src={member.image || "/placeholder.svg"}
                       alt={member.title}
-                      className="h-14 w-14 shrink-0 rounded-xl border border-violet-100 object-cover"
+                      className="h-14 w-14 shrink-0 rounded-xl border border-rose-100 object-cover"
                     />
                     <div className="min-w-0 flex-1">
                       <p className="truncate font-display text-sm font-semibold text-slate-900">
@@ -406,7 +406,7 @@ const LeadershipPanelPage = () => {
                         type="button"
                         variant="outline"
                         size="sm"
-                        className="rounded-lg border-violet-200 bg-white text-violet-700 hover:bg-violet-50"
+                        className="rounded-lg border-rose-200 bg-white text-rose-700 hover:bg-rose-50"
                         onClick={() =>
                           openEdit(
                             "member",
@@ -469,10 +469,10 @@ const LeadershipPanelPage = () => {
 
       {/* نافذة تعديل عضو/قائد/نائب */}
       <Dialog open={!!editTarget} onOpenChange={(open) => !open && setEditTarget(null)}>
-        <DialogContent dir="rtl" className="max-w-xl border-violet-200 bg-white text-slate-900 shadow-2xl">
+        <DialogContent dir="rtl" className="max-w-xl border-rose-200 bg-white text-slate-900 shadow-2xl">
           <DialogHeader className="text-right">
             <DialogTitle className="flex items-center justify-end gap-2 font-display text-lg">
-              <UserCog className="h-5 w-5 text-violet-700" />
+              <UserCog className="h-5 w-5 text-rose-700" />
               تعديل بيانات{" "}
               {editTarget?.kind === "leader" ? "القائد" : editTarget?.kind === "deputy" ? "النائب" : "العضو"}
             </DialogTitle>
@@ -482,12 +482,12 @@ const LeadershipPanelPage = () => {
               <img
                 src={editImage || "/placeholder.svg"}
                 alt=""
-                className="h-20 w-20 rounded-2xl border border-violet-200 object-cover"
+                className="h-20 w-20 rounded-2xl border border-rose-200 object-cover"
               />
               <Button
                 type="button"
                 variant="outline"
-                className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50"
+                className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50"
                 onClick={() => fileInputRef.current?.click()}
               >
                 <ImagePlus className="ms-1 h-4 w-4" /> تغيير الصورة
@@ -509,7 +509,7 @@ const LeadershipPanelPage = () => {
               <Input
                 value={editName}
                 onChange={(e) => setEditName(e.target.value)}
-                className="border-violet-200 bg-white"
+                className="border-rose-200 bg-white"
                 disabled={editTarget?.kind !== "member"}
               />
               {editTarget?.kind !== "member" ? (
@@ -524,7 +524,7 @@ const LeadershipPanelPage = () => {
                 value={editRank}
                 onChange={(e) => setEditRank(e.target.value)}
                 placeholder="مثال: ضابط مرور — رقيب — مسعف"
-                className="border-violet-200 bg-white"
+                className="border-rose-200 bg-white"
                 disabled={!!editingOwnMember}
               />
               {editingOwnMember ? (
@@ -540,23 +540,23 @@ const LeadershipPanelPage = () => {
                 value={editBio}
                 onChange={(e) => setEditBio(e.target.value)}
                 placeholder="نبذة قصيرة"
-                className="min-h-[90px] border-violet-200 bg-white"
+                className="min-h-[90px] border-rose-200 bg-white"
                 disabled={editTarget?.kind !== "member"}
               />
             </div>
           </div>
-          <div className="flex flex-wrap justify-end gap-2 border-t border-violet-100 pt-4">
+          <div className="flex flex-wrap justify-end gap-2 border-t border-rose-100 pt-4">
             <Button
               type="button"
               variant="outline"
-              className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50"
+              className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50"
               onClick={() => setEditTarget(null)}
             >
               إلغاء
             </Button>
             <Button
               type="button"
-              className="bg-violet-600 text-white hover:bg-violet-700"
+              className="bg-rose-600 text-white hover:bg-rose-700"
               onClick={saveEdit}
             >
               حفظ
@@ -591,7 +591,7 @@ const LeadershipPanelPage = () => {
               </div>
               <div className="space-y-1.5">
                 <Label className="text-xs">الدور الجديد</Label>
-                <div className="grid grid-cols-3 gap-2 rounded-xl border border-violet-200 bg-white p-1">
+                <div className="grid grid-cols-3 gap-2 rounded-xl border border-rose-200 bg-white p-1">
                   {(
                     [
                       { v: "member", l: "عضو" },
@@ -615,7 +615,7 @@ const LeadershipPanelPage = () => {
                               : opt.v === "deputy"
                                 ? "bg-indigo-100 text-indigo-800 ring-1 ring-indigo-400"
                                 : "bg-emerald-100 text-emerald-800 ring-1 ring-emerald-400"
-                            : "text-slate-600 hover:bg-violet-50",
+                            : "text-slate-600 hover:bg-rose-50",
                         )}
                       >
                         {opt.l}
@@ -641,7 +641,7 @@ const LeadershipPanelPage = () => {
                         ? "نائب القائد"
                         : "ضابط — رقيب — مسعف…"
                   }
-                  className="border-violet-200 bg-white"
+                  className="border-rose-200 bg-white"
                 />
               </div>
             </div>
@@ -727,7 +727,7 @@ function LeadershipSlotCard({
       <div
         className={cn(
           "pointer-events-none absolute inset-x-0 top-0 h-1",
-          accent === "amber" ? "bg-gradient-to-l from-amber-400 to-orange-500" : "bg-gradient-to-l from-indigo-400 to-violet-500",
+          accent === "amber" ? "bg-gradient-to-l from-amber-400 to-orange-500" : "bg-gradient-to-l from-indigo-400 to-rose-500",
         )}
       />
       <div className="flex flex-wrap items-start gap-3">

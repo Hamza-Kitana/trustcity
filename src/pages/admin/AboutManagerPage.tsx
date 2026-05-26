@@ -76,8 +76,8 @@ function SortablePillarEditor({
       ref={setNodeRef}
       style={style}
       className={cn(
-        "rounded-xl border border-slate-200 bg-violet-50/35 p-4 transition-shadow",
-        isDragging && "z-20 opacity-95 shadow-lg ring-2 ring-violet-300/60",
+        "rounded-xl border border-slate-200 bg-rose-50/35 p-4 transition-shadow",
+        isDragging && "z-20 opacity-95 shadow-lg ring-2 ring-rose-300/60",
       )}
     >
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
@@ -91,7 +91,7 @@ function SortablePillarEditor({
           >
             <GripVertical className="h-4 w-4" />
           </button>
-          <p className="font-display text-sm text-violet-700">ميزة {displayIndex + 1}</p>
+          <p className="font-display text-sm text-rose-700">ميزة {displayIndex + 1}</p>
         </div>
         <AlertDialog>
           <AlertDialogTrigger asChild>
@@ -206,7 +206,7 @@ const AboutManagerPage = () => {
             <Button
               asChild
               variant="outline"
-              className="border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800"
+              className="border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800"
             >
               <Link to="/contact" target="_blank" rel="noreferrer">
                 <ExternalLink className="ms-2 h-4 w-4" />
@@ -261,7 +261,7 @@ const AboutManagerPage = () => {
         <div className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm">
           <h2 className="mb-4 text-right font-display text-lg font-semibold text-slate-900">رؤيتنا وكيف نعمل</h2>
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-slate-200 bg-violet-50/35 p-4">
+            <div className="rounded-xl border border-slate-200 bg-rose-50/35 p-4">
               <div className="space-y-2 text-right">
                 <Label className="text-slate-700">عنوان الرؤية</Label>
                 <Input value={draft.visionTitle} onChange={(e) => setField("visionTitle", e.target.value)} className={inputClassName} />
@@ -271,7 +271,7 @@ const AboutManagerPage = () => {
                 <Textarea value={draft.visionBody} onChange={(e) => setField("visionBody", e.target.value)} className={textareaClassName} />
               </div>
             </div>
-            <div className="rounded-xl border border-slate-200 bg-violet-50/35 p-4">
+            <div className="rounded-xl border border-slate-200 bg-rose-50/35 p-4">
               <div className="space-y-2 text-right">
                 <Label className="text-slate-700">عنوان كيف نعمل</Label>
                 <Input value={draft.workTitle} onChange={(e) => setField("workTitle", e.target.value)} className={inputClassName} />
@@ -316,7 +316,7 @@ const AboutManagerPage = () => {
                     />
                   ))
                 ) : (
-                  <div className="rounded-xl border border-dashed border-violet-200 bg-violet-50/40 px-4 py-8 text-center text-sm text-slate-600">
+                  <div className="rounded-xl border border-dashed border-rose-200 bg-rose-50/40 px-4 py-8 text-center text-sm text-slate-600">
                     لا توجد ميزات بعد. اضغط «إضافة ميزة» أدناه.
                   </div>
                 )}
@@ -326,7 +326,7 @@ const AboutManagerPage = () => {
           <Button
             type="button"
             variant="outline"
-            className="mt-4 w-full border-violet-200 bg-white text-violet-700 hover:bg-violet-50 hover:text-violet-800 sm:w-auto"
+            className="mt-4 w-full border-rose-200 bg-white text-rose-700 hover:bg-rose-50 hover:text-rose-800 sm:w-auto"
             onClick={addPillar}
           >
             <Plus className="ms-2 h-4 w-4" />

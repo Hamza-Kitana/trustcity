@@ -34,7 +34,7 @@ function InvestmentCompactCard({
     <div
       className={cn(
         "relative w-full rounded-2xl p-[2px] shadow-[0_16px_44px_-22px_rgba(0,0,0,0.5)] transition-[box-shadow,filter] duration-500",
-        "bg-gradient-to-br from-amber-400 via-fuchsia-500 to-violet-500 bg-[length:300%_300%] animate-vip-gradient-shift motion-reduce:animate-none",
+        "bg-gradient-to-br from-amber-400 via-red-500 to-rose-500 bg-[length:300%_300%] animate-vip-gradient-shift motion-reduce:animate-none",
         "hover:shadow-[0_22px_52px_-20px_hsl(var(--primary)/0.38)]",
         item.taken && "opacity-[0.92]",
       )}

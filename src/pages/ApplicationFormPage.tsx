@@ -611,10 +611,10 @@ const ApplicationFormPage = () => {
   if (!publicUser.user) {
     return (
       <div dir="rtl" className="relative min-h-screen overflow-hidden bg-background text-foreground antialiased">
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_0%,hsl(272_82%_58%/0.22),transparent_70%),radial-gradient(60%_60%_at_50%_100%,hsl(287_72%_50%/0.18),transparent_70%)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_0%,hsl(350_64%_40%/0.22),transparent_70%),radial-gradient(60%_60%_at_50%_100%,hsl(6_74%_52%/0.18),transparent_70%)]" />
         <Navbar />
         <main className="relative z-10 mx-auto flex min-h-[calc(100vh-200px)] max-w-3xl flex-col items-center justify-center px-4 py-24 md:px-8">
-          <div className="w-full overflow-hidden rounded-3xl border border-indigo-200/80 bg-gradient-to-l from-indigo-50 via-white to-violet-50 p-8 text-right shadow-[0_28px_70px_-30px_rgba(99,102,241,0.45)] md:p-10">
+          <div className="w-full overflow-hidden rounded-3xl border border-indigo-200/80 bg-gradient-to-l from-indigo-50 via-white to-rose-50 p-8 text-right shadow-[0_28px_70px_-30px_rgba(99,102,241,0.45)] md:p-10">
             <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-right">
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#5865F2] text-white shadow-inner">
                 <DiscordIcon className="h-8 w-8" />
@@ -635,7 +635,7 @@ const ApplicationFormPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                    className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                     onClick={() => navigate("/", { replace: true })}
                   >
                     الذهاب للصفحة الرئيسية
@@ -653,10 +653,10 @@ const ApplicationFormPage = () => {
   if (publicUser.user && !isDiscordUser) {
     return (
       <div dir="rtl" className="relative min-h-screen overflow-hidden bg-background text-foreground antialiased">
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_0%,hsl(272_82%_58%/0.22),transparent_70%),radial-gradient(60%_60%_at_50%_100%,hsl(287_72%_50%/0.18),transparent_70%)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_0%,hsl(350_64%_40%/0.22),transparent_70%),radial-gradient(60%_60%_at_50%_100%,hsl(6_74%_52%/0.18),transparent_70%)]" />
         <Navbar />
         <main className="relative z-10 mx-auto flex min-h-[calc(100vh-200px)] max-w-3xl flex-col items-center justify-center px-4 py-24 md:px-8">
-          <div className="w-full overflow-hidden rounded-3xl border border-indigo-200/80 bg-gradient-to-l from-indigo-50 via-white to-violet-50 p-8 text-right shadow-[0_28px_70px_-30px_rgba(99,102,241,0.45)] md:p-10">
+          <div className="w-full overflow-hidden rounded-3xl border border-indigo-200/80 bg-gradient-to-l from-indigo-50 via-white to-rose-50 p-8 text-right shadow-[0_28px_70px_-30px_rgba(99,102,241,0.45)] md:p-10">
             <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-right">
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#5865F2] text-white shadow-inner">
                 <DiscordIcon className="h-8 w-8" />
@@ -692,7 +692,7 @@ const ApplicationFormPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                    className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                     onClick={() => navigate(target.dashboardPath)}
                   >
                     العودة إلى الجهة
@@ -712,7 +712,7 @@ const ApplicationFormPage = () => {
       <div dir="rtl" className="relative min-h-screen overflow-hidden bg-background text-foreground antialiased">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_0%,hsl(142_76%_36%/0.16),transparent_70%),radial-gradient(60%_60%_at_50%_100%,hsl(272_82%_58%/0.12),transparent_70%)]"
+          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_0%,hsl(142_76%_36%/0.16),transparent_70%),radial-gradient(60%_60%_at_50%_100%,hsl(350_64%_40%/0.12),transparent_70%)]"
         />
         <Navbar />
         <main className="relative z-10 mx-auto flex min-h-[calc(100vh-200px)] max-w-3xl flex-col items-center justify-center px-4 py-24 md:px-8">
@@ -752,7 +752,7 @@ const ApplicationFormPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                    className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                     onClick={() => navigate("/")}
                   >
                     الصفحة الرئيسية
@@ -770,7 +770,7 @@ const ApplicationFormPage = () => {
   if (isRoleClosed) {
     return (
       <div dir="rtl" className="relative min-h-screen overflow-hidden bg-background text-foreground antialiased">
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_0%,hsl(0_72%_50%/0.18),transparent_70%),radial-gradient(60%_60%_at_50%_100%,hsl(272_82%_58%/0.18),transparent_70%)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_0%,hsl(0_72%_50%/0.18),transparent_70%),radial-gradient(60%_60%_at_50%_100%,hsl(350_64%_40%/0.18),transparent_70%)]" />
         <Navbar />
         <main className="relative z-10 mx-auto flex min-h-[calc(100vh-200px)] max-w-3xl flex-col items-center justify-center px-4 py-24 md:px-8">
           <div className="w-full overflow-hidden rounded-3xl border border-rose-200/80 bg-gradient-to-l from-rose-50 via-white to-rose-50 p-8 text-right shadow-[0_28px_70px_-30px_rgba(244,63,94,0.45)] md:p-10">
@@ -807,7 +807,7 @@ const ApplicationFormPage = () => {
                   <Button
                     type="button"
                     variant="outline"
-                    className="rounded-xl border-violet-300 bg-white text-violet-700 hover:bg-violet-50"
+                    className="rounded-xl border-rose-300 bg-white text-rose-700 hover:bg-rose-50"
                     onClick={() => navigate("/")}
                   >
                     الصفحة الرئيسية
@@ -1146,7 +1146,7 @@ const ApplicationFormPage = () => {
                   noneOptionLabel="لم يسبق لي ذلك"
                   noneTitle="تجربتي الأولى في الرول بلاي"
                   noneDescription="سجّلنا أنك لم تلعب في مدن أو سيرفرات أخرى من قبل — لا حاجة لكتابة أي شيء."
-                  placeholder="مثال: Infinite City، مدينة كذا، سيرفر كذا…"
+                  placeholder="مثال: TRUST CFW، مدينة كذا، سيرفر كذا…"
                   rows={5}
                 />,
               )}

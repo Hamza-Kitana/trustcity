@@ -33,7 +33,7 @@ import { toast } from "sonner";
 const MAX_LOGO_BYTES = 2 * 1024 * 1024;
 
 const fieldInputClass =
-  "border-violet-200 bg-slate-50 text-slate-900 placeholder:text-slate-400 focus-visible:ring-violet-400";
+  "border-rose-200 bg-slate-50 text-slate-900 placeholder:text-slate-400 focus-visible:ring-rose-400";
 
 function readFileAsDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -176,9 +176,9 @@ const StreamerApplyPage = () => {
       <Navbar />
       <motion.div className="light min-h-screen bg-[#f4f0fb] text-slate-900 antialiased">
         <motion.div className="relative overflow-hidden pt-[env(safe-area-inset-top,0px)]">
-          <motion.div className="pointer-events-none absolute -left-40 top-0 h-72 w-72 rounded-full bg-violet-400/25 blur-[100px]" />
-          <motion.div className="pointer-events-none absolute -right-24 top-20 h-64 w-64 rounded-full bg-fuchsia-400/20 blur-[90px]" />
-          <motion.div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-violet-200/40 via-transparent to-transparent" />
+          <motion.div className="pointer-events-none absolute -left-40 top-0 h-72 w-72 rounded-full bg-rose-400/25 blur-[100px]" />
+          <motion.div className="pointer-events-none absolute -right-24 top-20 h-64 w-64 rounded-full bg-red-400/20 blur-[90px]" />
+          <motion.div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-rose-200/40 via-transparent to-transparent" />
 
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
@@ -187,18 +187,18 @@ const StreamerApplyPage = () => {
             className="relative mx-auto flex max-w-2xl flex-col items-center px-4 pb-8 pt-24 text-center sm:px-6 md:px-8"
           >
             <motion.div className="relative mb-4">
-              <motion.div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-fuchsia-400 via-violet-500 to-indigo-600 opacity-80 blur-md" />
-              <motion.div className="relative flex h-24 w-24 items-center justify-center rounded-2xl border-4 border-white bg-gradient-to-br from-fuchsia-600 via-violet-600 to-indigo-700 text-white shadow-[0_20px_50px_-12px_rgba(192,38,211,0.45)] ring-2 ring-fuchsia-200/60 md:h-28 md:w-28">
+              <motion.div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-red-400 via-rose-500 to-indigo-600 opacity-80 blur-md" />
+              <motion.div className="relative flex h-24 w-24 items-center justify-center rounded-2xl border-4 border-white bg-gradient-to-br from-red-600 via-rose-600 to-indigo-700 text-white shadow-[0_20px_50px_-12px_rgba(192,38,211,0.45)] ring-2 ring-red-200/60 md:h-28 md:w-28">
                 <Video className="h-11 w-11 md:h-12 md:w-12" />
               </motion.div>
             </motion.div>
-            <p className="font-display text-[11px] tracking-[0.35em] text-violet-700/90">CONTENT CREATOR</p>
+            <p className="font-display text-[11px] tracking-[0.35em] text-rose-700/90">CONTENT CREATOR</p>
             <h1 className="mt-1 font-display text-2xl font-bold text-slate-900 md:text-3xl">
               {"\u0627\u0644\u062a\u0642\u062f\u064a\u0645 \u0643\u0635\u0627\u0646\u0639 \u0645\u062d\u062a\u0648\u0649"}
             </h1>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-slate-600">
               {"\u0627\u0645\u0644\u0623 \u0628\u064a\u0627\u0646\u0627\u062a\u0643 \u0648\u0644\u0648\u062c\u0648\u0643 \u0648\u0631\u0627\u0628\u0637 \u0627\u0644\u0628\u062b. \u0639\u0646\u062f \u0627\u0644\u0642\u0628\u0648\u0644 \u062a\u064f\u0636\u0627\u0641 \u0628\u0637\u0627\u0642\u062a\u0643 \u062a\u0644\u0642\u0627\u0626\u064a\u0627\u064b \u0625\u0644\u0649 \u0635\u0641\u062d\u0629 "}
-              <Link to="/streamers" className="font-semibold text-violet-700 underline underline-offset-2">
+              <Link to="/streamers" className="font-semibold text-rose-700 underline underline-offset-2">
                 {"\u0635\u0646\u0651\u0627\u0639 \u0627\u0644\u0645\u062d\u062a\u0648\u0649"}
               </Link>
               .
@@ -237,7 +237,7 @@ const StreamerApplyPage = () => {
                     >
                       <Link to="/profile">{"\u0627\u0644\u0628\u0631\u0648\u0641\u0627\u064a\u0644"}</Link>
                     </Button>
-                    <Button asChild className="bg-violet-600 text-white hover:bg-violet-700">
+                    <Button asChild className="bg-rose-600 text-white hover:bg-rose-700">
                       <Link to="/streamers">{"\u0635\u0641\u062d\u0629 \u0635\u0646\u0651\u0627\u0639 \u0627\u0644\u0645\u062d\u062a\u0648\u0649"}</Link>
                     </Button>
                   </motion.div>
@@ -305,10 +305,10 @@ const StreamerApplyPage = () => {
                   </div>
                 </motion.div>
               ) : null}
-              <Card className="overflow-hidden border-violet-200/90 bg-white/95 text-slate-900 shadow-[0_24px_60px_-28px_rgba(54,22,79,0.35)] backdrop-blur-sm">
-              <CardHeader className="border-b border-violet-100/90 bg-gradient-to-l from-violet-50/90 to-white pb-6 text-right">
+              <Card className="overflow-hidden border-rose-200/90 bg-white/95 text-slate-900 shadow-[0_24px_60px_-28px_rgba(54,22,79,0.35)] backdrop-blur-sm">
+              <CardHeader className="border-b border-rose-100/90 bg-gradient-to-l from-rose-50/90 to-white pb-6 text-right">
                 <CardTitle className="flex items-center justify-end gap-2 font-display text-xl text-slate-900">
-                  <Video className="h-5 w-5 text-violet-600" />
+                  <Video className="h-5 w-5 text-rose-600" />
                   {applyRejected ? "\u062a\u0642\u062f\u064a\u0645 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649" : "\u0646\u0645\u0648\u0630\u062c \u0627\u0644\u062a\u0642\u062f\u064a\u0645"}
                 </CardTitle>
                 <CardDescription className="mt-1 text-pretty text-slate-600">
@@ -373,10 +373,10 @@ const StreamerApplyPage = () => {
                       <img
                         src={logoDataUrl}
                         alt=""
-                        className="h-20 w-20 rounded-2xl border border-violet-200 object-cover shadow-sm"
+                        className="h-20 w-20 rounded-2xl border border-rose-200 object-cover shadow-sm"
                       />
                     ) : (
-                      <motion.div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-dashed border-violet-300 bg-violet-50 text-violet-400">
+                      <motion.div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-dashed border-rose-300 bg-rose-50 text-rose-400">
                         <ImagePlus className="h-8 w-8" />
                       </motion.div>
                     )}
@@ -390,7 +390,7 @@ const StreamerApplyPage = () => {
                     <Button
                       type="button"
                       variant="outline"
-                      className="border-violet-200 bg-white text-slate-800 hover:bg-violet-50"
+                      className="border-rose-200 bg-white text-slate-800 hover:bg-rose-50"
                       onClick={() => fileInputRef.current?.click()}
                     >
                       {"\u0631\u0641\u0639 \u0635\u0648\u0631\u0629"}
@@ -398,7 +398,7 @@ const StreamerApplyPage = () => {
                   </motion.div>
                 </motion.div>
 
-                <motion.div className="flex items-start justify-end gap-3 rounded-xl border border-violet-200 bg-violet-50/80 p-4">
+                <motion.div className="flex items-start justify-end gap-3 rounded-xl border border-rose-200 bg-rose-50/80 p-4">
                   <Checkbox
                     id="streamer-laws"
                     checked={acceptedLaws}
@@ -406,7 +406,7 @@ const StreamerApplyPage = () => {
                   />
                   <Label htmlFor="streamer-laws" className="cursor-pointer text-sm leading-relaxed text-slate-700">
                     {"\u0623\u0642\u0631 \u0628\u0623\u0646\u0646\u064a \u0642\u0631\u0623\u062a "}
-                    <Link to="/laws" className="font-semibold text-violet-700 underline underline-offset-2">
+                    <Link to="/laws" className="font-semibold text-rose-700 underline underline-offset-2">
                       {"\u0642\u0648\u0627\u0646\u064a\u0646 \u0627\u0644\u0645\u062f\u064a\u0646\u0629"}
                     </Link>
                     {" \u0648\u0623\u0644\u062a\u0632\u0645 \u0628\u0647\u0627 \u0643\u0635\u0627\u0646\u0639 \u0645\u062d\u062a\u0648\u0649."}
@@ -416,7 +416,7 @@ const StreamerApplyPage = () => {
                 <Button
                   type="button"
                   disabled={submitting}
-                  className="h-12 w-full rounded-2xl bg-gradient-to-l from-fuchsia-600 via-violet-600 to-indigo-700 font-display text-base text-white shadow-[0_24px_60px_-28px_rgba(192,38,211,0.45)] hover:opacity-95"
+                  className="h-12 w-full rounded-2xl bg-gradient-to-l from-red-600 via-rose-600 to-indigo-700 font-display text-base text-white shadow-[0_24px_60px_-28px_rgba(192,38,211,0.45)] hover:opacity-95"
                   onClick={submit}
                 >
                   {submitting ? "\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644\u2026" : "\u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628 \u0627\u0644\u062a\u0642\u062f\u064a\u0645"}

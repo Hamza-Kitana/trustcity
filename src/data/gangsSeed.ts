@@ -11,7 +11,7 @@ export const GANGS_SEED: GangCard[] = [
     description:
       "هيكل ياباني صارم يمزج بين الاحترام الهرمي والقوة الصامتة. يُعرَفون بالانضباط والوفاء للمجموعة، واللون الأحمر كتحذير ورمز هيبة في الشارع.",
     youtubeVideo: "https://www.youtube.com/watch?v=QmiYsYwqyyA",
-    logoImage: "/INF_LOGO.png",
+    logoImage: "/trustLogo.png",
     status: "taken",
     leaderName: "مجهول",
     brandColor: "#DC2626",
@@ -30,7 +30,7 @@ export const GANGS_SEED: GangCard[] = [
     description:
       "فرقة تعكس زحام العاصمة وسرعة القرارات: تحرك ذكي بين الشوارع المضاءة، وتكتيك يعتمد على قراءة الزحام قبل المواجهة. اللون الأبيض رمز للهدوء أو التمويه حسب الموقف.",
     youtubeVideo: "https://www.youtube.com/watch?v=an1zut1lPs0",
-    logoImage: "/INF_LOGO.png",
+    logoImage: "/trustLogo.png",
     status: "taken",
     leaderName: "مجهول",
     brandColor: "#FFFFFF",
@@ -41,22 +41,22 @@ export const GANGS_SEED: GangCard[] = [
     ],
   },
   {
-    id: "infinity",
-    name: "إنفنتي",
-    nameEn: "Infinity",
+    id: "trust-cfw",
+    name: "ترست CFW",
+    nameEn: "TRUST CFW",
     specialty: "امتداد لا نهائي · ربط الهوية بالمدينة",
     location: "قلب الشبكة — نقاط التقاء الفصائل والإعلان المركزي",
     description:
-      "العصابة التي تحمل اسم المدينة نفسها: جسر بين الفرق، وهوية بنفسجية موحّدة فوق الخلفيات المختلفة. غالبًا ما يكون حضورها إعلاميًا وتنسيقيًا قدر ما هو ميداني.",
+      "العصابة التي تحمل اسم المدينة نفسها: جسر بين الفرق، وهوية خمرية موحّدة فوق الخلفيات المختلفة. غالبًا ما يكون حضورها إعلاميًا وتنسيقيًا قدر ما هو ميداني.",
     youtubeVideo: "https://www.youtube.com/watch?v=jSR2sTEnqFA",
     logoImage: "/610d9d48-da54-4b32-b725-67419f2aeaaa.png",
     status: "taken",
     leaderName: "مجهول",
-    brandColor: "#9333EA",
+    brandColor: "#9f1239",
     profilePoints: [
-      "ربط العلامة «Infinite» بشكل المدينة والتوسع المستمر.",
+      "ربط العلامة «TRUST CFW» بشكل المدينة والتوسع المستمر.",
       "تنسيق ومسارات اتصال بين العصابات تحت مظلة أو إطار موحّد.",
-      "البنفسجي كلون رئيسي يميّز الشارات والتغطية البصرية في الساحة.",
+      "الخمري كلون رئيسي يميّز الشارات والتغطية البصرية في الساحة.",
     ],
   },
   {
@@ -68,7 +68,7 @@ export const GANGS_SEED: GangCard[] = [
     description:
       "نادي دراجات يعيش على الطريق والولاء للمجموعة: مواجهات مباشرة، روح حرة، وهيكل يشبه العائلة أكثر من المؤسسة. اللون البني يعكس الخام والتراب والجلد والأسفلت.",
     youtubeVideo: "https://www.youtube.com/watch?v=WnGiZMQWlSM",
-    logoImage: "/INF_LOGO.png",
+    logoImage: "/trustLogo.png",
     status: "available",
     brandColor: "#92400E",
     profilePoints: [
@@ -86,7 +86,7 @@ export const GANGS_SEED: GangCard[] = [
     description:
       "طاقة عالية وروح جماعية واضحة على الأرض: ضغط متواصل، حركة على الأقدام، ولعب يعتمد على الصوت والإيقاع والثقة داخل المجموعة. اللون الأخضر يعبّر عن الحياة والبقاء في الشوارع الضيقة.",
     youtubeVideo: "https://www.youtube.com/watch?v=yvsNv1XVXK0",
-    logoImage: "/INF_LOGO.png",
+    logoImage: "/trustLogo.png",
     status: "available",
     brandColor: "#16A34A",
     profilePoints: [
