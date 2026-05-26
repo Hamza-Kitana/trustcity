@@ -75,22 +75,28 @@ const StreamersPage = () => {
               </div>
             ) : null}
 
-            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {visibleItems.map((streamer) => (
-                <ReflectiveCard
-                  key={streamer.id}
-                  name={streamer.name}
-                  role={streamer.role}
-                  bio={streamer.bio}
-                  image={streamer.image}
-                  streamUrl={streamer.streamUrl}
-                  kickSlug={parseKickSlugFromUrl(streamer.streamUrl)}
-                  kickLive={kickLiveMap[streamer.id]}
-                  tiktokUniqueId={parseTikTokUniqueIdFromUrl(streamer.streamUrl)}
-                  tiktokLive={tiktokLiveMap[streamer.id]}
-                />
-              ))}
-            </div>
+            {visibleItems.length === 0 ? (
+              <p className="mt-6 rounded-xl border border-dashed border-primary/25 bg-muted/20 px-4 py-10 text-center text-sm text-muted-foreground">
+                لا يوجد صنّاع محتوى معروضين حالياً — سيتم إضافة البطاقات لاحقاً من الإدارة.
+              </p>
+            ) : (
+              <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {visibleItems.map((streamer) => (
+                  <ReflectiveCard
+                    key={streamer.id}
+                    name={streamer.name}
+                    role={streamer.role}
+                    bio={streamer.bio}
+                    image={streamer.image}
+                    streamUrl={streamer.streamUrl}
+                    kickSlug={parseKickSlugFromUrl(streamer.streamUrl)}
+                    kickLive={kickLiveMap[streamer.id]}
+                    tiktokUniqueId={parseTikTokUniqueIdFromUrl(streamer.streamUrl)}
+                    tiktokLive={tiktokLiveMap[streamer.id]}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </section>
 

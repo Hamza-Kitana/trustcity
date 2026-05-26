@@ -3,6 +3,8 @@ import { INSTITUTION_BRANCH_IDS, type InstitutionBranchId } from "@/data/institu
 
 const STORAGE_KEY = "ic_site_visibility_v1";
 const EVENT_NAME = "ic-site-visibility";
+/** يُفعَّل مرة واحدة بعد إعادة تفعيل صفحة صنّاع المحتوى */
+const STREAMERS_RESTORED_KEY = "ic_streamers_page_restored_v1";
 
 export type SitePageKey = "laws" | "streamers" | "gangs" | "vipCars" | "houses" | "packages" | "investments";
 
@@ -17,7 +19,7 @@ function defaultState(): SiteVisibilityPersisted {
     v: 1,
     pages: {
       laws: true,
-      streamers: false,
+      streamers: true,
       gangs: true,
       vipCars: true,
       houses: true,
@@ -45,8 +47,16 @@ export function loadSiteVisibility(): SiteVisibilityPersisted {
   if (typeof window === "undefined") return defaultState();
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return defaultState();
-    return hydrate(JSON.parse(raw));
+    const loaded = raw ? hydrate(JSON.parse(raw)) : defaultState();
+    if (!localStorage.getItem(STREAMERS_RESTORED_KEY)) {
+      localStorage.setItem(STREAMERS_RESTORED_KEY, "1");
+      if (!loaded.pages.streamers) {
+        const fixed = { ...loaded, pages: { ...loaded.pages, streamers: true } };
+        saveSiteVisibility(fixed);
+        return fixed;
+      }
+    }
+    return loaded;
   } catch {
     return defaultState();
   }

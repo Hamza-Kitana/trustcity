@@ -16,7 +16,7 @@ import type { ApplicationRecord } from "@/data/publicApplicationTypes";
 import type { StreamerEntry, StreamersPersisted } from "@/types/streamersSchema";
 import { listenStorageSync, writeSyncedLocalStorage } from "@/lib/storageSync";
 
-const STORAGE_KEY = "ic_streamers_v1";
+const STORAGE_KEY = "ic_streamers_v2";
 
 function loadPersisted(): StreamersPersisted {
   try {
