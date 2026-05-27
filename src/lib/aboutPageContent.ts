@@ -46,13 +46,20 @@ export function createAboutPillar(): AboutPillar {
   };
 }
 
+const LEGACY_INFINITE_TITLE_RE = /\b(infinite|infinte|انفنتي|إنفنتي)\b/i;
+
+function migrateLegacyAboutBranding(content: AboutPageContent): AboutPageContent {
+  if (!LEGACY_INFINITE_TITLE_RE.test(content.aboutTitle)) return content;
+  return { ...content, aboutTitle: "TRUST CFW" };
+}
+
 export function defaultAboutPageContent(): AboutPageContent {
   return {
     heroEyebrow: "WHO WE ARE",
     heroTitleA: "من",
     heroTitleB: "نحن",
     aboutEyebrow: "من نحن",
-    aboutTitle: "INFINTE CITY CFW",
+    aboutTitle: "TRUST CFW",
     aboutBody:
       "نحن فريق ومجتمع يجمع حول مدينة رول بلاي عربية طموحة: قوانين واضحة، وزارات ومؤسسات، وشوارع مليئة بالقصص. هدفنا أن تكون كل جلسة قريبة من الواقع الترفيهي — احترام للقصة، ولللاعب، وللوقت الذي يقضيه الجميع هنا.",
     visionTitle: "رؤيتنا",
@@ -105,7 +112,7 @@ function normalize(raw: unknown): AboutPageContent {
       })
     : base.pillars;
 
-  return {
+  const normalized: AboutPageContent = {
     heroEyebrow: typeof p.heroEyebrow === "string" ? p.heroEyebrow : base.heroEyebrow,
     heroTitleA: typeof p.heroTitleA === "string" ? p.heroTitleA : base.heroTitleA,
     heroTitleB: typeof p.heroTitleB === "string" ? p.heroTitleB : base.heroTitleB,
@@ -127,6 +134,7 @@ function normalize(raw: unknown): AboutPageContent {
     ctaBody: typeof p.ctaBody === "string" ? p.ctaBody : base.ctaBody,
     ctaButtonLabel: typeof p.ctaButtonLabel === "string" ? p.ctaButtonLabel : base.ctaButtonLabel,
   };
+  return migrateLegacyAboutBranding(normalized);
 }
 
 export function loadAboutPageContent(): AboutPageContent {
@@ -135,10 +143,18 @@ export function loadAboutPageContent(): AboutPageContent {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return defaultAboutPageContent();
     const parsed = JSON.parse(raw) as AboutPagePersisted | AboutPageContent;
-    if (parsed && typeof parsed === "object" && "content" in parsed) {
-      return normalize((parsed as AboutPagePersisted).content);
+    const content =
+      parsed && typeof parsed === "object" && "content" in parsed
+        ? normalize((parsed as AboutPagePersisted).content)
+        : normalize(parsed);
+    const before =
+      parsed && typeof parsed === "object" && "content" in parsed
+        ? (parsed as AboutPagePersisted).content.aboutTitle
+        : (parsed as AboutPageContent).aboutTitle;
+    if (typeof before === "string" && before !== content.aboutTitle) {
+      saveAboutPageContent(content);
     }
-    return normalize(parsed);
+    return content;
   } catch {
     return defaultAboutPageContent();
   }
