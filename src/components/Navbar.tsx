@@ -673,7 +673,9 @@ const Navbar = () => {
                 className="flex min-h-[4rem] w-full items-center justify-center gap-3 rounded-2xl border-[#5865F2]/50 bg-[#5865F2] px-5 py-4 text-base text-white shadow-md hover:bg-[#4752C4] hover:text-white sm:min-h-[4.25rem]"
                 onClick={() => {
                   if (!isDiscordOAuthConfigured()) {
-                    toast.error("أضف VITE_DISCORD_CLIENT_ID في ملف .env ثم أعد تشغيل السيرفر.");
+                    toast.error(
+                      "Discord غير مفعّل: أعد نشر الموقع على Vercel بعد آخر تحديث، أو أضف VITE_DISCORD_CLIENT_ID في Environment Variables.",
+                    );
                     return;
                   }
                   void startDiscordLogin().catch(() => {
@@ -688,7 +690,7 @@ const Navbar = () => {
               </Button>
               {!isDiscordOAuthConfigured() ? (
                 <p className="text-center text-[11px] leading-snug text-amber-800/90">
-                  لتفعيل الزر: أنشئ تطبيقاً في Discord Developer Portal وأضف نفس رابط الإرجاع في OAuth2 → Redirects.
+                  على Vercel: تأكد من آخر نشر يتضمّن `.env.production`، وأضف رابط الإرجاع في Discord → OAuth2 → Redirects.
                 </p>
               ) : (
                 <p className="text-center text-xs text-slate-500">الطريقة الموصى بها للاعبين والزوار.</p>
