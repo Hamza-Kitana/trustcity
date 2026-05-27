@@ -1,25 +1,21 @@
-import { type FormEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Menu,
   X,
-  Lock,
   ChevronDown,
   Volume2,
   VolumeX,
   LayoutDashboard,
   UserCircle2,
-  Shield,
   Sparkles,
   MessageSquareMore,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { useOptionalHeroBackgroundVideo } from "@/contexts/HeroBackgroundVideoContext";
-import { getPostLoginDashboardPath, useAuth } from "@/contexts/AuthContext";
+import { useAuth } from "@/contexts/AuthContext";
 import { useApplicationsContent } from "@/contexts/ApplicationsContentContext";
 import { usePublicUser } from "@/contexts/PublicUserContext";
 import { useInstitutionRostersContent } from "@/contexts/InstitutionRostersContentContext";
@@ -50,18 +46,13 @@ function institutionLinkActive(pathname: string, to: string) {
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { login, canUseDashboard } = useAuth();
+  const { canUseDashboard } = useAuth();
   const publicUser = usePublicUser();
   const { applications } = useApplicationsContent();
   const { findMembershipForUser } = useInstitutionRostersContent();
   /** عضوية المستخدم الحالي (إن وُجدت) — تحدد إذا كان قائداً/نائباً يحتاج لوحة قيادة */
   const myMembership = findMembershipForUser(publicUser.user?.id);
   const tickets = useTicketsCenter();
-  const [staffUser, setStaffUser] = useState("");
-  const [staffPass, setStaffPass] = useState("");
-  const [staffLoginVisible, setStaffLoginVisible] = useState(false);
-  const staffUserRef = useRef<HTMLInputElement>(null);
-  const staffPassRef = useRef<HTMLInputElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [institutionsOpen, setInstitutionsOpen] = useState(false);
@@ -89,6 +80,16 @@ const Navbar = () => {
   const hideCitizenApplyForOnboardedUser =
     !!discordPublicProfile && isCitizenApplyFormBlocked(discordPublicProfile, applications);
   const showPublicApplyButton = !hideApplyNowForPublicProfile && !hideCitizenApplyForOnboardedUser;
+
+  const startPublicDiscordLogin = () => {
+    if (!isDiscordOAuthConfigured()) {
+      setLoginOpen(true);
+      return;
+    }
+    void startDiscordLogin().catch(() => {
+      toast.error("تعذر بدء تسجيل الدخول عبر Discord");
+    });
+  };
   /** صفحات بخلفية فاتحة — يتغيّر معها لون شريط التنقّل عند التمرير */
   const isLightSurface = (() => {
     const lightPaths = ["/profile", "/tickets", "/jobs", "/apply/streamers"];
@@ -286,8 +287,8 @@ const Navbar = () => {
                 if (publicUser.user) {
                   goToPublicTickets();
                 } else {
-                  setLoginOpen(true);
-                  toast.message("سجّل الدخول أولاً لفتح مركز التكت");
+                  startPublicDiscordLogin();
+                  toast.message("سجّل الدخول عبر Discord لفتح مركز التكت");
                 }
               }}
               className={`relative inline-flex items-center gap-1.5 font-body text-sm font-medium transition-colors after:absolute after:bottom-[-6px] after:right-0 after:h-px after:bg-primary after:transition-all ${
@@ -384,15 +385,13 @@ const Navbar = () => {
                 type="button"
                 onClick={() => {
                   if (!publicUser.user) {
-                    setLoginOpen(true);
+                    startPublicDiscordLogin();
                     toast.message("سجّل الدخول عبر Discord للمتابعة في التقديم الإلكتروني");
                     return;
                   }
                   if (publicUser.user.authProvider !== "discord") {
-                    toast.message(
-                      "التقديم الإلكتروني متاح للحسابات المسجّلة عبر Discord — اضغط للمتابعة",
-                    );
-                    navigate("/apply/citizen");
+                    toast.message("التقديم الإلكتروني يتطلب تسجيل الدخول عبر Discord");
+                    startPublicDiscordLogin();
                     return;
                   }
                   navigate("/apply/citizen");
@@ -421,12 +420,12 @@ const Navbar = () => {
               </Button>
             ) : publicUser.user ? null : (
               <Button
-                onClick={() => setLoginOpen(true)}
+                onClick={startPublicDiscordLogin}
                 variant="outline"
                 className="hidden sm:inline-flex border-primary/40 bg-primary/5 text-primary hover:bg-primary/15 hover:border-primary hover:shadow-glow-primary font-display tracking-wider"
               >
-                <Lock className="h-4 w-4 ml-2" />
-                تسجيل دخول
+                <DiscordIcon className="h-4 w-4 ml-2" />
+                دخول Discord
               </Button>
             )}
             <button
@@ -546,8 +545,8 @@ const Navbar = () => {
                   if (publicUser.user) {
                     goToPublicTickets();
                   } else {
-                    setLoginOpen(true);
-                    toast.message("سجّل الدخول أولاً لفتح مركز التكت");
+                    startPublicDiscordLogin();
+                    toast.message("سجّل الدخول عبر Discord لفتح مركز التكت");
                   }
                 }}
                 className="flex w-full touch-manipulation items-center justify-between rounded-lg py-3 text-right text-foreground transition-colors hover:text-primary active:bg-primary/10"
@@ -568,14 +567,14 @@ const Navbar = () => {
                   onClick={() => {
                     setOpen(false);
                     if (!publicUser.user) {
-                      setLoginOpen(true);
+                      startPublicDiscordLogin();
                       toast.message("سجّل الدخول عبر Discord للمتابعة في التقديم الإلكتروني");
                       return;
                     }
                     if (publicUser.user.authProvider !== "discord") {
-                      toast.message(
-                        "التقديم الإلكتروني متاح للحسابات المسجّلة عبر Discord — اضغط للمتابعة",
-                      );
+                      toast.message("التقديم الإلكتروني يتطلب تسجيل الدخول عبر Discord");
+                      startPublicDiscordLogin();
+                      return;
                     }
                     navigate("/apply/citizen");
                   }}
@@ -617,11 +616,11 @@ const Navbar = () => {
                   type="button"
                   onClick={() => {
                     setOpen(false);
-                    setLoginOpen(true);
+                    startPublicDiscordLogin();
                   }}
-                  className="w-full touch-manipulation bg-primary text-primary-foreground hover:bg-primary-glow"
+                  className="w-full touch-manipulation bg-[#5865F2] text-white hover:bg-[#4752C4]"
                 >
-                  <Lock className="h-4 w-4 ml-2" /> تسجيل دخول
+                  <DiscordIcon className="h-4 w-4 ml-2" /> دخول Discord
                 </Button>
               )}
             </nav>
@@ -629,176 +628,30 @@ const Navbar = () => {
         )}
       </header>
 
-      <Dialog
-        open={loginOpen}
-        onOpenChange={(next) => {
-          setLoginOpen(next);
-          if (!next) {
-            setStaffUser("");
-            setStaffPass("");
-            setStaffLoginVisible(false);
-          }
-        }}
-      >
+      <Dialog open={loginOpen} onOpenChange={setLoginOpen}>
         <DialogContent
           dir="rtl"
-          className="max-h-[90dvh] gap-0 overflow-y-auto rounded-3xl border border-rose-300/40 bg-[linear-gradient(180deg,rgba(255,255,255,0.97)_0%,rgba(255,241,244,0.97)_100%)] p-0 text-slate-900 shadow-[0_30px_80px_-24px_rgba(127,29,29,0.30)] backdrop-blur-xl sm:max-w-[560px]"
+          className="max-h-[90dvh] gap-0 overflow-y-auto rounded-3xl border border-rose-300/40 bg-[linear-gradient(180deg,rgba(255,255,255,0.97)_0%,rgba(255,241,244,0.97)_100%)] p-0 text-slate-900 shadow-[0_30px_80px_-24px_rgba(127,29,29,0.30)] backdrop-blur-xl sm:max-w-[480px]"
         >
-          <div className="relative bg-[radial-gradient(ellipse_120%_100%_at_50%_-20%,rgba(127,29,29,0.16),transparent_58%)] px-6 pb-2 pt-12 text-center sm:px-8 sm:pt-14">
-            <img
-              src="/trustLogo.png"
-              alt="TRUST CFW"
-              className="mx-auto h-[4.25rem] w-[4.25rem] object-contain drop-shadow-[0_0_24px_rgba(127,29,29,0.35)]"
-              loading="eager"
-            />
-            <p className="mt-3 font-latin-display text-[10px] font-semibold tracking-[0.38em] text-primary/90 sm:text-[11px] sm:tracking-[0.42em]">
-              TRUST CFW
-            </p>
-            <DialogHeader className="mt-5 space-y-2 text-center sm:text-center">
-              <DialogTitle className="font-display text-xl font-bold text-slate-900 sm:text-2xl">تسجيل الدخول</DialogTitle>
-              <DialogDescription className="mx-auto max-w-[22rem] text-pretty text-sm leading-relaxed text-slate-600">
-                الطريقة الأساسية للاعبين والزوار هي <strong className="font-semibold text-slate-800">Discord</strong>.
-                دخول لوحة الإدارة بالاسم وكلمة المرور يظهر فقط بعد الضغط على «تسجيل دخول إدمن».
+          <div className="px-6 py-8 text-center sm:px-8">
+            <img src="/trustLogo.png" alt="TRUST CFW" className="mx-auto h-14 w-14 object-contain" />
+            <DialogHeader className="mt-4 space-y-2 text-center sm:text-center">
+              <DialogTitle className="font-display text-xl font-bold text-slate-900">Discord غير مفعّل</DialogTitle>
+              <DialogDescription className="text-sm leading-relaxed text-slate-600">
+                أضف <strong className="font-semibold">VITE_DISCORD_CLIENT_ID</strong> في Vercel → Environment Variables ثم
+                Redeploy. في Discord أضف الرابط:
+                <br />
+                <code className="mt-2 inline-block rounded bg-slate-100 px-2 py-1 text-xs text-slate-800">
+                  https://trustcity.vercel.app/auth/discord/callback
+                </code>
               </DialogDescription>
             </DialogHeader>
-          </div>
-
-          <div className="h-px bg-gradient-to-l from-transparent via-rose-200 to-transparent" aria-hidden />
-
-          <div className="space-y-4 px-6 py-6 sm:px-9 sm:py-7">
-            <div className="space-y-2">
-              <Button
-                type="button"
-                variant="outline"
-                className="flex min-h-[4rem] w-full items-center justify-center gap-3 rounded-2xl border-[#5865F2]/50 bg-[#5865F2] px-5 py-4 text-base text-white shadow-md hover:bg-[#4752C4] hover:text-white sm:min-h-[4.25rem]"
-                onClick={() => {
-                  if (!isDiscordOAuthConfigured()) {
-                    toast.error("أضف VITE_DISCORD_CLIENT_ID في ملف .env ثم أعد تشغيل السيرفر.");
-                    return;
-                  }
-                  void startDiscordLogin().catch(() => {
-                    toast.error("تعذر بدء تسجيل الدخول عبر Discord");
-                  });
-                }}
-              >
-                <DiscordIcon className="h-8 w-8 shrink-0 text-white sm:h-9 sm:w-9" />
-                <span className="font-display text-base font-semibold tracking-wide sm:text-lg">
-                  تسجيل الدخول عبر Discord
-                </span>
-              </Button>
-              {!isDiscordOAuthConfigured() ? (
-                <p className="text-center text-[11px] leading-snug text-amber-800/90">
-                  لتفعيل الزر: أنشئ تطبيقاً في Discord Developer Portal وأضف نفس رابط الإرجاع في OAuth2 → Redirects.
-                </p>
-              ) : (
-                <p className="text-center text-xs text-slate-500">الطريقة الموصى بها للاعبين والزوار.</p>
-              )}
-            </div>
-
-            <Button
-              type="button"
-              variant="outline"
-              className="flex h-11 w-full items-center justify-center gap-2 rounded-xl border-rose-300 bg-white text-sm font-semibold text-rose-900 shadow-sm hover:border-rose-400 hover:bg-rose-100 hover:text-rose-950 focus-visible:ring-rose-300"
-              onClick={() => {
-                setStaffLoginVisible((v) => {
-                  const next = !v;
-                  if (next) {
-                    requestAnimationFrame(() => staffUserRef.current?.focus());
-                  }
-                  return next;
-                });
-              }}
-              aria-expanded={staffLoginVisible}
-            >
-              <Shield className="h-4 w-4 shrink-0 opacity-90" />
-              {staffLoginVisible ? "إخفاء تسجيل دخول الإدمن" : "تسجيل دخول إدمن"}
-              <ChevronDown className={`h-4 w-4 shrink-0 transition-transform ${staffLoginVisible ? "rotate-180" : ""}`} />
-            </Button>
-
-            <form
-              noValidate
-              hidden={!staffLoginVisible}
-              aria-hidden={!staffLoginVisible}
-              className="space-y-4 border-t border-rose-200/90 pt-4"
-              onSubmit={(e: FormEvent) => {
-                  e.preventDefault();
-                  try {
-                    const session = login(staffUser, staffPass);
-                    if (session) {
-                      toast.success("تم الدخول كموظف");
-                      setLoginOpen(false);
-                      setStaffUser("");
-                      setStaffPass("");
-                      setStaffLoginVisible(false);
-                      navigate(getPostLoginDashboardPath(session.roles));
-                      return;
-                    }
-                    toast.error("بيانات الموظف غير صحيحة");
-                  } catch (err) {
-                    if (err instanceof Error && err.message === "IC_SESSION_STORAGE") {
-                      toast.error("تعذر حفظ جلسة الموظف في المتصفح.");
-                    } else {
-                      toast.error("حدث خطأ أثناء الدخول");
-                      console.error(err);
-                    }
-                  }
-                }}
-              >
-                <p className="text-center text-xs font-medium text-rose-800">لوحة التحكم — موظفون معتمدون فقط</p>
-                <div className="space-y-1.5 text-right">
-                  <Label htmlFor="staff-user" className="text-xs font-medium text-slate-700">
-                    اسم المستخدم
-                  </Label>
-                  <Input
-                    ref={staffUserRef}
-                    id="staff-user"
-                    name="username"
-                    autoComplete="username"
-                    tabIndex={staffLoginVisible ? 0 : -1}
-                    value={staffUser}
-                    onChange={(ev) => setStaffUser(ev.target.value)}
-                    onKeyDown={(ev) => {
-                      if (ev.key === "Tab" && !ev.shiftKey) {
-                        ev.preventDefault();
-                        staffPassRef.current?.focus();
-                      }
-                    }}
-                    placeholder="اسم المستخدم"
-                    className="h-11 rounded-xl border-rose-200 bg-white text-right text-slate-900 shadow-sm transition-colors placeholder:text-slate-400 focus-visible:border-rose-400 focus-visible:ring-rose-200"
-                  />
-                </div>
-                <div className="space-y-1.5 text-right">
-                  <Label htmlFor="staff-pass" className="text-xs font-medium text-slate-700">
-                    كلمة المرور
-                  </Label>
-                  <Input
-                    ref={staffPassRef}
-                    id="staff-pass"
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    tabIndex={staffLoginVisible ? 0 : -1}
-                    value={staffPass}
-                    onChange={(ev) => setStaffPass(ev.target.value)}
-                    onKeyDown={(ev) => {
-                      if (ev.key === "Tab" && ev.shiftKey) {
-                        ev.preventDefault();
-                        staffUserRef.current?.focus();
-                      }
-                    }}
-                    placeholder="كلمة المرور"
-                    className="h-11 rounded-xl border-rose-200 bg-white text-right text-slate-900 shadow-sm transition-colors placeholder:text-slate-400 focus-visible:border-rose-400 focus-visible:ring-rose-200"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="h-11 w-full rounded-xl bg-gradient-neon font-display text-sm font-semibold tracking-wide text-primary-foreground shadow-md transition-all hover:brightness-110 hover:shadow-[var(--glow-primary)] active:scale-[0.99]"
-                >
-                  <Lock className="ms-2 h-4 w-4 opacity-90" />
-                  دخول لوحة التحكم
-                </Button>
-                <p className="text-center text-[11px] text-slate-500">لا يُستخدم هذا القسم لتسجيل اللاعبين.</p>
-              </form>
+            <p className="mt-4 text-center text-xs text-slate-500">
+              دخول الإدارة منفصل:{" "}
+              <Link to="/dashboard/login" className="font-semibold text-primary underline-offset-2 hover:underline" onClick={() => setLoginOpen(false)}>
+                /dashboard/login
+              </Link>
+            </p>
           </div>
         </DialogContent>
       </Dialog>

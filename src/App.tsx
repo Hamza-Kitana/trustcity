@@ -21,6 +21,7 @@ import { RequireStaffAuth } from "@/components/RequireStaffAuth";
 import { ALL_TICKET_STAFF_ROLES, DASHBOARD_TICKET_STAFF_ROLES } from "@/lib/ticketTypesConfig";
 import { PublicStaffLinkSync } from "@/components/PublicStaffLinkSync";
 import AdminLayout from "./pages/admin/AdminLayout.tsx";
+import StaffLoginPage from "./pages/admin/StaffLoginPage.tsx";
 import DashboardGate from "./pages/admin/DashboardGate.tsx";
 import GangsAdminShell from "./pages/admin/GangsAdminShell.tsx";
 import GangsEditorPage from "./pages/admin/GangsEditorPage.tsx";
@@ -121,6 +122,7 @@ const AppRoutes = () => {
         <Route path="/jobs/apply/:role" element={<JobsApplicationFormPage />} />
         <Route path="/leadership" element={<LeadershipPanelPage />} />
         <Route path="/developer" element={<DeveloperPage />} />
+        <Route path="/dashboard/login" element={<StaffLoginPage />} />
         <Route
           path="/dashboard"
           element={
