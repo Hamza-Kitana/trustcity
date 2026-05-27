@@ -1091,7 +1091,7 @@ const ProfilePage = () => {
           <div>
             <p className="font-display text-base font-bold text-slate-900">تسجيل الخروج من حسابك</p>
             <p className="mt-1 text-sm leading-relaxed text-slate-600">
-              ستحتاج لإعادة تسجيل الدخول عبر Discord للوصول إلى التكت والطلبات.
+              ستحتاج لإعادة تسجيل الدخول عبر Discord أو حسابك المحلي للوصول إلى التكت والطلبات.
             </p>
           </div>
           <button
